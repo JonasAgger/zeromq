@@ -1,0 +1,16 @@
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\amd64\libzmq.dll
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\amd64\libsodium.dll
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\i386\libzmq.dll
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\i386\libsodium.dll
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\amd64\libzmq.so
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\i386\libzmq.so
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\Server_Service2.exe.config
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\Server_Service2.exe
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\Server_Service2.pdb
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\ZeroMQ.dll
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Debug\ZeroMQ.xml
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Debug\Server_Service2.csprojAssemblyReference.cache
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Debug\Server_Service2.csproj.CoreCompileInputs.cache
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Debug\Server_Service2.csproj.CopyComplete
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Debug\Server_Service2.exe
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Debug\Server_Service2.pdb
