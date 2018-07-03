@@ -14,3 +14,5 @@ C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Release\Server_S
 C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Release\Server_Service2.exe
 C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Release\Server_Service2.pdb
 C:\Users\jonas\source\repos\Server_Service2\Server_Service2\obj\Release\Server_Service2.csprojAssemblyReference.cache
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Release\NAudio.dll
+C:\Users\jonas\source\repos\Server_Service2\Server_Service2\bin\Release\NAudio.xml

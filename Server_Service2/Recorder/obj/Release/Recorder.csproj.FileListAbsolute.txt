@@ -1,0 +1,10 @@
+C:\Users\jonas\source\repos\Server_Service2\Recorder\bin\Release\Recorder.exe.config
+C:\Users\jonas\source\repos\Server_Service2\Recorder\bin\Release\Recorder.exe
+C:\Users\jonas\source\repos\Server_Service2\Recorder\bin\Release\Recorder.pdb
+C:\Users\jonas\source\repos\Server_Service2\Recorder\bin\Release\NAudio.dll
+C:\Users\jonas\source\repos\Server_Service2\Recorder\bin\Release\NAudio.xml
+C:\Users\jonas\source\repos\Server_Service2\Recorder\obj\Release\Recorder.csprojAssemblyReference.cache
+C:\Users\jonas\source\repos\Server_Service2\Recorder\obj\Release\Recorder.csproj.CoreCompileInputs.cache
+C:\Users\jonas\source\repos\Server_Service2\Recorder\obj\Release\Recorder.csproj.CopyComplete
+C:\Users\jonas\source\repos\Server_Service2\Recorder\obj\Release\Recorder.exe
+C:\Users\jonas\source\repos\Server_Service2\Recorder\obj\Release\Recorder.pdb

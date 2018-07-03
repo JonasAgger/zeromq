@@ -18,16 +18,25 @@ namespace Server_Service2
 
         public HwClient(string address, ZSocketType socketType, BindingType bindingType, string identity) : base(address, socketType, bindingType, identity)
         {
-            SetUp();
+            //SetUp();
            //ZSocketType.DEALER
            //"Master Unit"
            //"tcp://18.185.114.115:5555"
         }
 
-        private void SetUp()
+        public void SetUp(EventHandler<ZeroMQEventArgs> handler = null)
         {
             Console.WriteLine("Setting Up ZeroMQ connection");
-            base.SetUp(OnMessageReceived);
+            if (handler == null)
+                base.SetUp(OnMessageReceived);
+            else 
+                base.SetUp(handler);
+        }
+
+        public void SendData(byte[] data)
+        {
+            var response = new ZMessage {new ZFrame(data)};
+            MsgQueue.Enqueue(response);
         }
 
         public void SendString(string type, string message)

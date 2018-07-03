@@ -13,7 +13,10 @@ namespace Server_Service2
     {
         static void Main(string[] args)
         {
+            // SENDER
+            /*
             var client = new HwClient("tcp://18.185.114.115:5555", ZSocketType.DEALER, BindingType.Connect, "Master Unit");
+            var audio = new NetworkAudioSender(0, client);
             while (client.IsRunning())
             {
                 while (true)
@@ -25,28 +28,47 @@ namespace Server_Service2
                         client.SetRunning(false);
                         Environment.Exit(0);
                     }
-                    else
+                }
+            }
+            */
+
+            // PLAYER
+            
+            var client = new HwClient("tcp://18.185.114.115:5555", ZSocketType.DEALER, BindingType.Connect, "Master Unit2");
+            var audio = new NetworkAudioPlayer(client);
+            while (client.IsRunning())
+            {
+                while (true)
+                {
+                    var input = Console.ReadLine();
+
+                    if (input == "q")
                     {
-                        client.SendString("str", input);
+                        client.SetRunning(false);
+                        Environment.Exit(0);
                     }
                 }
             }
+            
 
-            //var server = new HwServer("tcp://*:5555", ZSocketType.ROUTER, BindingType.Bind);
-            //while (server.IsRunning())
-            //{
-            //    while (true)
-            //    {
-            //        var input = Console.ReadLine();
+            //SERVER
+            /*
+            var server = new HwServer("tcp://*:5555", ZSocketType.ROUTER, BindingType.Bind);
+            while (server.IsRunning())
+            {
+                while (true)
+                {
+                    var input = Console.ReadLine();
 
-            //        if (input == "q")
-            //            Environment.Exit(0);
-            //        else
-            //        {
-            //            server.SendString("Master Unit", "str", input);
-            //        }
-            //    }
-            //}
+                    if (input == "q")
+                        Environment.Exit(0);
+                    else
+                    {
+                        server.SendString("Master Unit", "str", input);
+                    }
+                }
+            }
+            */
         }
     }
 }

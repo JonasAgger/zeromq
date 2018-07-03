@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using ZeroMQ;
+using ZeroMQ.lib;
 
 namespace Server_Service2
 {
