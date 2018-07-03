@@ -50,13 +50,25 @@ namespace VoiceChat
             }
         }
 
+        public void Send(string str)
+        {
+            Received(Encoding.UTF8.GetBytes(str), null);
+        }
+
         protected void Received(byte[] audioData, UDPServerNode node)
         {
             foreach (var serverNode in connected)
             {
-                if (node == serverNode) continue;
                 serverNode.Send(audioData);
             }
+        }
+
+        public void Dispose()
+        {
+            foreach (var serverNode in connected)
+                serverNode.Dispose();
+            connected = null;
+            client.Dispose();
         }
     }
 
@@ -64,6 +76,7 @@ namespace VoiceChat
     {
         private UdpClient client;
         private Action<byte[], UDPServerNode> _handler;
+        private IPEndPoint _connectedEndPoint = null;
 
         public UDPServerNode(int port, Action<byte[], UDPServerNode> handler)
         {
@@ -81,18 +94,25 @@ namespace VoiceChat
                     var b = client.ReceiveAsync();
 
                     b.Wait();
+                    _connectedEndPoint = b.Result.RemoteEndPoint;
                     _handler?.Invoke(b.Result.Buffer, this);
                 }
                 catch (SocketException)
                 {
                     // usually not a problem - just means we have disconnected
                 }
-            } while (client.Client.Connected);
+            } while (true);
         }
 
         public void Send(byte[] audioData)
+        { 
+            if(_connectedEndPoint != null)
+                client.Send(audioData, audioData.Length, _connectedEndPoint);
+        }
+
+        public void Dispose()
         {
-            client.Send(audioData, audioData.Length);
+            client.Dispose();
         }
     }
 }

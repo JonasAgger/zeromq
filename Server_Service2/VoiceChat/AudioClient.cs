@@ -36,6 +36,27 @@ namespace VoiceChat
             var newEP = new IPEndPoint(endPoint.Address, port);
             udpSender = new UdpClient();
             udpSender.Connect(newEP);
+
+
+            ThreadPool.QueueUserWorkItem(ListenerThread, endPoint);
+        }
+
+        private void ListenerThread(object state)
+        {
+            do
+            {
+                try
+                {
+                    var b = udpSender.ReceiveAsync();
+
+                    b.Wait();
+                    Console.WriteLine("Received: {0}", Encoding.UTF8.GetString(b.Result.Buffer));
+                }
+                catch (SocketException)
+                {
+                    // usually not a problem - just means we have disconnected
+                }
+            } while (true);
         }
 
         public void SetReceived(Action<byte[]> onAudioReceivedAction)

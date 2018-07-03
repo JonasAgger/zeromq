@@ -12,7 +12,7 @@ namespace VoiceChat
     {
         static void Main(string[] args)
         {
-            /*
+            
             var ip = new IPEndPoint(IPAddress.Parse("18.185.114.115"), 5555);
             var sender = new Sender(ip);
 
@@ -30,14 +30,20 @@ namespace VoiceChat
                     break;
 
             sender.Send(data);
-            */
+
+            while (true)
+                if (Console.ReadLine() == "q")
+                    break;
+            
+
+            /*
             var ip = new IPEndPoint(IPAddress.Parse("18.185.114.115"), 5555);
             var receiver = new Receiver(ip, ReadBytes);
 
             while (true)
                 if (Console.ReadLine() == "q")
                     break;
-
+            */
             // Sender
             /*
             var ip = new IPEndPoint(IPAddress.Parse("18.185.114.115"), 5555);
@@ -66,6 +72,14 @@ namespace VoiceChat
             {
                 if (Console.ReadLine() == "q") break;
             }
+
+            server.Send("Hello from server?");
+
+            while (true)
+            {
+                if (Console.ReadLine() == "q") break;
+            }
+            server.Dispose();
             */
         }
 
