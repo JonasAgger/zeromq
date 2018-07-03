@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace Server_Service2
         static void Main(string[] args)
         {
             // SENDER
-            /*
+            
             var client = new HwClient("tcp://18.185.114.115:5555", ZSocketType.DEALER, BindingType.Connect, "Master Unit");
             var audio = new NetworkAudioSender(0, client);
             while (client.IsRunning())
@@ -30,10 +31,10 @@ namespace Server_Service2
                     }
                 }
             }
-            */
+
 
             // PLAYER
-            
+            /*
             var client = new HwClient("tcp://18.185.114.115:5555", ZSocketType.DEALER, BindingType.Connect, "Master Unit2");
             var audio = new NetworkAudioPlayer(client);
             while (client.IsRunning())
@@ -49,7 +50,7 @@ namespace Server_Service2
                     }
                 }
             }
-            
+            */
 
             //SERVER
             /*

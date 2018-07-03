@@ -46,15 +46,31 @@ namespace Server_Service2
             response.Add(new ZFrame(message[0].ToString() == "Master Unit" ? "Master Unit2" : "Master Unit"));
             for (int i = 1; i < message.Count; i++)
             {
-                response.Add(message[i]);
+                response.Add(message[i].Duplicate());
             }
+
+            MsgQueue.Enqueue(response);
+        }
+
+        public void SendAudio(byte[] message)
+        {
+            var response = new ZMessage {new ZFrame("Master Unit2"), new ZFrame(message)};        
 
             MsgQueue.Enqueue(response);
         }
 
         private void OnMessageReceived(object obj, ZeroMQEventArgs zArgs)
         {
-            SendAudio(zArgs.ReceivedZMessage);
+            //SendAudio(zArgs.ReceivedZMessage);
+            try
+            {
+                var data = zArgs.ReceivedZMessage[1].Read();
+                SendAudio(data);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

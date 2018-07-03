@@ -17,7 +17,7 @@ namespace Server_Service2
             this.audioSender = audioSender;
             waveIn = new WaveInEvent
             {
-                BufferMilliseconds = 50,
+                BufferMilliseconds = 100,
                 DeviceNumber = inputDeviceNumber,
                 WaveFormat = new WaveFormat(8000, 16, 2)
             };
