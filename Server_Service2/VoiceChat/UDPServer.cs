@@ -35,8 +35,17 @@ namespace VoiceChat
 
                     b.Wait();
 
+                    Console.WriteLine("{0} connecting", b.Result.RemoteEndPoint.Address);
+
+                    if (connected.Exists(node => Equals(node.GetEndPoint().Address, b.Result.RemoteEndPoint.Address)))
+                    {
+                        var nodes = connected.RemoveAll(node => Equals(node.GetEndPoint().Address, b.Result.RemoteEndPoint.Address));
+
+                        Console.WriteLine("Removed {0} entries in the list", nodes);
+                    }
+
                     Console.WriteLine("added new from ip : {0}", b.Result.RemoteEndPoint.Address);
-                    connected.Add(new UDPServerNode(++_enumport, Received));
+                    connected.Add(new UDPServerNode(++_enumport, Received, OnConnectionClosed));
 
                     var data = Encoding.UTF8.GetBytes(_enumport.ToString());
 
@@ -55,10 +64,18 @@ namespace VoiceChat
             Received(Encoding.UTF8.GetBytes(str), null);
         }
 
+        protected void OnConnectionClosed(UDPServerNode node)
+        {
+            connected.Remove(node);
+        }
+
         protected void Received(byte[] audioData, UDPServerNode node)
         {
             foreach (var serverNode in connected)
             {
+                if (node == serverNode)
+                    continue;
+
                 serverNode.Send(audioData);
             }
         }
@@ -76,17 +93,24 @@ namespace VoiceChat
     {
         private UdpClient client;
         private Action<byte[], UDPServerNode> _handler;
+        private Action<UDPServerNode> _onConnectionClosed;
         private IPEndPoint _connectedEndPoint = null;
 
-        public UDPServerNode(int port, Action<byte[], UDPServerNode> handler)
+        public UDPServerNode(int port, Action<byte[], UDPServerNode> handler, Action<UDPServerNode> onConnectionClosed)
         {
             client = new UdpClient(new IPEndPoint(IPAddress.Any, port));
             ThreadPool.QueueUserWorkItem(ListenerThread, port);
             _handler = handler;
+            _onConnectionClosed = onConnectionClosed;
         }
 
         private void ListenerThread(object state)
         {
+            var connecting = client.ReceiveAsync();
+
+            connecting.Wait();
+            _connectedEndPoint = connecting.Result.RemoteEndPoint;
+
             do
             {
                 try
@@ -94,20 +118,26 @@ namespace VoiceChat
                     var b = client.ReceiveAsync();
 
                     b.Wait();
-                    _connectedEndPoint = b.Result.RemoteEndPoint;
+
                     _handler?.Invoke(b.Result.Buffer, this);
                 }
                 catch (SocketException)
                 {
                     // usually not a problem - just means we have disconnected
                 }
-            } while (true);
+            } while (client.Client.Connected);
+            _onConnectionClosed?.Invoke(this);
         }
 
         public void Send(byte[] audioData)
         { 
             if(_connectedEndPoint != null)
                 client.Send(audioData, audioData.Length, _connectedEndPoint);
+        }
+
+        public IPEndPoint GetEndPoint()
+        {
+            return _connectedEndPoint;
         }
 
         public void Dispose()

@@ -17,6 +17,7 @@ namespace VoiceChat
 
     public class Sender : IAudioClient
     {
+        private Action<byte[]> handler;
         private readonly UdpClient udpSender;
         public Sender(IPEndPoint endPoint)
         {
@@ -37,6 +38,7 @@ namespace VoiceChat
             udpSender = new UdpClient();
             udpSender.Connect(newEP);
 
+            Send(data);
 
             ThreadPool.QueueUserWorkItem(ListenerThread, endPoint);
         }
@@ -50,7 +52,8 @@ namespace VoiceChat
                     var b = udpSender.ReceiveAsync();
 
                     b.Wait();
-                    Console.WriteLine("Received: {0}", Encoding.UTF8.GetString(b.Result.Buffer));
+                    handler?.Invoke(b.Result.Buffer);
+                    //Console.WriteLine("Received: {0}", Encoding.UTF8.GetString(b.Result.Buffer));
                 }
                 catch (SocketException)
                 {
@@ -61,7 +64,7 @@ namespace VoiceChat
 
         public void SetReceived(Action<byte[]> onAudioReceivedAction)
         {
-            throw new NotImplementedException();
+            handler += onAudioReceivedAction;
         }
 
         public void Send(byte[] payload)

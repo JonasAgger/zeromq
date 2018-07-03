@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using NAudio.Wave;
 using Server_Service2;
 
 namespace VoiceChat
@@ -13,67 +14,37 @@ namespace VoiceChat
         static void Main(string[] args)
         {
             
+            // Client
+            
+            for (var i = 0; i < WaveIn.DeviceCount; i++)
+            {
+                Console.WriteLine(WaveIn.GetCapabilities(i).ProductName);
+            }
+
             var ip = new IPEndPoint(IPAddress.Parse("18.185.114.115"), 5555);
             var sender = new Sender(ip);
 
-            var data = Encoding.UTF8.GetBytes("hello there");
+            var audioSender = new NetworkAudioSender(0, sender);
+            var audioReceiver = new NetworkAudioPlayer(sender);
 
-            while (true)
-                if (Console.ReadLine() == "q")
-                    break;
 
-            sender.Send(data);
-            data = Encoding.UTF8.GetBytes("how you doin");
-
-            while (true)
-                if (Console.ReadLine() == "q")
-                    break;
-
-            sender.Send(data);
-
-            while (true)
-                if (Console.ReadLine() == "q")
-                    break;
-            
-
-            /*
-            var ip = new IPEndPoint(IPAddress.Parse("18.185.114.115"), 5555);
-            var receiver = new Receiver(ip, ReadBytes);
-
-            while (true)
-                if (Console.ReadLine() == "q")
-                    break;
-            */
-            // Sender
-            /*
-            var ip = new IPEndPoint(IPAddress.Parse("18.185.114.115"), 5555);
-            var sender = new NetworkAudioSender(0, new Sender(ip));
-            while (true)
-                if (Console.ReadLine() == "q")
-                    break;
-            sender.Dispose();
-            */
-
-            // Receiver
-            /*
-            var ip = new IPEndPoint(IPAddress.Parse("18.185.114.115"), 5555);
-            var player = new NetworkAudioPlayer(new Receiver(ip));
-            while (true)
-                if (Console.ReadLine() == "q")
-                    break;
-            player.Dispose();
-            */
-
-            // Server
-            /*
-            var server = new UDPServer(5555);
 
             while (true)
             {
-                if (Console.ReadLine() == "q") break;
+                var input = Console.ReadLine();
+                if (input == "q")
+                    break;
+                else if (input != null)
+                    sender.Send(Encoding.UTF8.GetBytes(input));
             }
-
-            server.Send("Hello from server?");
+            audioReceiver.Dispose();
+            audioSender.Dispose();
+            sender.Dispose();
+            
+            
+            // Server
+            /*
+            var server = new UDPServer(5555);
 
             while (true)
             {
