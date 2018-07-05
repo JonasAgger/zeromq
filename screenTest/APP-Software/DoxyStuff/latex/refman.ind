@@ -1,0 +1,1044 @@
+\begin{theindex}
+
+  \item {\+\_\+\+\_\+attribute\+\_\+\+\_\+}
+    \subitem {button\+\_\+drv.\+mod.\+c}, \hyperpage{71, 72}
+  \item {\+\_\+data\+\_\+pins}
+    \subitem {L\+CD}, \hyperpage{26}
+  \item {\+\_\+enable\+\_\+pin}
+    \subitem {L\+CD}, \hyperpage{26}
+  \item {\+\_\+rs\+\_\+pin}
+    \subitem {L\+CD}, \hyperpage{27}
+  \item {\+\_\+rw\+\_\+pin}
+    \subitem {L\+CD}, \hyperpage{27}
+  \item {$\sim$\+Button}
+    \subitem {Button}, \hyperpage{10}
+  \item {$\sim$\+I2\+C\+\_\+reg}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{16}
+  \item {$\sim$\+Timer}
+    \subitem {Timer}, \hyperpage{40}
+
+  \indexspace
+
+  \item {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{7}
+    \subitem {begin}, \hyperpage{7, 8}
+    \subitem {digital\+Read}, \hyperpage{8}
+    \subitem {digital\+Write}, \hyperpage{8}
+    \subitem {fd}, \hyperpage{9}
+    \subitem {i2caddr}, \hyperpage{9}
+    \subitem {pin\+Mode}, \hyperpage{8}
+    \subitem {pull\+Up}, \hyperpage{8}
+    \subitem {read8}, \hyperpage{8}
+    \subitem {read\+G\+P\+IO}, \hyperpage{9}
+    \subitem {write8}, \hyperpage{9}
+    \subitem {write\+G\+P\+IO}, \hyperpage{9}
+  \item {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}
+    \subitem {M\+C\+P23008\+\_\+\+A\+D\+D\+R\+E\+SS}, \hyperpage{51}
+    \subitem {M\+C\+P23008\+\_\+\+D\+E\+F\+V\+AL}, \hyperpage{51}
+    \subitem {M\+C\+P23008\+\_\+\+G\+P\+I\+N\+T\+EN}, \hyperpage{52}
+    \subitem {M\+C\+P23008\+\_\+\+G\+P\+IO}, \hyperpage{52}
+    \subitem {M\+C\+P23008\+\_\+\+G\+P\+PU}, \hyperpage{52}
+    \subitem {M\+C\+P23008\+\_\+\+I\+N\+T\+C\+AP}, \hyperpage{52}
+    \subitem {M\+C\+P23008\+\_\+\+I\+N\+T\+C\+ON}, \hyperpage{52}
+    \subitem {M\+C\+P23008\+\_\+\+I\+N\+TF}, \hyperpage{52}
+    \subitem {M\+C\+P23008\+\_\+\+I\+O\+C\+ON}, \hyperpage{52}
+    \subitem {M\+C\+P23008\+\_\+\+I\+O\+D\+IR}, \hyperpage{52}
+    \subitem {M\+C\+P23008\+\_\+\+I\+P\+OL}, \hyperpage{53}
+    \subitem {M\+C\+P23008\+\_\+\+O\+L\+AT}, \hyperpage{53}
+  \item {arduino\+Adress\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{20}
+  \item {arduino\+Message\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{20}
+
+  \indexspace
+
+  \item {begin}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{7, 8}
+    \subitem {L\+CD}, \hyperpage{23}
+  \item {blink}
+    \subitem {L\+CD}, \hyperpage{24}
+  \item {btn}
+    \subitem {Score\+System\+Crtl}, \hyperpage{35}
+  \item {Button}, \hyperpage{10}
+    \subitem {$\sim$\+Button}, \hyperpage{10}
+    \subitem {Button}, \hyperpage{10}
+    \subitem {fd}, \hyperpage{11}
+    \subitem {mq\+\_\+}, \hyperpage{11}
+    \subitem {run}, \hyperpage{10}
+    \subitem {running}, \hyperpage{11}
+    \subitem {value}, \hyperpage{11}
+  \item {Button.\+hpp}
+    \subitem {button\+Event}, \hyperpage{53}
+  \item {button\+\_\+drv.\+c}
+    \subitem {button\+Pin}, \hyperpage{68}
+    \subitem {button\+Update}, \hyperpage{66}
+    \subitem {D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+AD}, 
+		\hyperpage{66}
+    \subitem {devno}, \hyperpage{68}
+    \subitem {E\+R\+R\+G\+O\+TO}, \hyperpage{65}
+    \subitem {left\+Pin}, \hyperpage{68}
+    \subitem {left\+Status}, \hyperpage{69}
+    \subitem {M\+A\+X\+L\+EN}, \hyperpage{66}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}, \hyperpage{66}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG}, \hyperpage{66}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}, 
+		\hyperpage{67}
+    \subitem {module\+\_\+exit}, \hyperpage{67}
+    \subitem {module\+\_\+init}, \hyperpage{67}
+    \subitem {new\+Value}, \hyperpage{69}
+    \subitem {of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match}, 
+		\hyperpage{69}
+    \subitem {plat\+\_\+drv\+\_\+cdev}, \hyperpage{69}
+    \subitem {plat\+\_\+drv\+\_\+class}, \hyperpage{69}
+    \subitem {plat\+\_\+drv\+\_\+exit}, \hyperpage{67}
+    \subitem {plat\+\_\+drv\+\_\+fops}, \hyperpage{69}
+    \subitem {plat\+\_\+drv\+\_\+init}, \hyperpage{67}
+    \subitem {plat\+\_\+drv\+\_\+platform\+\_\+driver}, \hyperpage{70}
+    \subitem {plat\+\_\+drv\+\_\+probe}, \hyperpage{67}
+    \subitem {plat\+\_\+drv\+\_\+read}, \hyperpage{67}
+    \subitem {plat\+\_\+drv\+\_\+remove}, \hyperpage{68}
+    \subitem {prev\+Right\+Status}, \hyperpage{70}
+    \subitem {prev\+Value}, \hyperpage{70}
+    \subitem {right\+Pin}, \hyperpage{70}
+    \subitem {right\+Status}, \hyperpage{70}
+    \subitem {rotate\+Left\+Update}, \hyperpage{68}
+    \subitem {rotate\+Right\+Update}, \hyperpage{68}
+    \subitem {value}, \hyperpage{71}
+    \subitem {value\+Read}, \hyperpage{71}
+  \item {button\+\_\+drv.\+mod.\+c}
+    \subitem {\+\_\+\+\_\+attribute\+\_\+\+\_\+}, \hyperpage{71, 72}
+    \subitem {M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+FO}, \hyperpage{72}
+  \item {button\+Event}
+    \subitem {Button.\+hpp}, \hyperpage{53}
+  \item {button\+Left}
+    \subitem {Page}, \hyperpage{29}
+  \item {button\+Message}, \hyperpage{11}
+    \subitem {button\+Message}, \hyperpage{12}
+    \subitem {x}, \hyperpage{12}
+  \item {button\+Pin}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{68}
+  \item {button\+Pressed}
+    \subitem {Page}, \hyperpage{29}
+  \item {button\+Right}
+    \subitem {Page}, \hyperpage{29}
+  \item {button\+Test\+Code/main.\+cpp}
+    \subitem {main}, \hyperpage{73}
+  \item {button\+Thread}
+    \subitem {Score\+System\+Crtl}, \hyperpage{35}
+  \item {button\+Update}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{66}
+  \item {BV}
+    \subitem {L\+C\+D.\+cpp}, \hyperpage{77}
+    \subitem {Screen-\/\+Button\+Test\+Code/\+L\+C\+D.\+cpp}, 
+		\hyperpage{77}
+    \subitem {Screen\+Test\+Code/\+L\+C\+D.\+cpp}, \hyperpage{78}
+
+  \indexspace
+
+  \item {char\+Write}
+    \subitem {L\+CD}, \hyperpage{24}
+  \item {clear}
+    \subitem {L\+CD}, \hyperpage{24}
+  \item {collective\+Double\+Shots\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{36}
+  \item {command}
+    \subitem {L\+CD}, \hyperpage{24}
+  \item {cond\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{20}
+  \item {current\+Addr\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{20}
+  \item {current\+Char}
+    \subitem {Page}, \hyperpage{30}
+  \item {current\+Game\+ID}
+    \subitem {Website\+Score\+Handling}, \hyperpage{47}
+  \item {current\+Line}
+    \subitem {L\+CD}, \hyperpage{27}
+    \subitem {Website\+Score\+Handling}, \hyperpage{47}
+  \item {current\+Screen}
+    \subitem {Score\+System\+Crtl}, \hyperpage{36}
+  \item {cursor}
+    \subitem {L\+CD}, \hyperpage{24}
+  \item {cursor\+Coord}, \hyperpage{12}
+    \subitem {dir\+\_\+}, \hyperpage{13}
+    \subitem {line\+\_\+}, \hyperpage{13}
+    \subitem {row\+\_\+}, \hyperpage{13}
+    \subitem {type\+\_\+}, \hyperpage{13}
+  \item {cursor\+Pos\+\_\+}
+    \subitem {Page}, \hyperpage{30}
+
+  \indexspace
+
+  \item {D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+AD}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{66}
+  \item {date\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{48}
+  \item {day\+\_\+}
+    \subitem {Website\+Score\+Handling\+::\+D\+A\+T\+E\+S\+T\+R\+U\+CT}, 
+		\hyperpage{13}
+  \item {devno}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{68}
+  \item {digital\+Read}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{8}
+  \item {digital\+Write}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{8}
+  \item {dir\+\_\+}
+    \subitem {cursor\+Coord}, \hyperpage{13}
+  \item {display}
+    \subitem {L\+CD}, \hyperpage{24}
+    \subitem {Score\+System\+Crtl}, \hyperpage{36}
+  \item {display\+Control}
+    \subitem {L\+CD}, \hyperpage{27}
+  \item {display\+Function}
+    \subitem {L\+CD}, \hyperpage{27}
+  \item {display\+Init}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{16}
+  \item {display\+M\+Q\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{20}
+  \item {display\+Mode}
+    \subitem {L\+CD}, \hyperpage{27}
+  \item {display\+Read}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{16}
+  \item {display\+Screen}
+    \subitem {Page}, \hyperpage{30}
+  \item {display\+Write}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{16}
+
+  \indexspace
+
+  \item {E\+R\+R\+G\+O\+TO}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{65}
+  \item {En}
+    \subitem {L\+CD}, \hyperpage{27}
+  \item {end\+Game}
+    \subitem {Score\+System\+Crtl}, \hyperpage{34}
+  \item {error\+Fs\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{48}
+
+  \indexspace
+
+  \item {fd}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{9}
+    \subitem {Button}, \hyperpage{11}
+  \item {fd\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{20}
+  \item {fs\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{48}
+
+  \indexspace
+
+  \item {game\+I\+D\+Integer}
+    \subitem {Website\+Score\+Handling}, \hyperpage{48}
+  \item {game\+Time\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{36}
+    \subitem {Website\+Score\+Handling}, \hyperpage{48}
+  \item {get\+Current\+ID}
+    \subitem {Website\+Score\+Handling}, \hyperpage{44}
+  \item {get\+Date}
+    \subitem {Website\+Score\+Handling}, \hyperpage{44}
+  \item {get\+End\+Time}
+    \subitem {Website\+Score\+Handling}, \hyperpage{44}
+  \item {get\+Game\+Time}
+    \subitem {Website\+Score\+Handling}, \hyperpage{44}
+  \item {get\+Instance}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{16}
+  \item {get\+IP}
+    \subitem {Score\+System\+Crtl}, \hyperpage{34}
+  \item {get\+Msg\+Queue}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{17}
+    \subitem {Score\+System\+Crtl}, \hyperpage{34}
+  \item {get\+Score\+Team}
+    \subitem {Website\+Score\+Handling}, \hyperpage{45}
+  \item {get\+Start\+Time}
+    \subitem {Website\+Score\+Handling}, \hyperpage{45}
+  \item {get\+Start\+Time\+Date}
+    \subitem {Website\+Score\+Handling}, \hyperpage{45}
+  \item {get\+Team\+Name}
+    \subitem {Website\+Score\+Handling}, \hyperpage{45}
+  \item {get\+Total\+Double\+Cup\+Shots}
+    \subitem {Website\+Score\+Handling}, \hyperpage{45}
+
+  \indexspace
+
+  \item {H\+I\+GH}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{56}
+  \item {handle\+Msg}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{17}
+    \subitem {Score\+System\+Crtl}, \hyperpage{34}
+  \item {handle\+Psoc\+Update}
+    \subitem {Score\+System\+Crtl}, \hyperpage{34}
+  \item {handle\+State}
+    \subitem {Score\+System\+Crtl}, \hyperpage{35}
+  \item {headers}
+    \subitem {Website\+Score\+Handling}, \hyperpage{48}
+  \item {home}
+    \subitem {L\+CD}, \hyperpage{25}
+  \item {hours\+\_\+}
+    \subitem {Website\+Score\+Handling\+::\+T\+I\+M\+E\+S\+T\+R\+U\+CT}, 
+		\hyperpage{41}
+
+  \indexspace
+
+  \item {I2\+C\+\_\+reg}, \hyperpage{14}
+    \subitem {$\sim$\+I2\+C\+\_\+reg}, \hyperpage{16}
+    \subitem {arduino\+Adress\+\_\+}, \hyperpage{20}
+    \subitem {arduino\+Message\+\_\+}, \hyperpage{20}
+    \subitem {cond\+\_\+}, \hyperpage{20}
+    \subitem {current\+Addr\+\_\+}, \hyperpage{20}
+    \subitem {display\+Init}, \hyperpage{16}
+    \subitem {display\+M\+Q\+\_\+}, \hyperpage{20}
+    \subitem {display\+Read}, \hyperpage{16}
+    \subitem {display\+Write}, \hyperpage{16}
+    \subitem {fd\+\_\+}, \hyperpage{20}
+    \subitem {get\+Instance}, \hyperpage{16}
+    \subitem {get\+Msg\+Queue}, \hyperpage{17}
+    \subitem {handle\+Msg}, \hyperpage{17}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{15}
+    \subitem {lock\+I2C}, \hyperpage{17}
+    \subitem {mq\+\_\+}, \hyperpage{20}
+    \subitem {mut\+\_\+}, \hyperpage{20}
+    \subitem {psoc1\+Adress\+\_\+}, \hyperpage{21}
+    \subitem {psoc2\+Adress\+\_\+}, \hyperpage{21}
+    \subitem {psoc\+Message\+\_\+}, \hyperpage{21}
+    \subitem {psoc\+Update}, \hyperpage{17}
+    \subitem {receiving\+Pso\+C\+\_\+}, \hyperpage{21}
+    \subitem {run}, \hyperpage{17}
+    \subitem {running\+\_\+}, \hyperpage{21}
+    \subitem {Score\+System\+M\+Q\+\_\+}, \hyperpage{21}
+    \subitem {screen\+Adress\+\_\+}, \hyperpage{21}
+    \subitem {send\+Arduino\+Message}, \hyperpage{17}
+    \subitem {send\+Psoc1\+Message}, \hyperpage{18}
+    \subitem {send\+Psoc2\+Message}, \hyperpage{18}
+    \subitem {send\+Psoc\+Broadcast}, \hyperpage{18}
+    \subitem {send\+Psoc\+Message}, \hyperpage{18}
+    \subitem {set\+Arduino\+Message}, \hyperpage{18}
+    \subitem {set\+Msg\+Queue\+Score\+System}, \hyperpage{18}
+    \subitem {set\+Psoc\+Message}, \hyperpage{19}
+    \subitem {set\+UP}, \hyperpage{19}
+    \subitem {state\+\_\+}, \hyperpage{21}
+    \subitem {stop\+Psoc\+Polling}, \hyperpage{19}
+    \subitem {test\+Static}, \hyperpage{19}
+    \subitem {timer1\+\_\+}, \hyperpage{22}
+    \subitem {tt\+\_\+}, \hyperpage{22}
+    \subitem {unlock\+I2C}, \hyperpage{19}
+  \item {I2\+C\+\_\+reg.\+hpp}
+    \subitem {i2c\+\_\+messages}, \hyperpage{54}
+  \item {i2c\+\_\+}
+    \subitem {L\+CD}, \hyperpage{27}
+  \item {i2c\+\_\+messages}
+    \subitem {I2\+C\+\_\+reg.\+hpp}, \hyperpage{54}
+  \item {i2c\+Test\+Code/main.\+cpp}
+    \subitem {main}, \hyperpage{73}
+  \item {i2c\+Thread}
+    \subitem {Score\+System\+Crtl}, \hyperpage{36}
+  \item {i2caddr}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{9}
+  \item {I\+N\+P\+UT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{56}
+  \item {id\+\_\+}
+    \subitem {Timer}, \hyperpage{40}
+  \item {ifs\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{48}
+  \item {inc/osapi/\+Score\+System/\+Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, 
+		\hyperpage{51}
+  \item {inc/osapi/\+Score\+System/\+Button.\+hpp}, \hyperpage{53}
+  \item {inc/osapi/\+Score\+System/\+I2\+C\+\_\+reg.\+hpp}, 
+		\hyperpage{54}
+  \item {inc/osapi/\+Score\+System/\+L\+C\+D.\+hpp}, \hyperpage{55}
+  \item {inc/osapi/\+Score\+System/\+Page.\+hpp}, \hyperpage{60}
+  \item {inc/osapi/\+Score\+System/\+Score\+System\+Crtl.\+hpp}, 
+		\hyperpage{61}
+  \item {inc/osapi/\+Score\+System/\+Timer.\+hpp}, \hyperpage{62}
+  \item {inc/osapi/\+Score\+System/\+Website\+Score\+Handling.\+h}, 
+		\hyperpage{62}
+  \item {inc/osapi/\+Score\+System/test.\+hpp}, \hyperpage{62}
+  \item {ip\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{36}
+
+  \indexspace
+
+  \item {L\+C\+D.\+cpp}
+    \subitem {BV}, \hyperpage{77}
+  \item {L\+C\+D.\+hpp}
+    \subitem {H\+I\+GH}, \hyperpage{56}
+    \subitem {I\+N\+P\+UT}, \hyperpage{56}
+    \subitem {L\+C\+D\+\_\+1\+L\+I\+NE}, \hyperpage{56}
+    \subitem {L\+C\+D\+\_\+2\+L\+I\+NE}, \hyperpage{56}
+    \subitem {L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE}, \hyperpage{56}
+    \subitem {L\+C\+D\+\_\+5x10\+D\+O\+TS}, \hyperpage{56}
+    \subitem {L\+C\+D\+\_\+5x8\+D\+O\+TS}, \hyperpage{56}
+    \subitem {L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE}, \hyperpage{56}
+    \subitem {L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT}, \hyperpage{57}
+    \subitem {L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF}, \hyperpage{57}
+    \subitem {L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON}, \hyperpage{57}
+    \subitem {L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY}, 
+		\hyperpage{57}
+    \subitem {L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE}, 
+		\hyperpage{57}
+    \subitem {L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF}, \hyperpage{57}
+    \subitem {L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON}, \hyperpage{57}
+    \subitem {L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT}, 
+		\hyperpage{57}
+    \subitem {L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL}, 
+		\hyperpage{58}
+    \subitem {L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE}, 
+		\hyperpage{58}
+    \subitem {L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF}, 
+		\hyperpage{58}
+    \subitem {L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON}, \hyperpage{58}
+    \subitem {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT}, \hyperpage{58}
+    \subitem {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET}, 
+		\hyperpage{58}
+    \subitem {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT}, 
+		\hyperpage{58}
+    \subitem {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT}, 
+		\hyperpage{58}
+    \subitem {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT}, 
+		\hyperpage{59}
+    \subitem {L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET}, 
+		\hyperpage{59}
+    \subitem {L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT}, \hyperpage{59}
+    \subitem {L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT}, \hyperpage{59}
+    \subitem {L\+C\+D\+\_\+\+N\+O\+B\+A\+C\+K\+L\+I\+G\+HT}, 
+		\hyperpage{59}
+    \subitem {L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME}, 
+		\hyperpage{59}
+    \subitem {L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR}, 
+		\hyperpage{59}
+    \subitem {L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR}, 
+		\hyperpage{59}
+    \subitem {L\+OW}, \hyperpage{60}
+    \subitem {O\+U\+T\+P\+UT}, \hyperpage{60}
+  \item {L\+C\+D\+\_\+1\+L\+I\+NE}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{56}
+  \item {L\+C\+D\+\_\+2\+L\+I\+NE}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{56}
+  \item {L\+C\+D\+\_\+4\+B\+I\+T\+M\+O\+DE}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{56}
+  \item {L\+C\+D\+\_\+5x10\+D\+O\+TS}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{56}
+  \item {L\+C\+D\+\_\+5x8\+D\+O\+TS}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{56}
+  \item {L\+C\+D\+\_\+8\+B\+I\+T\+M\+O\+DE}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{56}
+  \item {L\+C\+D\+\_\+\+B\+A\+C\+K\+L\+I\+G\+HT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{57}
+  \item {L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+O\+FF}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{57}
+  \item {L\+C\+D\+\_\+\+B\+L\+I\+N\+K\+ON}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{57}
+  \item {L\+C\+D\+\_\+\+C\+L\+E\+A\+R\+D\+I\+S\+P\+L\+AY}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{57}
+  \item {L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+M\+O\+VE}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{57}
+  \item {L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+O\+FF}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{57}
+  \item {L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+ON}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{57}
+  \item {L\+C\+D\+\_\+\+C\+U\+R\+S\+O\+R\+S\+H\+I\+FT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{57}
+  \item {L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+C\+O\+N\+T\+R\+OL}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{58}
+  \item {L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+M\+O\+VE}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{58}
+  \item {L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+O\+FF}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{58}
+  \item {L\+C\+D\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+ON}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{58}
+  \item {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+L\+E\+FT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{58}
+  \item {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+M\+O\+D\+E\+S\+ET}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{58}
+  \item {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+R\+I\+G\+HT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{58}
+  \item {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+D\+E\+C\+R\+E\+M\+E\+NT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{58}
+  \item {L\+C\+D\+\_\+\+E\+N\+T\+R\+Y\+S\+H\+I\+F\+T\+I\+N\+C\+R\+E\+M\+E\+NT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{59}
+  \item {L\+C\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+ET}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{59}
+  \item {L\+C\+D\+\_\+\+M\+O\+V\+E\+L\+E\+FT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{59}
+  \item {L\+C\+D\+\_\+\+M\+O\+V\+E\+R\+I\+G\+HT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{59}
+  \item {L\+C\+D\+\_\+\+N\+O\+B\+A\+C\+K\+L\+I\+G\+HT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{59}
+  \item {L\+C\+D\+\_\+\+R\+E\+T\+U\+R\+N\+H\+O\+ME}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{59}
+  \item {L\+C\+D\+\_\+\+S\+E\+T\+C\+G\+R\+A\+M\+A\+D\+DR}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{59}
+  \item {L\+C\+D\+\_\+\+S\+E\+T\+D\+D\+R\+A\+M\+A\+D\+DR}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{59}
+  \item {L\+CD}, \hyperpage{22}
+    \subitem {\+\_\+data\+\_\+pins}, \hyperpage{26}
+    \subitem {\+\_\+enable\+\_\+pin}, \hyperpage{26}
+    \subitem {\+\_\+rs\+\_\+pin}, \hyperpage{27}
+    \subitem {\+\_\+rw\+\_\+pin}, \hyperpage{27}
+    \subitem {begin}, \hyperpage{23}
+    \subitem {blink}, \hyperpage{24}
+    \subitem {char\+Write}, \hyperpage{24}
+    \subitem {clear}, \hyperpage{24}
+    \subitem {command}, \hyperpage{24}
+    \subitem {current\+Line}, \hyperpage{27}
+    \subitem {cursor}, \hyperpage{24}
+    \subitem {display}, \hyperpage{24}
+    \subitem {display\+Control}, \hyperpage{27}
+    \subitem {display\+Function}, \hyperpage{27}
+    \subitem {display\+Mode}, \hyperpage{27}
+    \subitem {En}, \hyperpage{27}
+    \subitem {home}, \hyperpage{25}
+    \subitem {i2c\+\_\+}, \hyperpage{27}
+    \subitem {L\+CD}, \hyperpage{23}
+    \subitem {lcd\+Write\+\_\+four\+\_\+bits}, \hyperpage{25}
+    \subitem {no\+Blink}, \hyperpage{25}
+    \subitem {no\+Cursor}, \hyperpage{25}
+    \subitem {no\+Display}, \hyperpage{25}
+    \subitem {num\+Lines}, \hyperpage{28}
+    \subitem {read\+Reg}, \hyperpage{25}
+    \subitem {Rs}, \hyperpage{28}
+    \subitem {Rw}, \hyperpage{28}
+    \subitem {send}, \hyperpage{26}
+    \subitem {set\+Cursor}, \hyperpage{26}
+    \subitem {string\+Write}, \hyperpage{26}
+  \item {L\+OW}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{60}
+  \item {last\+Game\+ID}
+    \subitem {Website\+Score\+Handling}, \hyperpage{49}
+  \item {lcd\+Write\+\_\+four\+\_\+bits}
+    \subitem {L\+CD}, \hyperpage{25}
+  \item {left\+Pin}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{68}
+  \item {left\+Status}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{69}
+  \item {line\+\_\+}
+    \subitem {cursor\+Coord}, \hyperpage{13}
+  \item {line\+Number}
+    \subitem {Website\+Score\+Handling}, \hyperpage{49}
+  \item {line\+To\+Copy}
+    \subitem {Website\+Score\+Handling}, \hyperpage{49}
+  \item {line\+To\+Read}
+    \subitem {Website\+Score\+Handling}, \hyperpage{49}
+  \item {lock\+I2C}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{17}
+
+  \indexspace
+
+  \item {M\+A\+X\+L\+EN}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{66}
+  \item {M\+C\+P23008\+\_\+\+A\+D\+D\+R\+E\+SS}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{51}
+  \item {M\+C\+P23008\+\_\+\+D\+E\+F\+V\+AL}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{51}
+  \item {M\+C\+P23008\+\_\+\+G\+P\+I\+N\+T\+EN}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{52}
+  \item {M\+C\+P23008\+\_\+\+G\+P\+IO}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{52}
+  \item {M\+C\+P23008\+\_\+\+G\+P\+PU}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{52}
+  \item {M\+C\+P23008\+\_\+\+I\+N\+T\+C\+AP}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{52}
+  \item {M\+C\+P23008\+\_\+\+I\+N\+T\+C\+ON}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{52}
+  \item {M\+C\+P23008\+\_\+\+I\+N\+TF}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{52}
+  \item {M\+C\+P23008\+\_\+\+I\+O\+C\+ON}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{52}
+  \item {M\+C\+P23008\+\_\+\+I\+O\+D\+IR}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{52}
+  \item {M\+C\+P23008\+\_\+\+I\+P\+OL}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{53}
+  \item {M\+C\+P23008\+\_\+\+O\+L\+AT}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008.\+hpp}, \hyperpage{53}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{66}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{66}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+I\+N\+FO}
+    \subitem {button\+\_\+drv.\+mod.\+c}, \hyperpage{72}
+  \item {M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{67}
+  \item {main}
+    \subitem {button\+Test\+Code/main.\+cpp}, \hyperpage{73}
+    \subitem {i2c\+Test\+Code/main.\+cpp}, \hyperpage{73}
+    \subitem {main.\+cpp}, \hyperpage{74}
+    \subitem {Screen-\/\+Button\+Test\+Code/main.\+cpp}, \hyperpage{74}
+    \subitem {Screen\+Test\+Code/main.\+cpp}, \hyperpage{74}
+    \subitem {Time\+Test\+Code/main.\+cpp}, \hyperpage{75}
+  \item {main.\+cpp}
+    \subitem {main}, \hyperpage{74}
+  \item {minutes\+\_\+}
+    \subitem {Website\+Score\+Handling\+::\+T\+I\+M\+E\+S\+T\+R\+U\+CT}, 
+		\hyperpage{41}
+  \item {module\+\_\+exit}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{67}
+  \item {module\+\_\+init}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{67}
+  \item {month\+\_\+}
+    \subitem {Website\+Score\+Handling\+::\+D\+A\+T\+E\+S\+T\+R\+U\+CT}, 
+		\hyperpage{14}
+  \item {mq\+\_\+}
+    \subitem {Button}, \hyperpage{11}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{20}
+    \subitem {Score\+System\+Crtl}, \hyperpage{36}
+    \subitem {Timer}, \hyperpage{41}
+  \item {mut\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{20}
+
+  \indexspace
+
+  \item {new\+Name}
+    \subitem {Website\+Score\+Handling}, \hyperpage{49}
+  \item {new\+Value}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{69}
+  \item {no\+Blink}
+    \subitem {L\+CD}, \hyperpage{25}
+  \item {no\+Cursor}
+    \subitem {L\+CD}, \hyperpage{25}
+  \item {no\+Display}
+    \subitem {L\+CD}, \hyperpage{25}
+  \item {nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{36}
+  \item {nr\+Cursor\+Pos\+\_\+}
+    \subitem {Page}, \hyperpage{30}
+  \item {num\+Lines}
+    \subitem {L\+CD}, \hyperpage{28}
+
+  \indexspace
+
+  \item {O\+U\+T\+P\+UT}
+    \subitem {L\+C\+D.\+hpp}, \hyperpage{60}
+  \item {of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{69}
+  \item {old\+Name}
+    \subitem {Website\+Score\+Handling}, \hyperpage{49}
+
+  \indexspace
+
+  \item {p\+Soc\+Messages}
+    \subitem {Score\+System\+Crtl.\+hpp}, \hyperpage{61}
+  \item {Page}, \hyperpage{28}
+    \subitem {button\+Left}, \hyperpage{29}
+    \subitem {button\+Pressed}, \hyperpage{29}
+    \subitem {button\+Right}, \hyperpage{29}
+    \subitem {current\+Char}, \hyperpage{30}
+    \subitem {cursor\+Pos\+\_\+}, \hyperpage{30}
+    \subitem {display\+Screen}, \hyperpage{30}
+    \subitem {nr\+Cursor\+Pos\+\_\+}, \hyperpage{30}
+    \subitem {Page}, \hyperpage{29}
+    \subitem {page\+Text}, \hyperpage{31}
+    \subitem {possible\+Cursor\+Pos}, \hyperpage{31}
+    \subitem {reset\+Page}, \hyperpage{30}
+    \subitem {selecting\+Char}, \hyperpage{31}
+    \subitem {team\+Enter\+\_\+}, \hyperpage{31}
+    \subitem {team\+Name\+Arr}, \hyperpage{31}
+  \item {Page.\+hpp}
+    \subitem {page\+Event}, \hyperpage{60}
+  \item {page\+Event}
+    \subitem {Page.\+hpp}, \hyperpage{60}
+  \item {page\+Text}
+    \subitem {Page}, \hyperpage{31}
+  \item {pages\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{37}
+  \item {pin\+Mode}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{8}
+  \item {plat\+\_\+drv\+\_\+cdev}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{69}
+  \item {plat\+\_\+drv\+\_\+class}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{69}
+  \item {plat\+\_\+drv\+\_\+exit}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{67}
+  \item {plat\+\_\+drv\+\_\+fops}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{69}
+  \item {plat\+\_\+drv\+\_\+init}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{67}
+  \item {plat\+\_\+drv\+\_\+platform\+\_\+driver}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{70}
+  \item {plat\+\_\+drv\+\_\+probe}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{67}
+  \item {plat\+\_\+drv\+\_\+read}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{67}
+  \item {plat\+\_\+drv\+\_\+remove}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{68}
+  \item {possible\+Cursor\+Pos}
+    \subitem {Page}, \hyperpage{31}
+  \item {prev\+Right\+Status}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{70}
+  \item {prev\+Value}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{70}
+  \item {psoc1\+Adress\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{21}
+  \item {psoc2\+Adress\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{21}
+  \item {psoc\+Message\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{21}
+  \item {psoc\+Update}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{17}
+  \item {psoc\+Update\+Message}, \hyperpage{32}
+    \subitem {psoc\+Update\+Message}, \hyperpage{32}
+    \subitem {val\+\_\+}, \hyperpage{32}
+  \item {pull\+Up}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{8}
+
+  \indexspace
+
+  \item {re\+Arranging\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{37}
+  \item {re\+Arranging\+Zone\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{37}
+  \item {read8}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{8}
+  \item {read\+G\+P\+IO}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{9}
+  \item {read\+Reg}
+    \subitem {L\+CD}, \hyperpage{25}
+  \item {receiving\+Pso\+C\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{21}
+  \item {reset\+Game}
+    \subitem {Score\+System\+Crtl}, \hyperpage{35}
+  \item {reset\+Page}
+    \subitem {Page}, \hyperpage{30}
+  \item {right\+Pin}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{70}
+  \item {right\+Status}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{70}
+  \item {rotate\+Left\+Update}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{68}
+  \item {rotate\+Right\+Update}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{68}
+  \item {row\+\_\+}
+    \subitem {cursor\+Coord}, \hyperpage{13}
+  \item {Rs}
+    \subitem {L\+CD}, \hyperpage{28}
+  \item {run}
+    \subitem {Button}, \hyperpage{10}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{17}
+    \subitem {Score\+System\+Crtl}, \hyperpage{35}
+    \subitem {Test}, \hyperpage{39}
+    \subitem {Timer}, \hyperpage{40}
+  \item {running}
+    \subitem {Button}, \hyperpage{11}
+  \item {running\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{21}
+    \subitem {Timer}, \hyperpage{41}
+  \item {Rw}
+    \subitem {L\+CD}, \hyperpage{28}
+
+  \indexspace
+
+  \item {score\+\_\+\+Team\+\_\+1\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{37}
+  \item {score\+\_\+\+Team\+\_\+2\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{37}
+  \item {Score\+System/\+Adafruit\+\_\+\+M\+C\+P23008.\+cpp}, 
+		\hyperpage{63}
+  \item {Score\+System/\+Button.\+cpp}, \hyperpage{64}
+  \item {Score\+System/\+Button\+\_\+\+Driver/button\+\_\+drv.\+c}, 
+		\hyperpage{64}
+  \item {Score\+System/\+Button\+\_\+\+Driver/button\+\_\+drv.\+mod.\+c}, 
+		\hyperpage{71}
+  \item {Score\+System/\+I2\+C\+\_\+reg.\+cpp}, \hyperpage{75}
+  \item {Score\+System/\+L\+C\+D.\+cpp}, \hyperpage{76}
+  \item {Score\+System/\+Page.\+cpp}, \hyperpage{78}
+  \item {Score\+System/\+Score\+System\+Crtl.\+cpp}, \hyperpage{78}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/\+Adafruit\+\_\+\+M\+C\+P23008.\+cpp}, 
+		\hyperpage{64}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/\+I2\+C\+\_\+reg.\+cpp}, 
+		\hyperpage{75}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/\+L\+C\+D.\+cpp}, 
+		\hyperpage{77}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/\+Timer.\+cpp}, 
+		\hyperpage{76}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/host/files/main.\+d}, 
+		\hyperpage{72}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/main.\+cpp}, 
+		\hyperpage{74}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/target/files/\+Adafruit\+\_\+\+M\+C\+P23008.\+d}, 
+		\hyperpage{78}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/target/files/\+I2\+C\+\_\+reg.\+d}, 
+		\hyperpage{78}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/target/files/\+L\+C\+D.\+d}, 
+		\hyperpage{78}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/target/files/\+Timer.\+d}, 
+		\hyperpage{78}
+  \item {Score\+System/\+Screen-\/\+Button\+Test\+Code/target/files/main.\+d}, 
+		\hyperpage{72}
+  \item {Score\+System/\+Screen\+Test\+Code/\+Adafruit\+\_\+\+M\+C\+P23008.\+cpp}, 
+		\hyperpage{64}
+  \item {Score\+System/\+Screen\+Test\+Code/\+I2\+C\+\_\+reg.\+cpp}, 
+		\hyperpage{76}
+  \item {Score\+System/\+Screen\+Test\+Code/\+L\+C\+D.\+cpp}, 
+		\hyperpage{77}
+  \item {Score\+System/\+Screen\+Test\+Code/\+Timer.\+cpp}, 
+		\hyperpage{76}
+  \item {Score\+System/\+Screen\+Test\+Code/main.\+cpp}, \hyperpage{74}
+  \item {Score\+System/\+Time\+Test\+Code/main.\+cpp}, \hyperpage{75}
+  \item {Score\+System/\+Timer.\+cpp}, \hyperpage{76}
+  \item {Score\+System/\+Website\+Score\+Handling.\+cpp}, 
+		\hyperpage{78}
+  \item {Score\+System/button\+Test\+Code/host/files/main.\+d}, 
+		\hyperpage{72}
+  \item {Score\+System/button\+Test\+Code/main.\+cpp}, \hyperpage{72}
+  \item {Score\+System/button\+Test\+Code/target/files/main.\+d}, 
+		\hyperpage{72}
+  \item {Score\+System/i2c\+Test\+Code/\+I2\+C\+\_\+reg.\+cpp}, 
+		\hyperpage{75}
+  \item {Score\+System/i2c\+Test\+Code/\+Timer.\+cpp}, \hyperpage{76}
+  \item {Score\+System/i2c\+Test\+Code/main.\+cpp}, \hyperpage{73}
+  \item {Score\+System/i2c\+Test\+Code/test.\+cpp}, \hyperpage{76}
+  \item {Score\+System/main.\+cpp}, \hyperpage{73}
+  \item {Score\+System\+Crtl}, \hyperpage{32}
+    \subitem {btn}, \hyperpage{35}
+    \subitem {button\+Thread}, \hyperpage{35}
+    \subitem {collective\+Double\+Shots\+\_\+}, \hyperpage{36}
+    \subitem {current\+Screen}, \hyperpage{36}
+    \subitem {display}, \hyperpage{36}
+    \subitem {end\+Game}, \hyperpage{34}
+    \subitem {game\+Time\+\_\+}, \hyperpage{36}
+    \subitem {get\+IP}, \hyperpage{34}
+    \subitem {get\+Msg\+Queue}, \hyperpage{34}
+    \subitem {handle\+Msg}, \hyperpage{34}
+    \subitem {handle\+Psoc\+Update}, \hyperpage{34}
+    \subitem {handle\+State}, \hyperpage{35}
+    \subitem {i2c\+Thread}, \hyperpage{36}
+    \subitem {ip\+\_\+}, \hyperpage{36}
+    \subitem {mq\+\_\+}, \hyperpage{36}
+    \subitem {nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+}, 
+		\hyperpage{36}
+    \subitem {pages\+\_\+}, \hyperpage{37}
+    \subitem {re\+Arranging\+\_\+}, \hyperpage{37}
+    \subitem {re\+Arranging\+Zone\+\_\+}, \hyperpage{37}
+    \subitem {reset\+Game}, \hyperpage{35}
+    \subitem {run}, \hyperpage{35}
+    \subitem {score\+\_\+\+Team\+\_\+1\+\_\+}, \hyperpage{37}
+    \subitem {score\+\_\+\+Team\+\_\+2\+\_\+}, \hyperpage{37}
+    \subitem {Score\+System\+Crtl}, \hyperpage{33}
+    \subitem {state\+\_\+}, \hyperpage{37}
+    \subitem {team\+Name1\+\_\+}, \hyperpage{37}
+    \subitem {team\+Name2\+\_\+}, \hyperpage{38}
+    \subitem {temp\+String\+\_\+}, \hyperpage{38}
+    \subitem {website\+Ptr\+\_\+}, \hyperpage{38}
+    \subitem {zone1\+State\+\_\+}, \hyperpage{38}
+    \subitem {zone2\+State\+\_\+}, \hyperpage{38}
+  \item {Score\+System\+Crtl.\+hpp}
+    \subitem {p\+Soc\+Messages}, \hyperpage{61}
+  \item {Score\+System\+M\+Q\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{21}
+  \item {score\+Team1\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{49}
+  \item {score\+Team2\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{49}
+  \item {Screen-\/\+Button\+Test\+Code/\+L\+C\+D.\+cpp}
+    \subitem {BV}, \hyperpage{77}
+  \item {Screen-\/\+Button\+Test\+Code/main.\+cpp}
+    \subitem {main}, \hyperpage{74}
+  \item {screen\+Adress\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{21}
+  \item {Screen\+Test\+Code/\+L\+C\+D.\+cpp}
+    \subitem {BV}, \hyperpage{78}
+  \item {Screen\+Test\+Code/main.\+cpp}
+    \subitem {main}, \hyperpage{74}
+  \item {seconds\+\_\+}
+    \subitem {Website\+Score\+Handling\+::\+T\+I\+M\+E\+S\+T\+R\+U\+CT}, 
+		\hyperpage{42}
+  \item {selecting\+Char}
+    \subitem {Page}, \hyperpage{31}
+  \item {send}
+    \subitem {L\+CD}, \hyperpage{26}
+  \item {send\+Arduino\+Message}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{17}
+  \item {send\+Psoc1\+Message}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{18}
+  \item {send\+Psoc2\+Message}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{18}
+  \item {send\+Psoc\+Broadcast}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{18}
+  \item {send\+Psoc\+Message}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{18}
+  \item {set\+Arduino\+Message}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{18}
+  \item {set\+Cursor}
+    \subitem {L\+CD}, \hyperpage{26}
+  \item {set\+Date}
+    \subitem {Website\+Score\+Handling}, \hyperpage{45}
+  \item {set\+End\+Time}
+    \subitem {Website\+Score\+Handling}, \hyperpage{45}
+  \item {set\+Game\+Time}
+    \subitem {Website\+Score\+Handling}, \hyperpage{46}
+  \item {set\+Msg\+Queue\+Score\+System}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{18}
+  \item {set\+New\+I\+P\+JS}
+    \subitem {Website\+Score\+Handling.\+cpp}, \hyperpage{79}
+    \subitem {Website\+Score\+Handling.\+h}, \hyperpage{63}
+  \item {set\+Psoc\+Message}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{19}
+  \item {set\+Score\+Team}
+    \subitem {Website\+Score\+Handling}, \hyperpage{46}
+  \item {set\+Start\+Time}
+    \subitem {Website\+Score\+Handling}, \hyperpage{46}
+  \item {set\+Team\+Name}
+    \subitem {Website\+Score\+Handling}, \hyperpage{46}
+  \item {set\+Total\+Double\+Cup\+Shots}
+    \subitem {Website\+Score\+Handling}, \hyperpage{46}
+  \item {set\+UP}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{19}
+  \item {state\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{21}
+    \subitem {Score\+System\+Crtl}, \hyperpage{37}
+  \item {stop\+Psoc\+Polling}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{19}
+  \item {stop\+Timer}
+    \subitem {Timer}, \hyperpage{40}
+  \item {string\+Write}
+    \subitem {L\+CD}, \hyperpage{26}
+
+  \indexspace
+
+  \item {t}
+    \subitem {Website\+Score\+Handling}, \hyperpage{50}
+  \item {team\+Enter\+\_\+}
+    \subitem {Page}, \hyperpage{31}
+  \item {team\+Name1\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{37}
+    \subitem {Website\+Score\+Handling}, \hyperpage{50}
+  \item {team\+Name2\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{38}
+    \subitem {Website\+Score\+Handling}, \hyperpage{50}
+  \item {team\+Name\+Arr}
+    \subitem {Page}, \hyperpage{31}
+  \item {temp\+String\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{38}
+  \item {Test}, \hyperpage{39}
+    \subitem {run}, \hyperpage{39}
+  \item {test\+Static}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{19}
+  \item {time\+End\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{50}
+  \item {time\+Keeper\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{50}
+  \item {time\+Start\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{50}
+  \item {time\+Start\+Date\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{50}
+  \item {Time\+Test\+Code/main.\+cpp}
+    \subitem {main}, \hyperpage{75}
+  \item {timeout\+\_\+}
+    \subitem {Timer}, \hyperpage{41}
+  \item {Timer}, \hyperpage{39}
+    \subitem {$\sim$\+Timer}, \hyperpage{40}
+    \subitem {id\+\_\+}, \hyperpage{40}
+    \subitem {mq\+\_\+}, \hyperpage{41}
+    \subitem {run}, \hyperpage{40}
+    \subitem {running\+\_\+}, \hyperpage{41}
+    \subitem {stop\+Timer}, \hyperpage{40}
+    \subitem {timeout\+\_\+}, \hyperpage{41}
+    \subitem {Timer}, \hyperpage{40}
+  \item {timer1\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{22}
+  \item {total\+Double\+Cup\+Shots\+\_\+}
+    \subitem {Website\+Score\+Handling}, \hyperpage{50}
+  \item {tt\+\_\+}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{22}
+  \item {type\+\_\+}
+    \subitem {cursor\+Coord}, \hyperpage{13}
+
+  \indexspace
+
+  \item {unlock\+I2C}
+    \subitem {I2\+C\+\_\+reg}, \hyperpage{19}
+
+  \indexspace
+
+  \item {val\+\_\+}
+    \subitem {psoc\+Update\+Message}, \hyperpage{32}
+  \item {value}
+    \subitem {Button}, \hyperpage{11}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{71}
+  \item {value\+Read}
+    \subitem {button\+\_\+drv.\+c}, \hyperpage{71}
+
+  \indexspace
+
+  \item {website\+Ptr\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{38}
+  \item {Website\+Score\+Handling}, \hyperpage{42}
+    \subitem {current\+Game\+ID}, \hyperpage{47}
+    \subitem {current\+Line}, \hyperpage{47}
+    \subitem {date\+\_\+}, \hyperpage{48}
+    \subitem {error\+Fs\+\_\+}, \hyperpage{48}
+    \subitem {fs\+\_\+}, \hyperpage{48}
+    \subitem {game\+I\+D\+Integer}, \hyperpage{48}
+    \subitem {game\+Time\+\_\+}, \hyperpage{48}
+    \subitem {get\+Current\+ID}, \hyperpage{44}
+    \subitem {get\+Date}, \hyperpage{44}
+    \subitem {get\+End\+Time}, \hyperpage{44}
+    \subitem {get\+Game\+Time}, \hyperpage{44}
+    \subitem {get\+Score\+Team}, \hyperpage{45}
+    \subitem {get\+Start\+Time}, \hyperpage{45}
+    \subitem {get\+Start\+Time\+Date}, \hyperpage{45}
+    \subitem {get\+Team\+Name}, \hyperpage{45}
+    \subitem {get\+Total\+Double\+Cup\+Shots}, \hyperpage{45}
+    \subitem {headers}, \hyperpage{48}
+    \subitem {ifs\+\_\+}, \hyperpage{48}
+    \subitem {last\+Game\+ID}, \hyperpage{49}
+    \subitem {line\+Number}, \hyperpage{49}
+    \subitem {line\+To\+Copy}, \hyperpage{49}
+    \subitem {line\+To\+Read}, \hyperpage{49}
+    \subitem {new\+Name}, \hyperpage{49}
+    \subitem {old\+Name}, \hyperpage{49}
+    \subitem {score\+Team1\+\_\+}, \hyperpage{49}
+    \subitem {score\+Team2\+\_\+}, \hyperpage{49}
+    \subitem {set\+Date}, \hyperpage{45}
+    \subitem {set\+End\+Time}, \hyperpage{45}
+    \subitem {set\+Game\+Time}, \hyperpage{46}
+    \subitem {set\+Score\+Team}, \hyperpage{46}
+    \subitem {set\+Start\+Time}, \hyperpage{46}
+    \subitem {set\+Team\+Name}, \hyperpage{46}
+    \subitem {set\+Total\+Double\+Cup\+Shots}, \hyperpage{46}
+    \subitem {t}, \hyperpage{50}
+    \subitem {team\+Name1\+\_\+}, \hyperpage{50}
+    \subitem {team\+Name2\+\_\+}, \hyperpage{50}
+    \subitem {time\+End\+\_\+}, \hyperpage{50}
+    \subitem {time\+Keeper\+\_\+}, \hyperpage{50}
+    \subitem {time\+Start\+\_\+}, \hyperpage{50}
+    \subitem {time\+Start\+Date\+\_\+}, \hyperpage{50}
+    \subitem {total\+Double\+Cup\+Shots\+\_\+}, \hyperpage{50}
+    \subitem {Website\+Score\+Handling}, \hyperpage{43}
+    \subitem {write\+To\+C\+SV}, \hyperpage{47}
+  \item {Website\+Score\+Handling.\+cpp}
+    \subitem {set\+New\+I\+P\+JS}, \hyperpage{79}
+  \item {Website\+Score\+Handling.\+h}
+    \subitem {set\+New\+I\+P\+JS}, \hyperpage{63}
+  \item {Website\+Score\+Handling\+::\+D\+A\+T\+E\+S\+T\+R\+U\+CT}, 
+		\hyperpage{13}
+    \subitem {day\+\_\+}, \hyperpage{13}
+    \subitem {month\+\_\+}, \hyperpage{14}
+    \subitem {year\+\_\+}, \hyperpage{14}
+  \item {Website\+Score\+Handling\+::\+T\+I\+M\+E\+S\+T\+R\+U\+CT}, 
+		\hyperpage{41}
+    \subitem {hours\+\_\+}, \hyperpage{41}
+    \subitem {minutes\+\_\+}, \hyperpage{41}
+    \subitem {seconds\+\_\+}, \hyperpage{42}
+  \item {write8}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{9}
+  \item {write\+G\+P\+IO}
+    \subitem {Adafruit\+\_\+\+M\+C\+P23008}, \hyperpage{9}
+  \item {write\+To\+C\+SV}
+    \subitem {Website\+Score\+Handling}, \hyperpage{47}
+
+  \indexspace
+
+  \item {x}
+    \subitem {button\+Message}, \hyperpage{12}
+
+  \indexspace
+
+  \item {year\+\_\+}
+    \subitem {Website\+Score\+Handling\+::\+D\+A\+T\+E\+S\+T\+R\+U\+CT}, 
+		\hyperpage{14}
+
+  \indexspace
+
+  \item {zone1\+State\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{38}
+  \item {zone2\+State\+\_\+}
+    \subitem {Score\+System\+Crtl}, \hyperpage{38}
+
+\end{theindex}

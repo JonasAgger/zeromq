@@ -1,0 +1,95 @@
+\hypertarget{class_button}{}\section{Button Class Reference}
+\label{class_button}\index{Button@{Button}}
+
+
+{\ttfamily \#include $<$Button.\+hpp$>$}
+
+
+
+Inherits Thread\+Functor.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_button_ad578f9ff8accb8a05c433da08adc0981}{Button} (osapi\+::\+Msg\+Queue $\ast$mq)
+\begin{DoxyCompactList}\small\item\em constructor. Opens the \hyperlink{class_button}{Button} node in /dev and sets the message queue \end{DoxyCompactList}\item 
+\hyperlink{class_button_a2a001eb9c3cc8ae54768a850dd345002}{$\sim$\+Button} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_button_ae5f1226094e45cf814d000dab00593fe}{run} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_button_a705b1047e838e1a2c6d3a18c51a8c168}{running} = false
+\item 
+int \hyperlink{class_button_ac044518f4ed7fc329e9d9e7cad6eb146}{fd}
+\item 
+char \hyperlink{class_button_a81aa56b14de245886c538ca18dfd1782}{value} \mbox{[}2\mbox{]}
+\item 
+osapi\+::\+Msg\+Queue $\ast$ \hyperlink{class_button_a5e8e98a2391796121a464347d5df5de8}{mq\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_button_ad578f9ff8accb8a05c433da08adc0981}\label{class_button_ad578f9ff8accb8a05c433da08adc0981}} 
+\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\subsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily Button\+::\+Button (\begin{DoxyParamCaption}\item[{osapi\+::\+Msg\+Queue $\ast$}]{mq }\end{DoxyParamCaption})}
+
+
+
+constructor. Opens the \hyperlink{class_button}{Button} node in /dev and sets the message queue 
+
+\mbox{\Hypertarget{class_button_a2a001eb9c3cc8ae54768a850dd345002}\label{class_button_a2a001eb9c3cc8ae54768a850dd345002}} 
+\index{Button@{Button}!````~Button@{$\sim$\+Button}}
+\index{````~Button@{$\sim$\+Button}!Button@{Button}}
+\subsubsection{\texorpdfstring{$\sim$\+Button()}{~Button()}}
+{\footnotesize\ttfamily Button\+::$\sim$\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_button_ae5f1226094e45cf814d000dab00593fe}\label{class_button_ae5f1226094e45cf814d000dab00593fe}} 
+\index{Button@{Button}!run@{run}}
+\index{run@{run}!Button@{Button}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Button\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Tries to read a value in from the button node every 25ms. The read is blocking in the driver so it will only return once there\textquotesingle{}s new data avaliable, and once there is, it returns to the function and it\textquotesingle{}s able to send that data to the main thread via the message queue 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_button_ac044518f4ed7fc329e9d9e7cad6eb146}\label{class_button_ac044518f4ed7fc329e9d9e7cad6eb146}} 
+\index{Button@{Button}!fd@{fd}}
+\index{fd@{fd}!Button@{Button}}
+\subsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily int Button\+::fd\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_button_a5e8e98a2391796121a464347d5df5de8}\label{class_button_a5e8e98a2391796121a464347d5df5de8}} 
+\index{Button@{Button}!mq\+\_\+@{mq\+\_\+}}
+\index{mq\+\_\+@{mq\+\_\+}!Button@{Button}}
+\subsubsection{\texorpdfstring{mq\+\_\+}{mq\_}}
+{\footnotesize\ttfamily osapi\+::\+Msg\+Queue$\ast$ Button\+::mq\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_button_a705b1047e838e1a2c6d3a18c51a8c168}\label{class_button_a705b1047e838e1a2c6d3a18c51a8c168}} 
+\index{Button@{Button}!running@{running}}
+\index{running@{running}!Button@{Button}}
+\subsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool Button\+::running = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_button_a81aa56b14de245886c538ca18dfd1782}\label{class_button_a81aa56b14de245886c538ca18dfd1782}} 
+\index{Button@{Button}!value@{value}}
+\index{value@{value}!Button@{Button}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily char Button\+::value\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/osapi/\+Score\+System/\hyperlink{_button_8hpp}{Button.\+hpp}\item 
+Score\+System/\hyperlink{_button_8cpp}{Button.\+cpp}\item 
+Score\+System/\hyperlink{_page_8cpp}{Page.\+cpp}\end{DoxyCompactItemize}

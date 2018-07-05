@@ -1,0 +1,82 @@
+\hypertarget{_score_system_crtl_8hpp}{}\section{inc/osapi/\+Score\+System/\+Score\+System\+Crtl.hpp File Reference}
+\label{_score_system_crtl_8hpp}\index{inc/osapi/\+Score\+System/\+Score\+System\+Crtl.\+hpp@{inc/osapi/\+Score\+System/\+Score\+System\+Crtl.\+hpp}}
+{\ttfamily \#include $<$osapi/\+Score\+System/\+L\+C\+D.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Score\+System/\+Page.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Score\+System/\+Button.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Score\+System/\+I2\+C\+\_\+reg.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Score\+System/\+Website\+Score\+Handling.\+hpp$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$osapi/\+Clock\+Time.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Time.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Msg\+Queue.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Message.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Thread\+Functor.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Thread.\+hpp$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_score_system_crtl}{Score\+System\+Crtl}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92}{p\+Soc\+Messages} \{ \newline
+\hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a017af025e2359aebc03fb9aaf37587c2}{O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+O\+N\+E\+\_\+\+C\+UP} = 0x01, 
+\hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a9c95f23185f4e9b5777a9a2bb5c76af2}{O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+T\+W\+O\+\_\+\+C\+U\+PS} = 0x02, 
+\hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a1cf586241c66fe636926c87ba72f5952}{T\+W\+O\+\_\+\+B\+A\+L\+L\+S\+\_\+\+O\+N\+E\+\_\+\+C\+UP} = 0x03, 
+\hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aa5724d010055ba7abaec96116ef0518b}{A\+L\+L\+\_\+\+C\+U\+P\+S\+\_\+\+P\+L\+A\+C\+ED} = 0x04, 
+\newline
+\hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a4d2fff5d881c51510c72c0116adff360}{C\+U\+P\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+E\+A\+DY} = 0x05, 
+\hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aec6ee3a65037e91df41a46483a466f6b}{E\+M\+P\+T\+Y\+\_\+\+C\+U\+P\+Z\+O\+NE} = 0x06, 
+\hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aaab5a2bcea860b4f52557e01cb37c66f}{C\+A\+L\+I\+B\+R\+A\+TE} = 0x07, 
+\hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a7fb0c1cca10ff57ae7aa3878ba530fbd}{N\+O\+\_\+\+C\+H\+A\+N\+GE} = 0x\+FF
+ \}\begin{DoxyCompactList}\small\item\em R\+E\+C\+E\+I\+V\+A\+B\+LE P\+S\+OC M\+E\+S\+S\+A\+G\+ES. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92}} 
+\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!p\+Soc\+Messages@{p\+Soc\+Messages}}
+\index{p\+Soc\+Messages@{p\+Soc\+Messages}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}
+\subsubsection{\texorpdfstring{p\+Soc\+Messages}{pSocMessages}}
+{\footnotesize\ttfamily enum \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92}{p\+Soc\+Messages}}
+
+
+
+R\+E\+C\+E\+I\+V\+A\+B\+LE P\+S\+OC M\+E\+S\+S\+A\+G\+ES. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+O\+N\+E\+\_\+\+C\+UP@{O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+O\+N\+E\+\_\+\+C\+UP}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+O\+N\+E\+\_\+\+C\+UP@{O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+O\+N\+E\+\_\+\+C\+UP}}}\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a017af025e2359aebc03fb9aaf37587c2}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a017af025e2359aebc03fb9aaf37587c2}} 
+O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+O\+N\+E\+\_\+\+C\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+T\+W\+O\+\_\+\+C\+U\+PS@{O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+T\+W\+O\+\_\+\+C\+U\+PS}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+T\+W\+O\+\_\+\+C\+U\+PS@{O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+T\+W\+O\+\_\+\+C\+U\+PS}}}\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a9c95f23185f4e9b5777a9a2bb5c76af2}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a9c95f23185f4e9b5777a9a2bb5c76af2}} 
+O\+N\+E\+\_\+\+B\+A\+L\+L\+\_\+\+T\+W\+O\+\_\+\+C\+U\+PS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+W\+O\+\_\+\+B\+A\+L\+L\+S\+\_\+\+O\+N\+E\+\_\+\+C\+UP@{T\+W\+O\+\_\+\+B\+A\+L\+L\+S\+\_\+\+O\+N\+E\+\_\+\+C\+UP}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!T\+W\+O\+\_\+\+B\+A\+L\+L\+S\+\_\+\+O\+N\+E\+\_\+\+C\+UP@{T\+W\+O\+\_\+\+B\+A\+L\+L\+S\+\_\+\+O\+N\+E\+\_\+\+C\+UP}}}\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a1cf586241c66fe636926c87ba72f5952}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a1cf586241c66fe636926c87ba72f5952}} 
+T\+W\+O\+\_\+\+B\+A\+L\+L\+S\+\_\+\+O\+N\+E\+\_\+\+C\+UP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+L\+L\+\_\+\+C\+U\+P\+S\+\_\+\+P\+L\+A\+C\+ED@{A\+L\+L\+\_\+\+C\+U\+P\+S\+\_\+\+P\+L\+A\+C\+ED}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!A\+L\+L\+\_\+\+C\+U\+P\+S\+\_\+\+P\+L\+A\+C\+ED@{A\+L\+L\+\_\+\+C\+U\+P\+S\+\_\+\+P\+L\+A\+C\+ED}}}\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aa5724d010055ba7abaec96116ef0518b}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aa5724d010055ba7abaec96116ef0518b}} 
+A\+L\+L\+\_\+\+C\+U\+P\+S\+\_\+\+P\+L\+A\+C\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+U\+P\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+E\+A\+DY@{C\+U\+P\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+E\+A\+DY}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!C\+U\+P\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+E\+A\+DY@{C\+U\+P\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+E\+A\+DY}}}\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a4d2fff5d881c51510c72c0116adff360}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a4d2fff5d881c51510c72c0116adff360}} 
+C\+U\+P\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+E\+A\+DY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E\+M\+P\+T\+Y\+\_\+\+C\+U\+P\+Z\+O\+NE@{E\+M\+P\+T\+Y\+\_\+\+C\+U\+P\+Z\+O\+NE}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!E\+M\+P\+T\+Y\+\_\+\+C\+U\+P\+Z\+O\+NE@{E\+M\+P\+T\+Y\+\_\+\+C\+U\+P\+Z\+O\+NE}}}\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aec6ee3a65037e91df41a46483a466f6b}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aec6ee3a65037e91df41a46483a466f6b}} 
+E\+M\+P\+T\+Y\+\_\+\+C\+U\+P\+Z\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+A\+L\+I\+B\+R\+A\+TE@{C\+A\+L\+I\+B\+R\+A\+TE}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!C\+A\+L\+I\+B\+R\+A\+TE@{C\+A\+L\+I\+B\+R\+A\+TE}}}\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aaab5a2bcea860b4f52557e01cb37c66f}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92aaab5a2bcea860b4f52557e01cb37c66f}} 
+C\+A\+L\+I\+B\+R\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+\_\+\+C\+H\+A\+N\+GE@{N\+O\+\_\+\+C\+H\+A\+N\+GE}!Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}}\index{Score\+System\+Crtl.\+hpp@{Score\+System\+Crtl.\+hpp}!N\+O\+\_\+\+C\+H\+A\+N\+GE@{N\+O\+\_\+\+C\+H\+A\+N\+GE}}}\mbox{\Hypertarget{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a7fb0c1cca10ff57ae7aa3878ba530fbd}\label{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a7fb0c1cca10ff57ae7aa3878ba530fbd}} 
+N\+O\+\_\+\+C\+H\+A\+N\+GE&\\
+\hline
+
+\end{DoxyEnumFields}

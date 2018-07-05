@@ -1,0 +1,318 @@
+\hypertarget{button__drv_8c}{}\section{Score\+System/\+Button\+\_\+\+Driver/button\+\_\+drv.c File Reference}
+\label{button__drv_8c}\index{Score\+System/\+Button\+\_\+\+Driver/button\+\_\+drv.\+c@{Score\+System/\+Button\+\_\+\+Driver/button\+\_\+drv.\+c}}
+{\ttfamily \#include $<$linux/cdev.\+h$>$}\newline
+{\ttfamily \#include $<$asm/uaccess.\+h$>$}\newline
+{\ttfamily \#include $<$linux/module.\+h$>$}\newline
+{\ttfamily \#include $<$linux/platform\+\_\+device.\+h$>$}\newline
+{\ttfamily \#include $<$linux/gpio.\+h$>$}\newline
+{\ttfamily \#include $<$linux/of\+\_\+gpio.\+h$>$}\newline
+{\ttfamily \#include $<$linux/wait.\+h$>$}\newline
+{\ttfamily \#include $<$linux/sched.\+h$>$}\newline
+{\ttfamily \#include $<$linux/interrupt.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{button__drv_8c_ae6648cd71a8bd49d58ae8ed33ba910d1}{M\+A\+X\+L\+EN}~32
+\item 
+\#define \hyperlink{button__drv_8c_ae5874b45ddf4a96602ab046bb2bca80a}{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG}~1
+\item 
+\#define \hyperlink{button__drv_8c_aedfd87792f00f3676280e6a90e1e1f70}{E\+R\+R\+G\+O\+TO}(label, ...)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{button__drv_8c_af9c2fca16bca99a36f393007badad3d4}{D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+AD} (wtqueue)
+\item 
+static irqreturn\+\_\+t \hyperlink{button__drv_8c_a1c7d39adda711a237ac0ee69e64dd01a}{button\+Update} (int irq, void $\ast$dev)
+\item 
+static irqreturn\+\_\+t \hyperlink{button__drv_8c_a31e75729961eb26d4ea6239acaa4c305}{rotate\+Left\+Update} (int irq, void $\ast$dev)
+\item 
+static irqreturn\+\_\+t \hyperlink{button__drv_8c_a376fd822969690955064afefec667787}{rotate\+Right\+Update} (int irq, void $\ast$dev)
+\item 
+static int \+\_\+\+\_\+init \hyperlink{button__drv_8c_abaf7c9f405735e069c5fead12da99f94}{plat\+\_\+drv\+\_\+init} (void)
+\item 
+static void \+\_\+\+\_\+exit \hyperlink{button__drv_8c_a68ecd503a4265190a7d0ea8ba024c8ea}{plat\+\_\+drv\+\_\+exit} (void)
+\item 
+ssize\+\_\+t \hyperlink{button__drv_8c_ab5486bcd2d518f544f6da6f5e79bcd88}{plat\+\_\+drv\+\_\+read} (struct file $\ast$filep, char \+\_\+\+\_\+user $\ast$ubuf, size\+\_\+t count, loff\+\_\+t $\ast$f\+\_\+pos)
+\item 
+static int \hyperlink{button__drv_8c_ae0c377241ad464174d90beccbcdc2d43}{plat\+\_\+drv\+\_\+probe} (struct platform\+\_\+device $\ast$pdev)
+\item 
+static int \hyperlink{button__drv_8c_aed93b994bf66ee5d30cf459c8d5d9462}{plat\+\_\+drv\+\_\+remove} (struct platform\+\_\+device $\ast$pdev)
+\item 
+\hyperlink{button__drv_8c_a057bc4f826e39d0d0fe5e4466c0a4674}{module\+\_\+init} (\hyperlink{button__drv_8c_abaf7c9f405735e069c5fead12da99f94}{plat\+\_\+drv\+\_\+init})
+\item 
+\hyperlink{button__drv_8c_aff26bd48dbab32740906a16bfe14e72c}{module\+\_\+exit} (\hyperlink{button__drv_8c_a68ecd503a4265190a7d0ea8ba024c8ea}{plat\+\_\+drv\+\_\+exit})
+\item 
+\hyperlink{button__drv_8c_a97b31ad6cf3515001542e548e41b920f}{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR} (\char`\"{}Jonas Agger Joergensen\char`\"{})
+\item 
+\hyperlink{button__drv_8c_ad94b36675e7eb067ea3ce6ff9e244a44}{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE} (\char`\"{}G\+PL\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static struct platform\+\_\+driver \hyperlink{button__drv_8c_a5686e46023fcc7ed2d8e980b72e97a07}{plat\+\_\+drv\+\_\+platform\+\_\+driver}
+\item 
+struct file\+\_\+operations \hyperlink{button__drv_8c_af7ca7a05312a918b3748d4674e5b60a3}{plat\+\_\+drv\+\_\+fops}
+\item 
+static struct class $\ast$ \hyperlink{button__drv_8c_ac771eb8415cef1af360a069699b0e798}{plat\+\_\+drv\+\_\+class}
+\item 
+static dev\+\_\+t \hyperlink{button__drv_8c_a5f49b457ceb3404b45cb5c7f115e170e}{devno}
+\item 
+static struct cdev \hyperlink{button__drv_8c_a40325daa7dc1016be366155480be0049}{plat\+\_\+drv\+\_\+cdev}
+\item 
+int \hyperlink{button__drv_8c_ad36ed583f89e9926133d9867f96bb6f7}{left\+Pin} = 9
+\item 
+int \hyperlink{button__drv_8c_a92c8ee66f8b521e815985eecddafb98f}{right\+Pin} = 11
+\item 
+int \hyperlink{button__drv_8c_af8b8301b5030eaf612289cea2695d3b5}{button\+Pin} = 10
+\item 
+static int \hyperlink{button__drv_8c_addcd7e146a3bc5fa69930965a337289d}{value\+Read} = 0
+\item 
+static int \hyperlink{button__drv_8c_a966542fc5417e5bb2834d45dbb097c1c}{new\+Value} = 0
+\item 
+int \hyperlink{button__drv_8c_ac4f474c82e82cbb89ca7c36dd52be0ed}{value} = 0
+\item 
+int \hyperlink{button__drv_8c_a4ba0955a1350ca6298f43d062c1d8847}{prev\+Value} = 0
+\item 
+int \hyperlink{button__drv_8c_a6b555c1a085becaf7313f9e1fb7dde91}{right\+Status}
+\item 
+int \hyperlink{button__drv_8c_a82d3f04f1ff2f9fcdb630c3bedcd15e1}{left\+Status}
+\item 
+int \hyperlink{button__drv_8c_a39c51ea719b0b922e7fe00432f5ac6ac}{prev\+Right\+Status}
+\item 
+static const struct of\+\_\+device\+\_\+id \hyperlink{button__drv_8c_a18b4dd8a762436e52d70eabba4ad9e15}{of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{button__drv_8c_aedfd87792f00f3676280e6a90e1e1f70}\label{button__drv_8c_aedfd87792f00f3676280e6a90e1e1f70}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!E\+R\+R\+G\+O\+TO@{E\+R\+R\+G\+O\+TO}}
+\index{E\+R\+R\+G\+O\+TO@{E\+R\+R\+G\+O\+TO}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{E\+R\+R\+G\+O\+TO}{ERRGOTO}}
+{\footnotesize\ttfamily \#define E\+R\+R\+G\+O\+TO(\begin{DoxyParamCaption}\item[{}]{label,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                             \(\backslash\)
+  printk (\_\_VA\_ARGS\_\_);                         \(\backslash\)
+  goto label;                                   \(\backslash\)
+  \} \textcolor{keywordflow}{while}(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{button__drv_8c_ae6648cd71a8bd49d58ae8ed33ba910d1}\label{button__drv_8c_ae6648cd71a8bd49d58ae8ed33ba910d1}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!M\+A\+X\+L\+EN@{M\+A\+X\+L\+EN}}
+\index{M\+A\+X\+L\+EN@{M\+A\+X\+L\+EN}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{M\+A\+X\+L\+EN}{MAXLEN}}
+{\footnotesize\ttfamily \#define M\+A\+X\+L\+EN~32}
+
+\mbox{\Hypertarget{button__drv_8c_ae5874b45ddf4a96602ab046bb2bca80a}\label{button__drv_8c_ae5874b45ddf4a96602ab046bb2bca80a}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG@{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG@{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG}{MODULE\_DEBUG}}
+{\footnotesize\ttfamily \#define M\+O\+D\+U\+L\+E\+\_\+\+D\+E\+B\+UG~1}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{button__drv_8c_a1c7d39adda711a237ac0ee69e64dd01a}\label{button__drv_8c_a1c7d39adda711a237ac0ee69e64dd01a}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!button\+Update@{button\+Update}}
+\index{button\+Update@{button\+Update}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{button\+Update()}{buttonUpdate()}}
+{\footnotesize\ttfamily static irqreturn\+\_\+t button\+Update (\begin{DoxyParamCaption}\item[{int}]{irq,  }\item[{void $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_af9c2fca16bca99a36f393007badad3d4}\label{button__drv_8c_af9c2fca16bca99a36f393007badad3d4}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+AD@{D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+AD}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+AD@{D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+AD}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+A\+D()}{DECLARE\_WAIT\_QUEUE\_HEAD()}}
+{\footnotesize\ttfamily static D\+E\+C\+L\+A\+R\+E\+\_\+\+W\+A\+I\+T\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+H\+E\+AD (\begin{DoxyParamCaption}\item[{wtqueue}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_a97b31ad6cf3515001542e548e41b920f}\label{button__drv_8c_a97b31ad6cf3515001542e548e41b920f}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR@{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR@{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+O\+R()}{MODULE\_AUTHOR()}}
+{\footnotesize\ttfamily M\+O\+D\+U\+L\+E\+\_\+\+A\+U\+T\+H\+OR (\begin{DoxyParamCaption}\item[{\char`\"{}Jonas Agger Joergensen\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{button__drv_8c_aff26bd48dbab32740906a16bfe14e72c}\label{button__drv_8c_aff26bd48dbab32740906a16bfe14e72c}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!module\+\_\+exit@{module\+\_\+exit}}
+\index{module\+\_\+exit@{module\+\_\+exit}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{module\+\_\+exit()}{module\_exit()}}
+{\footnotesize\ttfamily module\+\_\+exit (\begin{DoxyParamCaption}\item[{\hyperlink{button__drv_8c_a68ecd503a4265190a7d0ea8ba024c8ea}{plat\+\_\+drv\+\_\+exit}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{button__drv_8c_a057bc4f826e39d0d0fe5e4466c0a4674}\label{button__drv_8c_a057bc4f826e39d0d0fe5e4466c0a4674}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!module\+\_\+init@{module\+\_\+init}}
+\index{module\+\_\+init@{module\+\_\+init}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{module\+\_\+init()}{module\_init()}}
+{\footnotesize\ttfamily module\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{button__drv_8c_abaf7c9f405735e069c5fead12da99f94}{plat\+\_\+drv\+\_\+init}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{button__drv_8c_ad94b36675e7eb067ea3ce6ff9e244a44}\label{button__drv_8c_ad94b36675e7eb067ea3ce6ff9e244a44}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE@{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}}
+\index{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE@{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+S\+E()}{MODULE\_LICENSE()}}
+{\footnotesize\ttfamily M\+O\+D\+U\+L\+E\+\_\+\+L\+I\+C\+E\+N\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}G\+PL\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{button__drv_8c_a68ecd503a4265190a7d0ea8ba024c8ea}\label{button__drv_8c_a68ecd503a4265190a7d0ea8ba024c8ea}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+exit@{plat\+\_\+drv\+\_\+exit}}
+\index{plat\+\_\+drv\+\_\+exit@{plat\+\_\+drv\+\_\+exit}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+exit()}{plat\_drv\_exit()}}
+{\footnotesize\ttfamily static void \+\_\+\+\_\+exit plat\+\_\+drv\+\_\+exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_abaf7c9f405735e069c5fead12da99f94}\label{button__drv_8c_abaf7c9f405735e069c5fead12da99f94}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+init@{plat\+\_\+drv\+\_\+init}}
+\index{plat\+\_\+drv\+\_\+init@{plat\+\_\+drv\+\_\+init}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+init()}{plat\_drv\_init()}}
+{\footnotesize\ttfamily static int \+\_\+\+\_\+init plat\+\_\+drv\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_ae0c377241ad464174d90beccbcdc2d43}\label{button__drv_8c_ae0c377241ad464174d90beccbcdc2d43}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+probe@{plat\+\_\+drv\+\_\+probe}}
+\index{plat\+\_\+drv\+\_\+probe@{plat\+\_\+drv\+\_\+probe}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+probe()}{plat\_drv\_probe()}}
+{\footnotesize\ttfamily static int plat\+\_\+drv\+\_\+probe (\begin{DoxyParamCaption}\item[{struct platform\+\_\+device $\ast$}]{pdev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_ab5486bcd2d518f544f6da6f5e79bcd88}\label{button__drv_8c_ab5486bcd2d518f544f6da6f5e79bcd88}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+read@{plat\+\_\+drv\+\_\+read}}
+\index{plat\+\_\+drv\+\_\+read@{plat\+\_\+drv\+\_\+read}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+read()}{plat\_drv\_read()}}
+{\footnotesize\ttfamily ssize\+\_\+t plat\+\_\+drv\+\_\+read (\begin{DoxyParamCaption}\item[{struct file $\ast$}]{filep,  }\item[{char \+\_\+\+\_\+user $\ast$}]{ubuf,  }\item[{size\+\_\+t}]{count,  }\item[{loff\+\_\+t $\ast$}]{f\+\_\+pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{button__drv_8c_aed93b994bf66ee5d30cf459c8d5d9462}\label{button__drv_8c_aed93b994bf66ee5d30cf459c8d5d9462}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+remove@{plat\+\_\+drv\+\_\+remove}}
+\index{plat\+\_\+drv\+\_\+remove@{plat\+\_\+drv\+\_\+remove}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+remove()}{plat\_drv\_remove()}}
+{\footnotesize\ttfamily static int plat\+\_\+drv\+\_\+remove (\begin{DoxyParamCaption}\item[{struct platform\+\_\+device $\ast$}]{pdev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_a31e75729961eb26d4ea6239acaa4c305}\label{button__drv_8c_a31e75729961eb26d4ea6239acaa4c305}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!rotate\+Left\+Update@{rotate\+Left\+Update}}
+\index{rotate\+Left\+Update@{rotate\+Left\+Update}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{rotate\+Left\+Update()}{rotateLeftUpdate()}}
+{\footnotesize\ttfamily static irqreturn\+\_\+t rotate\+Left\+Update (\begin{DoxyParamCaption}\item[{int}]{irq,  }\item[{void $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_a376fd822969690955064afefec667787}\label{button__drv_8c_a376fd822969690955064afefec667787}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!rotate\+Right\+Update@{rotate\+Right\+Update}}
+\index{rotate\+Right\+Update@{rotate\+Right\+Update}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{rotate\+Right\+Update()}{rotateRightUpdate()}}
+{\footnotesize\ttfamily static irqreturn\+\_\+t rotate\+Right\+Update (\begin{DoxyParamCaption}\item[{int}]{irq,  }\item[{void $\ast$}]{dev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{button__drv_8c_af8b8301b5030eaf612289cea2695d3b5}\label{button__drv_8c_af8b8301b5030eaf612289cea2695d3b5}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!button\+Pin@{button\+Pin}}
+\index{button\+Pin@{button\+Pin}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{button\+Pin}{buttonPin}}
+{\footnotesize\ttfamily int button\+Pin = 10}
+
+\mbox{\Hypertarget{button__drv_8c_a5f49b457ceb3404b45cb5c7f115e170e}\label{button__drv_8c_a5f49b457ceb3404b45cb5c7f115e170e}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!devno@{devno}}
+\index{devno@{devno}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{devno}{devno}}
+{\footnotesize\ttfamily dev\+\_\+t devno\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_ad36ed583f89e9926133d9867f96bb6f7}\label{button__drv_8c_ad36ed583f89e9926133d9867f96bb6f7}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!left\+Pin@{left\+Pin}}
+\index{left\+Pin@{left\+Pin}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{left\+Pin}{leftPin}}
+{\footnotesize\ttfamily int left\+Pin = 9}
+
+\mbox{\Hypertarget{button__drv_8c_a82d3f04f1ff2f9fcdb630c3bedcd15e1}\label{button__drv_8c_a82d3f04f1ff2f9fcdb630c3bedcd15e1}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!left\+Status@{left\+Status}}
+\index{left\+Status@{left\+Status}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{left\+Status}{leftStatus}}
+{\footnotesize\ttfamily int left\+Status}
+
+\mbox{\Hypertarget{button__drv_8c_a966542fc5417e5bb2834d45dbb097c1c}\label{button__drv_8c_a966542fc5417e5bb2834d45dbb097c1c}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!new\+Value@{new\+Value}}
+\index{new\+Value@{new\+Value}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{new\+Value}{newValue}}
+{\footnotesize\ttfamily int new\+Value = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_a18b4dd8a762436e52d70eabba4ad9e15}\label{button__drv_8c_a18b4dd8a762436e52d70eabba4ad9e15}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match@{of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match}}
+\index{of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match@{of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match}{of\_plat\_drv\_platform\_device\_match}}
+{\footnotesize\ttfamily const struct of\+\_\+device\+\_\+id of\+\_\+plat\+\_\+drv\+\_\+platform\+\_\+device\+\_\+match\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+   \{ .compatible = \textcolor{stringliteral}{"ase, knap"}, \}, \{\},
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{button__drv_8c_a40325daa7dc1016be366155480be0049}\label{button__drv_8c_a40325daa7dc1016be366155480be0049}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+cdev@{plat\+\_\+drv\+\_\+cdev}}
+\index{plat\+\_\+drv\+\_\+cdev@{plat\+\_\+drv\+\_\+cdev}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+cdev}{plat\_drv\_cdev}}
+{\footnotesize\ttfamily struct cdev plat\+\_\+drv\+\_\+cdev\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_ac771eb8415cef1af360a069699b0e798}\label{button__drv_8c_ac771eb8415cef1af360a069699b0e798}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+class@{plat\+\_\+drv\+\_\+class}}
+\index{plat\+\_\+drv\+\_\+class@{plat\+\_\+drv\+\_\+class}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+class}{plat\_drv\_class}}
+{\footnotesize\ttfamily struct class$\ast$ plat\+\_\+drv\+\_\+class\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{button__drv_8c_af7ca7a05312a918b3748d4674e5b60a3}\label{button__drv_8c_af7ca7a05312a918b3748d4674e5b60a3}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+fops@{plat\+\_\+drv\+\_\+fops}}
+\index{plat\+\_\+drv\+\_\+fops@{plat\+\_\+drv\+\_\+fops}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+fops}{plat\_drv\_fops}}
+{\footnotesize\ttfamily struct file\+\_\+operations plat\+\_\+drv\+\_\+fops}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+  .owner   = THIS\_MODULE,
+  .read    = \hyperlink{button__drv_8c_ab5486bcd2d518f544f6da6f5e79bcd88}{plat\_drv\_read},
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{button__drv_8c_a5686e46023fcc7ed2d8e980b72e97a07}\label{button__drv_8c_a5686e46023fcc7ed2d8e980b72e97a07}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!plat\+\_\+drv\+\_\+platform\+\_\+driver@{plat\+\_\+drv\+\_\+platform\+\_\+driver}}
+\index{plat\+\_\+drv\+\_\+platform\+\_\+driver@{plat\+\_\+drv\+\_\+platform\+\_\+driver}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{plat\+\_\+drv\+\_\+platform\+\_\+driver}{plat\_drv\_platform\_driver}}
+{\footnotesize\ttfamily static struct platform\+\_\+driver plat\+\_\+drv\+\_\+platform\+\_\+driver\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+    .probe      = \hyperlink{button__drv_8c_ae0c377241ad464174d90beccbcdc2d43}{plat\_drv\_probe},
+    .remove     = \hyperlink{button__drv_8c_aed93b994bf66ee5d30cf459c8d5d9462}{plat\_drv\_remove},
+    .driver     = \{
+    .name   = \textcolor{stringliteral}{"knap"},
+        .of\_match\_table = \hyperlink{button__drv_8c_a18b4dd8a762436e52d70eabba4ad9e15}{of\_plat\_drv\_platform\_device\_match},
+        .owner = THIS\_MODULE,
+    \},
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{button__drv_8c_a39c51ea719b0b922e7fe00432f5ac6ac}\label{button__drv_8c_a39c51ea719b0b922e7fe00432f5ac6ac}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!prev\+Right\+Status@{prev\+Right\+Status}}
+\index{prev\+Right\+Status@{prev\+Right\+Status}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{prev\+Right\+Status}{prevRightStatus}}
+{\footnotesize\ttfamily int prev\+Right\+Status}
+
+\mbox{\Hypertarget{button__drv_8c_a4ba0955a1350ca6298f43d062c1d8847}\label{button__drv_8c_a4ba0955a1350ca6298f43d062c1d8847}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!prev\+Value@{prev\+Value}}
+\index{prev\+Value@{prev\+Value}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{prev\+Value}{prevValue}}
+{\footnotesize\ttfamily int prev\+Value = 0}
+
+\mbox{\Hypertarget{button__drv_8c_a92c8ee66f8b521e815985eecddafb98f}\label{button__drv_8c_a92c8ee66f8b521e815985eecddafb98f}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!right\+Pin@{right\+Pin}}
+\index{right\+Pin@{right\+Pin}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{right\+Pin}{rightPin}}
+{\footnotesize\ttfamily int right\+Pin = 11}
+
+\mbox{\Hypertarget{button__drv_8c_a6b555c1a085becaf7313f9e1fb7dde91}\label{button__drv_8c_a6b555c1a085becaf7313f9e1fb7dde91}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!right\+Status@{right\+Status}}
+\index{right\+Status@{right\+Status}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{right\+Status}{rightStatus}}
+{\footnotesize\ttfamily int right\+Status}
+
+\mbox{\Hypertarget{button__drv_8c_ac4f474c82e82cbb89ca7c36dd52be0ed}\label{button__drv_8c_ac4f474c82e82cbb89ca7c36dd52be0ed}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!value@{value}}
+\index{value@{value}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily int value = 0}
+
+\mbox{\Hypertarget{button__drv_8c_addcd7e146a3bc5fa69930965a337289d}\label{button__drv_8c_addcd7e146a3bc5fa69930965a337289d}} 
+\index{button\+\_\+drv.\+c@{button\+\_\+drv.\+c}!value\+Read@{value\+Read}}
+\index{value\+Read@{value\+Read}!button\+\_\+drv.\+c@{button\+\_\+drv.\+c}}
+\subsubsection{\texorpdfstring{value\+Read}{valueRead}}
+{\footnotesize\ttfamily int value\+Read = 0\hspace{0.3cm}{\ttfamily [static]}}
+

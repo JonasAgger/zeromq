@@ -1,0 +1,5 @@
+3,14,1,13;
+Please remove
+everything from the 
+cupzone.  When done 
+press->   DONE     

@@ -1,0 +1,53 @@
+\hypertarget{_website_score_handling_8h}{}\section{inc/osapi/\+Score\+System/\+Website\+Score\+Handling.h File Reference}
+\label{_website_score_handling_8h}\index{inc/osapi/\+Score\+System/\+Website\+Score\+Handling.\+h@{inc/osapi/\+Score\+System/\+Website\+Score\+Handling.\+h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_website_score_handling}{Website\+Score\+Handling}
+\begin{DoxyCompactList}\small\item\em Global function; Is called from Score\+System upon startup. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_website_score_handling_1_1_d_a_t_e_s_t_r_u_c_t}{Website\+Score\+Handling\+::\+D\+A\+T\+E\+S\+T\+R\+U\+CT}
+\item 
+struct \hyperlink{struct_website_score_handling_1_1_t_i_m_e_s_t_r_u_c_t}{Website\+Score\+Handling\+::\+T\+I\+M\+E\+S\+T\+R\+U\+CT}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_website_score_handling_8h_ac388d4ebbc80bb13f5f1dad47eb96002}{set\+New\+I\+P\+JS} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_website_score_handling_8h_ac388d4ebbc80bb13f5f1dad47eb96002}\label{_website_score_handling_8h_ac388d4ebbc80bb13f5f1dad47eb96002}} 
+\index{Website\+Score\+Handling.\+h@{Website\+Score\+Handling.\+h}!set\+New\+I\+P\+JS@{set\+New\+I\+P\+JS}}
+\index{set\+New\+I\+P\+JS@{set\+New\+I\+P\+JS}!Website\+Score\+Handling.\+h@{Website\+Score\+Handling.\+h}}
+\subsubsection{\texorpdfstring{set\+New\+I\+P\+J\+S()}{setNewIPJS()}}
+{\footnotesize\ttfamily void set\+New\+I\+P\+JS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Author\+: Søren Skieller Accessing file with info about current IP address
+
+Splitting string to only get IP
+
+Skip equal sign
+
+Remove comma in end
+
+Cleanup
+
+Opening functionality.\+js and temp\+Func for overwriting new IP
+
+Writing javascript before IP to temp file
+
+Writing the new IP to the temp file
+
+Skipping ahead of the IP line
+
+Writing rest of functionality.\+js to temp file
+
+Closing both file streams
+
+Deleting old functionality.\+js, replace with tempfunc.\+js 

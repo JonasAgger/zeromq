@@ -1,0 +1,123 @@
+\hypertarget{class_adafruit___m_c_p23008}{}\section{Adafruit\+\_\+\+M\+C\+P23008 Class Reference}
+\label{class_adafruit___m_c_p23008}\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+
+
+{\ttfamily \#include $<$Adafruit\+\_\+\+M\+C\+P23008.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_adafruit___m_c_p23008_a8314a25b377985de7ce5e3b5e7455372}{begin} (uint8\+\_\+t addr)
+\item 
+void \hyperlink{class_adafruit___m_c_p23008_af3987b6fb1535161dc7ba6b7128728ab}{begin} (void)
+\item 
+void \hyperlink{class_adafruit___m_c_p23008_a4b0ecc269a2f8a7a837d6f9bece20caf}{pin\+Mode} (uint8\+\_\+t p, uint8\+\_\+t d)
+\item 
+void \hyperlink{class_adafruit___m_c_p23008_a3e68d889e4ae288b73055dd0e685e3e3}{digital\+Write} (uint8\+\_\+t p, uint8\+\_\+t d)
+\item 
+void \hyperlink{class_adafruit___m_c_p23008_a5e2c6d20e8a3e81af47bb9ec47d707b1}{pull\+Up} (uint8\+\_\+t p, uint8\+\_\+t d)
+\item 
+uint8\+\_\+t \hyperlink{class_adafruit___m_c_p23008_a51d5f3149d92245cca9b3429456edce5}{digital\+Read} (uint8\+\_\+t p)
+\item 
+uint8\+\_\+t \hyperlink{class_adafruit___m_c_p23008_a83c2886cdd47924a628f5bd42560748b}{read\+G\+P\+IO} (void)
+\item 
+void \hyperlink{class_adafruit___m_c_p23008_a03b271a8a8e9bb8b8289a57cea5d328f}{write\+G\+P\+IO} (uint8\+\_\+t)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{class_adafruit___m_c_p23008_af291bdb83da9d2ea2b5fd640e9610ffb}{read8} (uint8\+\_\+t addr)
+\item 
+void \hyperlink{class_adafruit___m_c_p23008_ae87dc8ba103bb45ff558d1802a9eab73}{write8} (uint8\+\_\+t addr, uint8\+\_\+t data)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_adafruit___m_c_p23008_ac849412fb7fd288f59349d91bba33d6f}{fd}
+\item 
+uint8\+\_\+t \hyperlink{class_adafruit___m_c_p23008_aacd0fda7bfc9d93442828123d0394d6b}{i2caddr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_a8314a25b377985de7ce5e3b5e7455372}\label{class_adafruit___m_c_p23008_a8314a25b377985de7ce5e3b5e7455372}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!begin@{begin}}
+\index{begin@{begin}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+C\+P23008\+::begin (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_af3987b6fb1535161dc7ba6b7128728ab}\label{class_adafruit___m_c_p23008_af3987b6fb1535161dc7ba6b7128728ab}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!begin@{begin}}
+\index{begin@{begin}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+C\+P23008\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_a51d5f3149d92245cca9b3429456edce5}\label{class_adafruit___m_c_p23008_a51d5f3149d92245cca9b3429456edce5}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!digital\+Read@{digital\+Read}}
+\index{digital\+Read@{digital\+Read}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{digital\+Read()}{digitalRead()}}
+{\footnotesize\ttfamily uint8\+\_\+t Adafruit\+\_\+\+M\+C\+P23008\+::digital\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_a3e68d889e4ae288b73055dd0e685e3e3}\label{class_adafruit___m_c_p23008_a3e68d889e4ae288b73055dd0e685e3e3}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!digital\+Write@{digital\+Write}}
+\index{digital\+Write@{digital\+Write}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{digital\+Write()}{digitalWrite()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+C\+P23008\+::digital\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p,  }\item[{uint8\+\_\+t}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_a4b0ecc269a2f8a7a837d6f9bece20caf}\label{class_adafruit___m_c_p23008_a4b0ecc269a2f8a7a837d6f9bece20caf}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!pin\+Mode@{pin\+Mode}}
+\index{pin\+Mode@{pin\+Mode}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{pin\+Mode()}{pinMode()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+C\+P23008\+::pin\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p,  }\item[{uint8\+\_\+t}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_a5e2c6d20e8a3e81af47bb9ec47d707b1}\label{class_adafruit___m_c_p23008_a5e2c6d20e8a3e81af47bb9ec47d707b1}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!pull\+Up@{pull\+Up}}
+\index{pull\+Up@{pull\+Up}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{pull\+Up()}{pullUp()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+C\+P23008\+::pull\+Up (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p,  }\item[{uint8\+\_\+t}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_af291bdb83da9d2ea2b5fd640e9610ffb}\label{class_adafruit___m_c_p23008_af291bdb83da9d2ea2b5fd640e9610ffb}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!read8@{read8}}
+\index{read8@{read8}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{read8()}{read8()}}
+{\footnotesize\ttfamily uint8\+\_\+t Adafruit\+\_\+\+M\+C\+P23008\+::read8 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_a83c2886cdd47924a628f5bd42560748b}\label{class_adafruit___m_c_p23008_a83c2886cdd47924a628f5bd42560748b}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!read\+G\+P\+IO@{read\+G\+P\+IO}}
+\index{read\+G\+P\+IO@{read\+G\+P\+IO}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{read\+G\+P\+I\+O()}{readGPIO()}}
+{\footnotesize\ttfamily uint8\+\_\+t Adafruit\+\_\+\+M\+C\+P23008\+::read\+G\+P\+IO (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_ae87dc8ba103bb45ff558d1802a9eab73}\label{class_adafruit___m_c_p23008_ae87dc8ba103bb45ff558d1802a9eab73}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!write8@{write8}}
+\index{write8@{write8}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{write8()}{write8()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+C\+P23008\+::write8 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_a03b271a8a8e9bb8b8289a57cea5d328f}\label{class_adafruit___m_c_p23008_a03b271a8a8e9bb8b8289a57cea5d328f}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!write\+G\+P\+IO@{write\+G\+P\+IO}}
+\index{write\+G\+P\+IO@{write\+G\+P\+IO}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{write\+G\+P\+I\+O()}{writeGPIO()}}
+{\footnotesize\ttfamily void Adafruit\+\_\+\+M\+C\+P23008\+::write\+G\+P\+IO (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{gpio }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_ac849412fb7fd288f59349d91bba33d6f}\label{class_adafruit___m_c_p23008_ac849412fb7fd288f59349d91bba33d6f}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!fd@{fd}}
+\index{fd@{fd}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily int Adafruit\+\_\+\+M\+C\+P23008\+::fd\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_adafruit___m_c_p23008_aacd0fda7bfc9d93442828123d0394d6b}\label{class_adafruit___m_c_p23008_aacd0fda7bfc9d93442828123d0394d6b}} 
+\index{Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}!i2caddr@{i2caddr}}
+\index{i2caddr@{i2caddr}!Adafruit\+\_\+\+M\+C\+P23008@{Adafruit\+\_\+\+M\+C\+P23008}}
+\subsubsection{\texorpdfstring{i2caddr}{i2caddr}}
+{\footnotesize\ttfamily uint8\+\_\+t Adafruit\+\_\+\+M\+C\+P23008\+::i2caddr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/osapi/\+Score\+System/\hyperlink{_adafruit___m_c_p23008_8hpp}{Adafruit\+\_\+\+M\+C\+P23008.\+hpp}\item 
+Score\+System/\hyperlink{_adafruit___m_c_p23008_8cpp}{Adafruit\+\_\+\+M\+C\+P23008.\+cpp}\end{DoxyCompactItemize}
