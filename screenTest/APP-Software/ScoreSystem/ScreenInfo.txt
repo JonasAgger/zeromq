@@ -1,0 +1,40 @@
+**** Welcome to ****
+ Alpaca Power Pong!
+Quick Start!
+Configure game
+Enter name of team1:
+
+
+Done         Delete
+Enter name of team2:
+
+
+Done         Delete
+Sync light to music:
+on
+off
+   
+Number of cups:
+Full game, 10 cups
+Small game, 6 cups
+   
+Place cups on table
+until all cups are
+green
+                exit
+********************
+**** Start game ****
+********************
+********************
+     Game is ON!
+    
+#address
+           Rearrange
+Which team should
+rearrange their cups
+#team1
+#team2
+     You can now
+ rearrange the cups.
+When finished press:
+******* done *******

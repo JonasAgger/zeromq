@@ -1,0 +1,5 @@
+2,19,1,8;3,19,1,0;
+**** Welcome to ****
+ Alpaca Power Pong!
+Quick Start!
+Configure game

@@ -1,0 +1,46 @@
+\hypertarget{_button_8hpp}{}\section{inc/osapi/\+Score\+System/\+Button.hpp File Reference}
+\label{_button_8hpp}\index{inc/osapi/\+Score\+System/\+Button.\+hpp@{inc/osapi/\+Score\+System/\+Button.\+hpp}}
+{\ttfamily \#include $<$osapi/\+Thread\+Functor.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Msg\+Queue.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Message.\+hpp$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbutton_message}{button\+Message}
+\item 
+class \hyperlink{class_button}{Button}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_button_8hpp_a88367962bd46e3db5b652fa228829706}{button\+Event} \{ \hyperlink{_button_8hpp_a88367962bd46e3db5b652fa228829706af9f8854ebbb7ba791699e5f7900619b3}{btn\+Pressed}, 
+\hyperlink{_button_8hpp_a88367962bd46e3db5b652fa228829706a97a56e0aeaa7bcd425d7da8151ff380f}{btn\+Right}, 
+\hyperlink{_button_8hpp_a88367962bd46e3db5b652fa228829706aa0aa947add22fdd12f320b4bbe18da80}{btn\+Left}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_button_8hpp_a88367962bd46e3db5b652fa228829706}\label{_button_8hpp_a88367962bd46e3db5b652fa228829706}} 
+\index{Button.\+hpp@{Button.\+hpp}!button\+Event@{button\+Event}}
+\index{button\+Event@{button\+Event}!Button.\+hpp@{Button.\+hpp}}
+\subsubsection{\texorpdfstring{button\+Event}{buttonEvent}}
+{\footnotesize\ttfamily enum \hyperlink{_button_8hpp_a88367962bd46e3db5b652fa228829706}{button\+Event}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{btn\+Pressed@{btn\+Pressed}!Button.\+hpp@{Button.\+hpp}}\index{Button.\+hpp@{Button.\+hpp}!btn\+Pressed@{btn\+Pressed}}}\mbox{\Hypertarget{_button_8hpp_a88367962bd46e3db5b652fa228829706af9f8854ebbb7ba791699e5f7900619b3}\label{_button_8hpp_a88367962bd46e3db5b652fa228829706af9f8854ebbb7ba791699e5f7900619b3}} 
+btn\+Pressed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{btn\+Right@{btn\+Right}!Button.\+hpp@{Button.\+hpp}}\index{Button.\+hpp@{Button.\+hpp}!btn\+Right@{btn\+Right}}}\mbox{\Hypertarget{_button_8hpp_a88367962bd46e3db5b652fa228829706a97a56e0aeaa7bcd425d7da8151ff380f}\label{_button_8hpp_a88367962bd46e3db5b652fa228829706a97a56e0aeaa7bcd425d7da8151ff380f}} 
+btn\+Right&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{btn\+Left@{btn\+Left}!Button.\+hpp@{Button.\+hpp}}\index{Button.\+hpp@{Button.\+hpp}!btn\+Left@{btn\+Left}}}\mbox{\Hypertarget{_button_8hpp_a88367962bd46e3db5b652fa228829706aa0aa947add22fdd12f320b4bbe18da80}\label{_button_8hpp_a88367962bd46e3db5b652fa228829706aa0aa947add22fdd12f320b4bbe18da80}} 
+btn\+Left&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,304 @@
+\hypertarget{class_score_system_crtl}{}\section{Score\+System\+Crtl Class Reference}
+\label{class_score_system_crtl}\index{Score\+System\+Crtl@{Score\+System\+Crtl}}
+
+
+{\ttfamily \#include $<$Score\+System\+Crtl.\+hpp$>$}
+
+
+
+Inherits Thread\+Functor.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_score_system_crtl_aa5e275c79e3e60dec6eb12da70ebe382}{Score\+System\+Crtl} ()
+\item 
+osapi\+::\+Msg\+Queue $\ast$ \hyperlink{class_score_system_crtl_a5dc4b60ddc680b5a8c8e6ab646e7d049}{get\+Msg\+Queue} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_score_system_crtl_a04176fe6a2ed0c8fdfb4394426357d76}{run} ()
+\item 
+void \hyperlink{class_score_system_crtl_a5c168a573054312aedf6c7da099f7ba4}{handle\+Msg} (unsigned int id, osapi\+::\+Message $\ast$msg\+Ptr)
+\item 
+void \hyperlink{class_score_system_crtl_ae36d14423417173e6b5e3c5196d76e99}{handle\+State} ()
+\item 
+void \hyperlink{class_score_system_crtl_a5644cff9cfc9fbe9ca962823be333cf0}{handle\+Psoc\+Update} (uint8\+\_\+t psoc, osapi\+::\+Message $\ast$msg\+Ptr)
+\item 
+void \hyperlink{class_score_system_crtl_a2de992b7e2734b0be919da1bc460ea48}{reset\+Game} ()
+\item 
+void \hyperlink{class_score_system_crtl_a4cfa5045fdaa955fc3a1c183a3698ec9}{end\+Game} (int winner=1)
+\item 
+string \hyperlink{class_score_system_crtl_ae15d59e88b416b1f13249c3f1a1edafa}{get\+IP} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_score_system_crtl_a5759191f17d2b510527f6779829c60e6}{ip\+\_\+}
+\item 
+string \hyperlink{class_score_system_crtl_ac7dd279813c25cbbd8ac14a3f3f5e35a}{temp\+String\+\_\+}
+\item 
+unsigned int \hyperlink{class_score_system_crtl_a347375cfd504730d6c12b193cc34e274}{state\+\_\+} = \hyperlink{_page_8hpp_ab0a8bc3c34e6c808c389332ea2654365a9f75a1925ae97b13f3a84cc493f671dd}{page\+Event\+::no\+Update}
+\item 
+uint8\+\_\+t \hyperlink{class_score_system_crtl_ad10e10dbe95e3b8afd47c6eaaf59c5f0}{current\+Screen} = 0
+\item 
+unsigned long \hyperlink{class_score_system_crtl_aec703fee0bce24cb0c5b6b46ce6260b9}{game\+Time\+\_\+} = 0
+\item 
+uint8\+\_\+t \hyperlink{class_score_system_crtl_a6828b899dd4351499125ea996d994b37}{nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+} = 10
+\item 
+string \hyperlink{class_score_system_crtl_aebddfa81ba4ebb47200d60e46fd9adcb}{team\+Name1\+\_\+} = \char`\"{}moon moon\char`\"{}
+\item 
+string \hyperlink{class_score_system_crtl_a7942072f35a6905f8c6d6cc480153725}{team\+Name2\+\_\+} = \char`\"{}red pandas\char`\"{}
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+LT V\+A\+L\+U\+ES. \end{DoxyCompactList}\item 
+enum \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92}{p\+Soc\+Messages} \hyperlink{class_score_system_crtl_a3be2ff5efa739ea09d8aa1bdcd43a7c2}{zone1\+State\+\_\+} = \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a7fb0c1cca10ff57ae7aa3878ba530fbd}{p\+Soc\+Messages\+::\+N\+O\+\_\+\+C\+H\+A\+N\+GE}
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+LT V\+A\+L\+U\+ES. \end{DoxyCompactList}\item 
+enum \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92}{p\+Soc\+Messages} \hyperlink{class_score_system_crtl_ae5b46cd4c92c500e63ca0341b6ce2a11}{zone2\+State\+\_\+} = \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a7fb0c1cca10ff57ae7aa3878ba530fbd}{p\+Soc\+Messages\+::\+N\+O\+\_\+\+C\+H\+A\+N\+GE}
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+LT V\+A\+L\+U\+ES. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{class_score_system_crtl_a7a81b6a251a2b6ace8d43bcac1f2ac9a}{score\+\_\+\+Team\+\_\+1\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em D\+E\+F\+A\+U\+LT V\+A\+L\+U\+ES. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{class_score_system_crtl_a2e3179ced68d428cb1d5bdf551772198}{score\+\_\+\+Team\+\_\+2\+\_\+} = 0
+\item 
+uint8\+\_\+t \hyperlink{class_score_system_crtl_ab02d528662eb8284cce8e8cbb62b4a45}{collective\+Double\+Shots\+\_\+} = 0
+\item 
+bool \hyperlink{class_score_system_crtl_ad14ec0e42018683bea64c7b575889c10}{re\+Arranging\+\_\+} = false
+\item 
+uint8\+\_\+t \hyperlink{class_score_system_crtl_a7a192f635f055a2e33d7faa1f97d3e66}{re\+Arranging\+Zone\+\_\+} = 0
+\item 
+vector$<$ \hyperlink{class_page}{Page} $\ast$ $>$ \hyperlink{class_score_system_crtl_afebc95fe508117fb6f0642b07515da8d}{pages\+\_\+}
+\item 
+\hyperlink{class_l_c_d}{L\+CD} $\ast$ \hyperlink{class_score_system_crtl_a3111d9f033967ce5d52a3bf2714b5b29}{display}
+\item 
+\hyperlink{class_button}{Button} $\ast$ \hyperlink{class_score_system_crtl_aa4b1c98fb3cddcc8d41c575cabb6115f}{btn}
+\item 
+\hyperlink{class_website_score_handling}{Website\+Score\+Handling} $\ast$ \hyperlink{class_score_system_crtl_a8a252e6501be65ecb4c233c12ca2e0a1}{website\+Ptr\+\_\+}
+\item 
+osapi\+::\+Thread $\ast$ \hyperlink{class_score_system_crtl_a03511b42262a18c002496a1448de12c2}{i2c\+Thread}
+\item 
+osapi\+::\+Thread $\ast$ \hyperlink{class_score_system_crtl_a48e0963e0c602f187099acd521a845dd}{button\+Thread}
+\item 
+osapi\+::\+Msg\+Queue $\ast$ \hyperlink{class_score_system_crtl_abb07ef8f5a3a2edfd16b08f21dfe4656}{mq\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_score_system_crtl_aa5e275c79e3e60dec6eb12da70ebe382}\label{class_score_system_crtl_aa5e275c79e3e60dec6eb12da70ebe382}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{Score\+System\+Crtl()}{ScoreSystemCrtl()}}
+{\footnotesize\ttfamily Score\+System\+Crtl\+::\+Score\+System\+Crtl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/--- D\+E\+F\+A\+U\+LT C\+O\+N\+S\+T\+R\+U\+C\+T\+OR -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- -\/-\/-\/-\/--- S\+E\+TS UP V\+A\+R\+I\+A\+B\+L\+ES, L\+O\+A\+DS IN P\+A\+G\+ES -\/-\/-\/-\/--- -- S\+T\+A\+R\+T\+I\+NG I2C A\+ND B\+U\+T\+T\+ON T\+H\+R\+E\+A\+DS A\+ND S\+T\+A\+R\+TS T\+HE D\+I\+S\+P\+L\+AY -- 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_score_system_crtl_a4cfa5045fdaa955fc3a1c183a3698ec9}\label{class_score_system_crtl_a4cfa5045fdaa955fc3a1c183a3698ec9}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!end\+Game@{end\+Game}}
+\index{end\+Game@{end\+Game}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{end\+Game()}{endGame()}}
+{\footnotesize\ttfamily void Score\+System\+Crtl\+::end\+Game (\begin{DoxyParamCaption}\item[{int}]{winner = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ E\+ND G\+A\+ME -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ -\/--- E\+N\+DS G\+A\+ME, U\+P\+L\+O\+A\+DS TO W\+E\+B\+S\+I\+TE A\+ND R\+E\+S\+E\+TS TO I\+N\+I\+T\+I\+AL S\+T\+A\+TE -\/--- Waits 15 seconds before returning to the welcome screen \mbox{\Hypertarget{class_score_system_crtl_ae15d59e88b416b1f13249c3f1a1edafa}\label{class_score_system_crtl_ae15d59e88b416b1f13249c3f1a1edafa}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!get\+IP@{get\+IP}}
+\index{get\+IP@{get\+IP}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{get\+I\+P()}{getIP()}}
+{\footnotesize\ttfamily string Score\+System\+Crtl\+::get\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+-\/-\/-\/-\/-\/-\/--- G\+ET IP -\/-\/-\/-\/-\/-\/-\/--- -\/--- L\+O\+A\+DS IN IP F\+R\+OM F\+I\+LE -\/--- \mbox{\Hypertarget{class_score_system_crtl_a5dc4b60ddc680b5a8c8e6ab646e7d049}\label{class_score_system_crtl_a5dc4b60ddc680b5a8c8e6ab646e7d049}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!get\+Msg\+Queue@{get\+Msg\+Queue}}
+\index{get\+Msg\+Queue@{get\+Msg\+Queue}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{get\+Msg\+Queue()}{getMsgQueue()}}
+{\footnotesize\ttfamily osapi\+::\+Msg\+Queue $\ast$ Score\+System\+Crtl\+::get\+Msg\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+-\/-\/-\/-\/-\/-\/--- G\+ET M\+E\+S\+S\+A\+G\+E\+Q\+U\+E\+UE -\/-\/-\/-\/-\/-\/-\/--- -\/--- R\+E\+T\+U\+R\+NS P\+O\+I\+N\+T\+ER TO M\+E\+S\+S\+A\+G\+E\+Q\+U\+E\+UE -\/--- \mbox{\Hypertarget{class_score_system_crtl_a5c168a573054312aedf6c7da099f7ba4}\label{class_score_system_crtl_a5c168a573054312aedf6c7da099f7ba4}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!handle\+Msg@{handle\+Msg}}
+\index{handle\+Msg@{handle\+Msg}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{handle\+Msg()}{handleMsg()}}
+{\footnotesize\ttfamily void Score\+System\+Crtl\+::handle\+Msg (\begin{DoxyParamCaption}\item[{unsigned int}]{id,  }\item[{osapi\+::\+Message $\ast$}]{msg\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/------ H\+A\+N\+D\+L\+E\+M\+SG -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ -\/--- H\+A\+N\+D\+L\+ES M\+E\+S\+S\+A\+G\+ES IN O\+UR M\+E\+S\+S\+A\+G\+E\+Q\+U\+E\+UE -\/--- Handles the received message. If the button is pressed, then page-\/$>$button\+Pressed is called. Same happens with rotate\+Left \& rotate\+Right. It also handles receiving updates from the 2 psocs, where it calls handle\+Psoc\+Update\mbox{\Hypertarget{class_score_system_crtl_a5644cff9cfc9fbe9ca962823be333cf0}\label{class_score_system_crtl_a5644cff9cfc9fbe9ca962823be333cf0}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!handle\+Psoc\+Update@{handle\+Psoc\+Update}}
+\index{handle\+Psoc\+Update@{handle\+Psoc\+Update}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{handle\+Psoc\+Update()}{handlePsocUpdate()}}
+{\footnotesize\ttfamily void Score\+System\+Crtl\+::handle\+Psoc\+Update (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{psoc,  }\item[{osapi\+::\+Message $\ast$}]{msg\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+-\/-\/-\/-\/-\/-\/-\/-\/------ H\+A\+N\+D\+LE P\+S\+OC U\+P\+D\+A\+TE -\/-\/-\/-\/-\/-\/-\/-\/-\/------ -\/--- H\+A\+N\+D\+L\+ES T\+HE V\+A\+L\+U\+ES R\+E\+T\+U\+R\+N\+ED F\+R\+OM T\+HE P\+S\+OC -\/--- Handles the updates received from the psocs, by casting the Message pointer to a \hyperlink{structpsoc_update_message}{psoc\+Update\+Message}, where an uint8\+\_\+t value can be retrived from. It will then discard the update, if its received during rearrange, which means, that no team can finish, while 1 is rearranging. It will also ready the game, when initially setting up the cups, making it possible to press play game.
+
+Otherwise it checks if the current state is of less value than the newly received state, which will cause a change of state. This happens untill a cup\+Zone\+Ready state is received.
+
+The teams scores are also updated in this function.\mbox{\Hypertarget{class_score_system_crtl_ae36d14423417173e6b5e3c5196d76e99}\label{class_score_system_crtl_ae36d14423417173e6b5e3c5196d76e99}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!handle\+State@{handle\+State}}
+\index{handle\+State@{handle\+State}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{handle\+State()}{handleState()}}
+{\footnotesize\ttfamily void Score\+System\+Crtl\+::handle\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+-\/-\/-\/-\/-\/--------- H\+A\+N\+D\+LE S\+T\+A\+TE -\/-\/-\/-\/-\/-\/--------- -\/--- H\+A\+N\+D\+L\+ES S\+T\+A\+T\+ES R\+E\+T\+U\+R\+N\+ED BY O\+UR P\+A\+G\+ES -\/--- Handles the state received from the button\+Pressed function. It then takes action accouring to the state received Most commonly it increases the current\+Screen variable and displays the next screen. It will also save team\+Names and send information to the PsoC\textquotesingle{}s/\+Arduino
+
+C\+O\+N\+N\+E\+C\+T\+I\+NG TO I\+N\+T\+E\+R\+N\+ET, N\+E\+E\+DS TO W\+A\+IT F\+OR C\+O\+N\+N\+M\+A\+N\+C\+TL TO S\+T\+A\+RT, H\+E\+N\+CE T\+HE D\+E\+L\+AY \mbox{\Hypertarget{class_score_system_crtl_a2de992b7e2734b0be919da1bc460ea48}\label{class_score_system_crtl_a2de992b7e2734b0be919da1bc460ea48}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!reset\+Game@{reset\+Game}}
+\index{reset\+Game@{reset\+Game}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{reset\+Game()}{resetGame()}}
+{\footnotesize\ttfamily void Score\+System\+Crtl\+::reset\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+-\/-\/-\/-\/-\/-\/-\/------ R\+E\+S\+ET G\+A\+ME -\/-\/-\/-\/-\/-\/-\/-\/------ -\/--- R\+E\+S\+E\+TS T\+HE T\+A\+B\+LE TO I\+N\+I\+T\+I\+AL S\+T\+A\+TE -\/--- Resets pages, psocs, Arduino, names, sates etc. to initial values. \mbox{\Hypertarget{class_score_system_crtl_a04176fe6a2ed0c8fdfb4394426357d76}\label{class_score_system_crtl_a04176fe6a2ed0c8fdfb4394426357d76}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!run@{run}}
+\index{run@{run}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Score\+System\+Crtl\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+------ R\+UN -\/------ -\/--- T\+H\+R\+E\+AD M\+E\+T\+H\+OD -\/--- Gets message from the Message Queue, and handles the received message 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_score_system_crtl_aa4b1c98fb3cddcc8d41c575cabb6115f}\label{class_score_system_crtl_aa4b1c98fb3cddcc8d41c575cabb6115f}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!btn@{btn}}
+\index{btn@{btn}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{btn}{btn}}
+{\footnotesize\ttfamily \hyperlink{class_button}{Button}$\ast$ Score\+System\+Crtl\+::btn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a48e0963e0c602f187099acd521a845dd}\label{class_score_system_crtl_a48e0963e0c602f187099acd521a845dd}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!button\+Thread@{button\+Thread}}
+\index{button\+Thread@{button\+Thread}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{button\+Thread}{buttonThread}}
+{\footnotesize\ttfamily osapi\+::\+Thread$\ast$ Score\+System\+Crtl\+::button\+Thread\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_ab02d528662eb8284cce8e8cbb62b4a45}\label{class_score_system_crtl_ab02d528662eb8284cce8e8cbb62b4a45}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!collective\+Double\+Shots\+\_\+@{collective\+Double\+Shots\+\_\+}}
+\index{collective\+Double\+Shots\+\_\+@{collective\+Double\+Shots\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{collective\+Double\+Shots\+\_\+}{collectiveDoubleShots\_}}
+{\footnotesize\ttfamily uint8\+\_\+t Score\+System\+Crtl\+::collective\+Double\+Shots\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_ad10e10dbe95e3b8afd47c6eaaf59c5f0}\label{class_score_system_crtl_ad10e10dbe95e3b8afd47c6eaaf59c5f0}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!current\+Screen@{current\+Screen}}
+\index{current\+Screen@{current\+Screen}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{current\+Screen}{currentScreen}}
+{\footnotesize\ttfamily uint8\+\_\+t Score\+System\+Crtl\+::current\+Screen = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a3111d9f033967ce5d52a3bf2714b5b29}\label{class_score_system_crtl_a3111d9f033967ce5d52a3bf2714b5b29}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!display@{display}}
+\index{display@{display}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily \hyperlink{class_l_c_d}{L\+CD}$\ast$ Score\+System\+Crtl\+::display\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_aec703fee0bce24cb0c5b6b46ce6260b9}\label{class_score_system_crtl_aec703fee0bce24cb0c5b6b46ce6260b9}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!game\+Time\+\_\+@{game\+Time\+\_\+}}
+\index{game\+Time\+\_\+@{game\+Time\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{game\+Time\+\_\+}{gameTime\_}}
+{\footnotesize\ttfamily unsigned long Score\+System\+Crtl\+::game\+Time\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a03511b42262a18c002496a1448de12c2}\label{class_score_system_crtl_a03511b42262a18c002496a1448de12c2}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!i2c\+Thread@{i2c\+Thread}}
+\index{i2c\+Thread@{i2c\+Thread}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{i2c\+Thread}{i2cThread}}
+{\footnotesize\ttfamily osapi\+::\+Thread$\ast$ Score\+System\+Crtl\+::i2c\+Thread\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a5759191f17d2b510527f6779829c60e6}\label{class_score_system_crtl_a5759191f17d2b510527f6779829c60e6}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!ip\+\_\+@{ip\+\_\+}}
+\index{ip\+\_\+@{ip\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{ip\+\_\+}{ip\_}}
+{\footnotesize\ttfamily string Score\+System\+Crtl\+::ip\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_abb07ef8f5a3a2edfd16b08f21dfe4656}\label{class_score_system_crtl_abb07ef8f5a3a2edfd16b08f21dfe4656}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!mq\+\_\+@{mq\+\_\+}}
+\index{mq\+\_\+@{mq\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{mq\+\_\+}{mq\_}}
+{\footnotesize\ttfamily osapi\+::\+Msg\+Queue$\ast$ Score\+System\+Crtl\+::mq\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a6828b899dd4351499125ea996d994b37}\label{class_score_system_crtl_a6828b899dd4351499125ea996d994b37}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+@{nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+}}
+\index{nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+@{nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+}{nr\_Cups\_In\_Game\_}}
+{\footnotesize\ttfamily uint8\+\_\+t Score\+System\+Crtl\+::nr\+\_\+\+Cups\+\_\+\+In\+\_\+\+Game\+\_\+ = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_afebc95fe508117fb6f0642b07515da8d}\label{class_score_system_crtl_afebc95fe508117fb6f0642b07515da8d}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!pages\+\_\+@{pages\+\_\+}}
+\index{pages\+\_\+@{pages\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{pages\+\_\+}{pages\_}}
+{\footnotesize\ttfamily vector$<$\hyperlink{class_page}{Page}$\ast$$>$ Score\+System\+Crtl\+::pages\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_ad14ec0e42018683bea64c7b575889c10}\label{class_score_system_crtl_ad14ec0e42018683bea64c7b575889c10}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!re\+Arranging\+\_\+@{re\+Arranging\+\_\+}}
+\index{re\+Arranging\+\_\+@{re\+Arranging\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{re\+Arranging\+\_\+}{reArranging\_}}
+{\footnotesize\ttfamily bool Score\+System\+Crtl\+::re\+Arranging\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a7a192f635f055a2e33d7faa1f97d3e66}\label{class_score_system_crtl_a7a192f635f055a2e33d7faa1f97d3e66}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!re\+Arranging\+Zone\+\_\+@{re\+Arranging\+Zone\+\_\+}}
+\index{re\+Arranging\+Zone\+\_\+@{re\+Arranging\+Zone\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{re\+Arranging\+Zone\+\_\+}{reArrangingZone\_}}
+{\footnotesize\ttfamily uint8\+\_\+t Score\+System\+Crtl\+::re\+Arranging\+Zone\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a7a81b6a251a2b6ace8d43bcac1f2ac9a}\label{class_score_system_crtl_a7a81b6a251a2b6ace8d43bcac1f2ac9a}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!score\+\_\+\+Team\+\_\+1\+\_\+@{score\+\_\+\+Team\+\_\+1\+\_\+}}
+\index{score\+\_\+\+Team\+\_\+1\+\_\+@{score\+\_\+\+Team\+\_\+1\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{score\+\_\+\+Team\+\_\+1\+\_\+}{score\_Team\_1\_}}
+{\footnotesize\ttfamily uint8\+\_\+t Score\+System\+Crtl\+::score\+\_\+\+Team\+\_\+1\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+D\+E\+F\+A\+U\+LT V\+A\+L\+U\+ES. 
+
+\mbox{\Hypertarget{class_score_system_crtl_a2e3179ced68d428cb1d5bdf551772198}\label{class_score_system_crtl_a2e3179ced68d428cb1d5bdf551772198}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!score\+\_\+\+Team\+\_\+2\+\_\+@{score\+\_\+\+Team\+\_\+2\+\_\+}}
+\index{score\+\_\+\+Team\+\_\+2\+\_\+@{score\+\_\+\+Team\+\_\+2\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{score\+\_\+\+Team\+\_\+2\+\_\+}{score\_Team\_2\_}}
+{\footnotesize\ttfamily uint8\+\_\+t Score\+System\+Crtl\+::score\+\_\+\+Team\+\_\+2\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a347375cfd504730d6c12b193cc34e274}\label{class_score_system_crtl_a347375cfd504730d6c12b193cc34e274}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
+{\footnotesize\ttfamily unsigned int Score\+System\+Crtl\+::state\+\_\+ = \hyperlink{_page_8hpp_ab0a8bc3c34e6c808c389332ea2654365a9f75a1925ae97b13f3a84cc493f671dd}{page\+Event\+::no\+Update}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_aebddfa81ba4ebb47200d60e46fd9adcb}\label{class_score_system_crtl_aebddfa81ba4ebb47200d60e46fd9adcb}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!team\+Name1\+\_\+@{team\+Name1\+\_\+}}
+\index{team\+Name1\+\_\+@{team\+Name1\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{team\+Name1\+\_\+}{teamName1\_}}
+{\footnotesize\ttfamily string Score\+System\+Crtl\+::team\+Name1\+\_\+ = \char`\"{}moon moon\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a7942072f35a6905f8c6d6cc480153725}\label{class_score_system_crtl_a7942072f35a6905f8c6d6cc480153725}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!team\+Name2\+\_\+@{team\+Name2\+\_\+}}
+\index{team\+Name2\+\_\+@{team\+Name2\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{team\+Name2\+\_\+}{teamName2\_}}
+{\footnotesize\ttfamily string Score\+System\+Crtl\+::team\+Name2\+\_\+ = \char`\"{}red pandas\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+D\+E\+F\+A\+U\+LT V\+A\+L\+U\+ES. 
+
+\mbox{\Hypertarget{class_score_system_crtl_ac7dd279813c25cbbd8ac14a3f3f5e35a}\label{class_score_system_crtl_ac7dd279813c25cbbd8ac14a3f3f5e35a}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!temp\+String\+\_\+@{temp\+String\+\_\+}}
+\index{temp\+String\+\_\+@{temp\+String\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{temp\+String\+\_\+}{tempString\_}}
+{\footnotesize\ttfamily string Score\+System\+Crtl\+::temp\+String\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a8a252e6501be65ecb4c233c12ca2e0a1}\label{class_score_system_crtl_a8a252e6501be65ecb4c233c12ca2e0a1}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!website\+Ptr\+\_\+@{website\+Ptr\+\_\+}}
+\index{website\+Ptr\+\_\+@{website\+Ptr\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{website\+Ptr\+\_\+}{websitePtr\_}}
+{\footnotesize\ttfamily \hyperlink{class_website_score_handling}{Website\+Score\+Handling}$\ast$ Score\+System\+Crtl\+::website\+Ptr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_score_system_crtl_a3be2ff5efa739ea09d8aa1bdcd43a7c2}\label{class_score_system_crtl_a3be2ff5efa739ea09d8aa1bdcd43a7c2}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!zone1\+State\+\_\+@{zone1\+State\+\_\+}}
+\index{zone1\+State\+\_\+@{zone1\+State\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{zone1\+State\+\_\+}{zone1State\_}}
+{\footnotesize\ttfamily enum \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92}{p\+Soc\+Messages} Score\+System\+Crtl\+::zone1\+State\+\_\+ = \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a7fb0c1cca10ff57ae7aa3878ba530fbd}{p\+Soc\+Messages\+::\+N\+O\+\_\+\+C\+H\+A\+N\+GE}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+D\+E\+F\+A\+U\+LT V\+A\+L\+U\+ES. 
+
+\mbox{\Hypertarget{class_score_system_crtl_ae5b46cd4c92c500e63ca0341b6ce2a11}\label{class_score_system_crtl_ae5b46cd4c92c500e63ca0341b6ce2a11}} 
+\index{Score\+System\+Crtl@{Score\+System\+Crtl}!zone2\+State\+\_\+@{zone2\+State\+\_\+}}
+\index{zone2\+State\+\_\+@{zone2\+State\+\_\+}!Score\+System\+Crtl@{Score\+System\+Crtl}}
+\subsubsection{\texorpdfstring{zone2\+State\+\_\+}{zone2State\_}}
+{\footnotesize\ttfamily enum \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92}{p\+Soc\+Messages} Score\+System\+Crtl\+::zone2\+State\+\_\+ = \hyperlink{_score_system_crtl_8hpp_a5561f3e128877a8ec1313455605a2c92a7fb0c1cca10ff57ae7aa3878ba530fbd}{p\+Soc\+Messages\+::\+N\+O\+\_\+\+C\+H\+A\+N\+GE}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+D\+E\+F\+A\+U\+LT V\+A\+L\+U\+ES. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/osapi/\+Score\+System/\hyperlink{_score_system_crtl_8hpp}{Score\+System\+Crtl.\+hpp}\item 
+Score\+System/\hyperlink{_score_system_crtl_8cpp}{Score\+System\+Crtl.\+cpp}\end{DoxyCompactItemize}

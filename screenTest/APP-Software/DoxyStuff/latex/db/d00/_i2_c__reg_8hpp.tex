@@ -1,0 +1,73 @@
+\hypertarget{_i2_c__reg_8hpp}{}\section{inc/osapi/\+Score\+System/\+I2\+C\+\_\+reg.hpp File Reference}
+\label{_i2_c__reg_8hpp}\index{inc/osapi/\+Score\+System/\+I2\+C\+\_\+reg.\+hpp@{inc/osapi/\+Score\+System/\+I2\+C\+\_\+reg.\+hpp}}
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$osapi/\+Thread\+Functor.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Msg\+Queue.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Message.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Conditional.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Mutex.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Utility.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Thread.\+hpp$>$}\newline
+{\ttfamily \#include $<$osapi/\+Score\+System/\+Timer.\+hpp$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpsoc_update_message}{psoc\+Update\+Message}
+\item 
+class \hyperlink{class_i2_c__reg}{I2\+C\+\_\+reg}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621}{i2c\+\_\+messages} \{ \newline
+\hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621ad2ce844c2118a0f3d0079f1af024a4fa}{T\+I\+M\+E\+R\+\_\+\+O\+UT}, 
+\hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a310dd9ea15dca1dffd74b74505020bb4}{A\+R\+D\+U\+I\+N\+O\+M\+E\+S\+S\+GE}, 
+\hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a0624a8dc197e0c461cea7f1c612712e7}{P\+S\+O\+C\+B\+R\+O\+A\+D\+C\+A\+ST}, 
+\hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a2fceb00ead4f12ff15c595b10f37a248}{P\+S\+O\+C1\+M\+E\+S\+S\+A\+GE}, 
+\newline
+\hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a89bebf7a46ab2d845b556334dfca588b}{P\+S\+O\+C2\+M\+E\+S\+S\+A\+GE}, 
+\hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621aeafbe6fc17f39832c9e03c492ac5959c}{P\+S\+O\+C1\+U\+P\+D\+A\+TE} = 50, 
+\hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a288916617ee0e05dde03f08d56586427}{P\+S\+O\+C2\+U\+P\+D\+A\+TE} = 60
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621}\label{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621}} 
+\index{I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}!i2c\+\_\+messages@{i2c\+\_\+messages}}
+\index{i2c\+\_\+messages@{i2c\+\_\+messages}!I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}}
+\subsubsection{\texorpdfstring{i2c\+\_\+messages}{i2c\_messages}}
+{\footnotesize\ttfamily enum \hyperlink{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621}{i2c\+\_\+messages}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+I\+M\+E\+R\+\_\+\+O\+UT@{T\+I\+M\+E\+R\+\_\+\+O\+UT}!I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}}\index{I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}!T\+I\+M\+E\+R\+\_\+\+O\+UT@{T\+I\+M\+E\+R\+\_\+\+O\+UT}}}\mbox{\Hypertarget{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621ad2ce844c2118a0f3d0079f1af024a4fa}\label{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621ad2ce844c2118a0f3d0079f1af024a4fa}} 
+T\+I\+M\+E\+R\+\_\+\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+R\+D\+U\+I\+N\+O\+M\+E\+S\+S\+GE@{A\+R\+D\+U\+I\+N\+O\+M\+E\+S\+S\+GE}!I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}}\index{I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}!A\+R\+D\+U\+I\+N\+O\+M\+E\+S\+S\+GE@{A\+R\+D\+U\+I\+N\+O\+M\+E\+S\+S\+GE}}}\mbox{\Hypertarget{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a310dd9ea15dca1dffd74b74505020bb4}\label{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a310dd9ea15dca1dffd74b74505020bb4}} 
+A\+R\+D\+U\+I\+N\+O\+M\+E\+S\+S\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+S\+O\+C\+B\+R\+O\+A\+D\+C\+A\+ST@{P\+S\+O\+C\+B\+R\+O\+A\+D\+C\+A\+ST}!I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}}\index{I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}!P\+S\+O\+C\+B\+R\+O\+A\+D\+C\+A\+ST@{P\+S\+O\+C\+B\+R\+O\+A\+D\+C\+A\+ST}}}\mbox{\Hypertarget{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a0624a8dc197e0c461cea7f1c612712e7}\label{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a0624a8dc197e0c461cea7f1c612712e7}} 
+P\+S\+O\+C\+B\+R\+O\+A\+D\+C\+A\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+S\+O\+C1\+M\+E\+S\+S\+A\+GE@{P\+S\+O\+C1\+M\+E\+S\+S\+A\+GE}!I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}}\index{I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}!P\+S\+O\+C1\+M\+E\+S\+S\+A\+GE@{P\+S\+O\+C1\+M\+E\+S\+S\+A\+GE}}}\mbox{\Hypertarget{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a2fceb00ead4f12ff15c595b10f37a248}\label{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a2fceb00ead4f12ff15c595b10f37a248}} 
+P\+S\+O\+C1\+M\+E\+S\+S\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+S\+O\+C2\+M\+E\+S\+S\+A\+GE@{P\+S\+O\+C2\+M\+E\+S\+S\+A\+GE}!I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}}\index{I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}!P\+S\+O\+C2\+M\+E\+S\+S\+A\+GE@{P\+S\+O\+C2\+M\+E\+S\+S\+A\+GE}}}\mbox{\Hypertarget{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a89bebf7a46ab2d845b556334dfca588b}\label{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a89bebf7a46ab2d845b556334dfca588b}} 
+P\+S\+O\+C2\+M\+E\+S\+S\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+S\+O\+C1\+U\+P\+D\+A\+TE@{P\+S\+O\+C1\+U\+P\+D\+A\+TE}!I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}}\index{I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}!P\+S\+O\+C1\+U\+P\+D\+A\+TE@{P\+S\+O\+C1\+U\+P\+D\+A\+TE}}}\mbox{\Hypertarget{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621aeafbe6fc17f39832c9e03c492ac5959c}\label{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621aeafbe6fc17f39832c9e03c492ac5959c}} 
+P\+S\+O\+C1\+U\+P\+D\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+S\+O\+C2\+U\+P\+D\+A\+TE@{P\+S\+O\+C2\+U\+P\+D\+A\+TE}!I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}}\index{I2\+C\+\_\+reg.\+hpp@{I2\+C\+\_\+reg.\+hpp}!P\+S\+O\+C2\+U\+P\+D\+A\+TE@{P\+S\+O\+C2\+U\+P\+D\+A\+TE}}}\mbox{\Hypertarget{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a288916617ee0e05dde03f08d56586427}\label{_i2_c__reg_8hpp_a9873d2cb61de4f3b54b7c7df746f7621a288916617ee0e05dde03f08d56586427}} 
+P\+S\+O\+C2\+U\+P\+D\+A\+TE&\\
+\hline
+
+\end{DoxyEnumFields}

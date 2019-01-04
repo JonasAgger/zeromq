@@ -1,0 +1,441 @@
+\hypertarget{class_i2_c__reg}{}\section{I2\+C\+\_\+reg Class Reference}
+\label{class_i2_c__reg}\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+
+
+{\ttfamily \#include $<$I2\+C\+\_\+reg.\+hpp$>$}
+
+
+
+Inherits Thread\+Functor.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_i2_c__reg_a3d471f20191b5918283fefca5d48e0e6}{test\+Static} ()
+\item 
+void \hyperlink{class_i2_c__reg_a2893302d924b666bd1a91a4effe5ed9b}{set\+Msg\+Queue\+Score\+System} (osapi\+::\+Msg\+Queue $\ast$smq)
+\item 
+osapi\+::\+Msg\+Queue $\ast$ \hyperlink{class_i2_c__reg_aa0db20b76ba93e31051be9f35ae7ee7e}{get\+Msg\+Queue} ()
+\item 
+void \hyperlink{class_i2_c__reg_a2028790c3222d6ce7ae263b26919af20}{set\+UP} (int cups)
+\begin{DoxyCompactList}\small\item\em Function which starts the timers to get updates from the psocs, and sets nr. of cups on the psocs. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_accde84779d1a3a3290fb955c1269b66f}{set\+Arduino\+Message} (uint8\+\_\+t message)
+\begin{DoxyCompactList}\small\item\em Function to send a message to the arduino. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_a97310205f1e1fc2f53c43ac95c04d252}{set\+Psoc\+Message} (uint8\+\_\+t message, uint8\+\_\+t psoc=0)
+\begin{DoxyCompactList}\small\item\em Function to send a message to either both psocs, by leaving it blank, or a specific psoc by writing 1 or 2. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_ad9bdd59728a4323f871d0790044e7ac0}{display\+Write} (uint8\+\_\+t addr, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Function to be used by the \hyperlink{class_l_c_d}{L\+CD} to write to the display. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_a09a60c49f946406d98754966473110a5}{display\+Read} (uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em Function to be used by the \hyperlink{class_l_c_d}{L\+CD} to read from display registers. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_afb752ee0655db95f5b54c99a351cb574}{display\+Init} ()
+\begin{DoxyCompactList}\small\item\em Function to be used by the \hyperlink{class_l_c_d}{L\+CD} to initialize the display. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_abf7f9d0cb3ba7f175f88521c6c865ce9}{lock\+I2C} ()
+\begin{DoxyCompactList}\small\item\em Function to lock the mutex. Used by the \hyperlink{class_l_c_d}{L\+CD} class. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_a031bc853a788721fea14a98e9ab4c06c}{unlock\+I2C} ()
+\begin{DoxyCompactList}\small\item\em Function to unlock the mutex. Used by the \hyperlink{class_l_c_d}{L\+CD} class. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_af5483b482bc8129b9d460a570789528b}{stop\+Psoc\+Polling} ()
+\begin{DoxyCompactList}\small\item\em Function that disables the timer polling the psocs for updates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_i2_c__reg}{I2\+C\+\_\+reg} \& \hyperlink{class_i2_c__reg_a1fbc3ac094e2b64324f91019c9fa68e1}{get\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_i2_c__reg_a720b6a4c79f5065acd067e0c97ba4d72}{I2\+C\+\_\+reg} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Opens /dev/i2c-\/1. Creates the Message queue. \end{DoxyCompactList}\item 
+\hyperlink{class_i2_c__reg_aaeda24970f812b2f805abb71f3e55489}{$\sim$\+I2\+C\+\_\+reg} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Closes /dev/i2c-\/1. Deletes the Message queue. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_abc05f4c53d60cb63152b9fbdc0c38c23}{run} ()
+\begin{DoxyCompactList}\small\item\em Thread\+Functor function. Thread function. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_a21a1711d4835a287dde1d08e9e39279d}{handle\+Msg} (unsigned long id, osapi\+::\+Message $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Function to handle messages received in the message queue. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_a55154e2f02004d6485c32a9e5f1b2d61}{psoc\+Update} ()
+\begin{DoxyCompactList}\small\item\em Private function which gets updates from the psocs. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_acd34d2f4e7768e262772828f980b933b}{send\+Psoc\+Broadcast} ()
+\begin{DoxyCompactList}\small\item\em Function which sends messages to both psocs. private. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_ac69b2184dc49d8b097bebde346e56783}{send\+Psoc\+Message} (uint8\+\_\+t psoc\+Nr)
+\begin{DoxyCompactList}\small\item\em Function which sends messages to a specific psoc. private. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_ad7edf2735cca77a30cd694105c45866a}{send\+Psoc1\+Message} ()
+\begin{DoxyCompactList}\small\item\em Function which sends a message to psoc 1. private. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_a6776bfe77df2a4de2c0e53071d972993}{send\+Psoc2\+Message} ()
+\begin{DoxyCompactList}\small\item\em Function which sends a message to psoc 2. private. \end{DoxyCompactList}\item 
+void \hyperlink{class_i2_c__reg_aa95ab17a2bba34006b163f245513dd18}{send\+Arduino\+Message} ()
+\begin{DoxyCompactList}\small\item\em Function which sends a message to the arduino. private. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_i2_c__reg_aa5fd39295618d3ae819136c60a9a93f9}{fd\+\_\+}
+\item 
+unsigned int \hyperlink{class_i2_c__reg_a14b21c49054b5101a5b7258abbfcf7ec}{state\+\_\+}
+\item 
+bool \hyperlink{class_i2_c__reg_ac1783200bd4cfa343c9efcf3d05147d2}{running\+\_\+} = true
+\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_a9f00fe7636749157c56ac0468a1443e9}{current\+Addr\+\_\+} = 0
+\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_a6bfe663e5f48ac17a3fd49226643754e}{arduino\+Adress\+\_\+} = 0x06
+\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_a5812753df4f7f637195db36382817db0}{psoc1\+Adress\+\_\+} = 0x10
+\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_ac6899d5ab5021a60c5250d8b94341a8f}{psoc2\+Adress\+\_\+} = 0x11
+\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_a7fcccc0e344c7b69c1e5d8ba1c90a68b}{screen\+Adress\+\_\+} = 0x20
+\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_a09768cee402326bef0399729305edcf8}{arduino\+Message\+\_\+} = 0
+\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_a7233ee02b2a6f76eff04f9bd7648c958}{psoc\+Message\+\_\+} = 0
+\item 
+uint8\+\_\+t \hyperlink{class_i2_c__reg_aca7b0128eae9ad08da09376b6b15dc4f}{receiving\+Pso\+C\+\_\+} = 0
+\item 
+\hyperlink{class_timer}{Timer} $\ast$ \hyperlink{class_i2_c__reg_aaad6b1b2efeb974521239765556a18c8}{timer1\+\_\+}
+\item 
+osapi\+::\+Thread $\ast$ \hyperlink{class_i2_c__reg_afaa9f5a61f18026faeb1cf499422ee04}{tt\+\_\+}
+\item 
+osapi\+::\+Msg\+Queue $\ast$ \hyperlink{class_i2_c__reg_a9e139070cc9a328c976e02d50bfc8463}{mq\+\_\+}
+\item 
+osapi\+::\+Msg\+Queue $\ast$ \hyperlink{class_i2_c__reg_a501dcb1b2bced713fcbac3e52a23b8f3}{Score\+System\+M\+Q\+\_\+}
+\item 
+osapi\+::\+Msg\+Queue $\ast$ \hyperlink{class_i2_c__reg_a3905d1dee48edcb683df50575ec27113}{display\+M\+Q\+\_\+}
+\item 
+osapi\+::\+Mutex \hyperlink{class_i2_c__reg_a3c3e7e3c3ff7d9cb70715a960fc909c2}{mut\+\_\+}
+\item 
+osapi\+::\+Conditional \hyperlink{class_i2_c__reg_a586e78ca7a45a3ffdb33051861a33b5d}{cond\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i2_c__reg_a720b6a4c79f5065acd067e0c97ba4d72}\label{class_i2_c__reg_a720b6a4c79f5065acd067e0c97ba4d72}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+reg()}{I2C\_reg()}}
+{\footnotesize\ttfamily I2\+C\+\_\+reg\+::\+I2\+C\+\_\+reg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor. Opens /dev/i2c-\/1. Creates the Message queue. 
+
+\mbox{\Hypertarget{class_i2_c__reg_aaeda24970f812b2f805abb71f3e55489}\label{class_i2_c__reg_aaeda24970f812b2f805abb71f3e55489}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!````~I2\+C\+\_\+reg@{$\sim$\+I2\+C\+\_\+reg}}
+\index{````~I2\+C\+\_\+reg@{$\sim$\+I2\+C\+\_\+reg}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{$\sim$\+I2\+C\+\_\+reg()}{~I2C\_reg()}}
+{\footnotesize\ttfamily I2\+C\+\_\+reg\+::$\sim$\+I2\+C\+\_\+reg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor. Closes /dev/i2c-\/1. Deletes the Message queue. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i2_c__reg_afb752ee0655db95f5b54c99a351cb574}\label{class_i2_c__reg_afb752ee0655db95f5b54c99a351cb574}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!display\+Init@{display\+Init}}
+\index{display\+Init@{display\+Init}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{display\+Init()}{displayInit()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::display\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to be used by the \hyperlink{class_l_c_d}{L\+CD} to initialize the display. 
+
+\mbox{\Hypertarget{class_i2_c__reg_a09a60c49f946406d98754966473110a5}\label{class_i2_c__reg_a09a60c49f946406d98754966473110a5}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!display\+Read@{display\+Read}}
+\index{display\+Read@{display\+Read}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{display\+Read()}{displayRead()}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::display\+Read (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+
+
+Function to be used by the \hyperlink{class_l_c_d}{L\+CD} to read from display registers. 
+
+\mbox{\Hypertarget{class_i2_c__reg_ad9bdd59728a4323f871d0790044e7ac0}\label{class_i2_c__reg_ad9bdd59728a4323f871d0790044e7ac0}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!display\+Write@{display\+Write}}
+\index{display\+Write@{display\+Write}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{display\+Write()}{displayWrite()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::display\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Function to be used by the \hyperlink{class_l_c_d}{L\+CD} to write to the display. 
+
+\mbox{\Hypertarget{class_i2_c__reg_a1fbc3ac094e2b64324f91019c9fa68e1}\label{class_i2_c__reg_a1fbc3ac094e2b64324f91019c9fa68e1}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{get\+Instance()}{getInstance()}}
+{\footnotesize\ttfamily static \hyperlink{class_i2_c__reg}{I2\+C\+\_\+reg}\& I2\+C\+\_\+reg\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_aa0db20b76ba93e31051be9f35ae7ee7e}\label{class_i2_c__reg_aa0db20b76ba93e31051be9f35ae7ee7e}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!get\+Msg\+Queue@{get\+Msg\+Queue}}
+\index{get\+Msg\+Queue@{get\+Msg\+Queue}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{get\+Msg\+Queue()}{getMsgQueue()}}
+{\footnotesize\ttfamily osapi\+::\+Msg\+Queue$\ast$ I2\+C\+\_\+reg\+::get\+Msg\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a21a1711d4835a287dde1d08e9e39279d}\label{class_i2_c__reg_a21a1711d4835a287dde1d08e9e39279d}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!handle\+Msg@{handle\+Msg}}
+\index{handle\+Msg@{handle\+Msg}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{handle\+Msg()}{handleMsg()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::handle\+Msg (\begin{DoxyParamCaption}\item[{unsigned long}]{id,  }\item[{osapi\+::\+Message $\ast$}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function to handle messages received in the message queue. 
+
+\mbox{\Hypertarget{class_i2_c__reg_abf7f9d0cb3ba7f175f88521c6c865ce9}\label{class_i2_c__reg_abf7f9d0cb3ba7f175f88521c6c865ce9}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!lock\+I2C@{lock\+I2C}}
+\index{lock\+I2C@{lock\+I2C}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{lock\+I2\+C()}{lockI2C()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::lock\+I2C (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to lock the mutex. Used by the \hyperlink{class_l_c_d}{L\+CD} class. 
+
+\mbox{\Hypertarget{class_i2_c__reg_a55154e2f02004d6485c32a9e5f1b2d61}\label{class_i2_c__reg_a55154e2f02004d6485c32a9e5f1b2d61}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!psoc\+Update@{psoc\+Update}}
+\index{psoc\+Update@{psoc\+Update}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{psoc\+Update()}{psocUpdate()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::psoc\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Private function which gets updates from the psocs. 
+
+\mbox{\Hypertarget{class_i2_c__reg_abc05f4c53d60cb63152b9fbdc0c38c23}\label{class_i2_c__reg_abc05f4c53d60cb63152b9fbdc0c38c23}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!run@{run}}
+\index{run@{run}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Thread\+Functor function. Thread function. 
+
+\mbox{\Hypertarget{class_i2_c__reg_aa95ab17a2bba34006b163f245513dd18}\label{class_i2_c__reg_aa95ab17a2bba34006b163f245513dd18}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!send\+Arduino\+Message@{send\+Arduino\+Message}}
+\index{send\+Arduino\+Message@{send\+Arduino\+Message}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{send\+Arduino\+Message()}{sendArduinoMessage()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::send\+Arduino\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function which sends a message to the arduino. private. 
+
+\mbox{\Hypertarget{class_i2_c__reg_ad7edf2735cca77a30cd694105c45866a}\label{class_i2_c__reg_ad7edf2735cca77a30cd694105c45866a}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!send\+Psoc1\+Message@{send\+Psoc1\+Message}}
+\index{send\+Psoc1\+Message@{send\+Psoc1\+Message}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{send\+Psoc1\+Message()}{sendPsoc1Message()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::send\+Psoc1\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function which sends a message to psoc 1. private. 
+
+\mbox{\Hypertarget{class_i2_c__reg_a6776bfe77df2a4de2c0e53071d972993}\label{class_i2_c__reg_a6776bfe77df2a4de2c0e53071d972993}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!send\+Psoc2\+Message@{send\+Psoc2\+Message}}
+\index{send\+Psoc2\+Message@{send\+Psoc2\+Message}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{send\+Psoc2\+Message()}{sendPsoc2Message()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::send\+Psoc2\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function which sends a message to psoc 2. private. 
+
+\mbox{\Hypertarget{class_i2_c__reg_acd34d2f4e7768e262772828f980b933b}\label{class_i2_c__reg_acd34d2f4e7768e262772828f980b933b}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!send\+Psoc\+Broadcast@{send\+Psoc\+Broadcast}}
+\index{send\+Psoc\+Broadcast@{send\+Psoc\+Broadcast}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{send\+Psoc\+Broadcast()}{sendPsocBroadcast()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::send\+Psoc\+Broadcast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function which sends messages to both psocs. private. 
+
+\mbox{\Hypertarget{class_i2_c__reg_ac69b2184dc49d8b097bebde346e56783}\label{class_i2_c__reg_ac69b2184dc49d8b097bebde346e56783}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!send\+Psoc\+Message@{send\+Psoc\+Message}}
+\index{send\+Psoc\+Message@{send\+Psoc\+Message}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{send\+Psoc\+Message()}{sendPsocMessage()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::send\+Psoc\+Message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{psoc\+Nr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Function which sends messages to a specific psoc. private. 
+
+\mbox{\Hypertarget{class_i2_c__reg_accde84779d1a3a3290fb955c1269b66f}\label{class_i2_c__reg_accde84779d1a3a3290fb955c1269b66f}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!set\+Arduino\+Message@{set\+Arduino\+Message}}
+\index{set\+Arduino\+Message@{set\+Arduino\+Message}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{set\+Arduino\+Message()}{setArduinoMessage()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::set\+Arduino\+Message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{message }\end{DoxyParamCaption})}
+
+
+
+Function to send a message to the arduino. 
+
+\mbox{\Hypertarget{class_i2_c__reg_a2893302d924b666bd1a91a4effe5ed9b}\label{class_i2_c__reg_a2893302d924b666bd1a91a4effe5ed9b}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!set\+Msg\+Queue\+Score\+System@{set\+Msg\+Queue\+Score\+System}}
+\index{set\+Msg\+Queue\+Score\+System@{set\+Msg\+Queue\+Score\+System}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{set\+Msg\+Queue\+Score\+System()}{setMsgQueueScoreSystem()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::set\+Msg\+Queue\+Score\+System (\begin{DoxyParamCaption}\item[{osapi\+::\+Msg\+Queue $\ast$}]{smq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a97310205f1e1fc2f53c43ac95c04d252}\label{class_i2_c__reg_a97310205f1e1fc2f53c43ac95c04d252}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!set\+Psoc\+Message@{set\+Psoc\+Message}}
+\index{set\+Psoc\+Message@{set\+Psoc\+Message}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{set\+Psoc\+Message()}{setPsocMessage()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::set\+Psoc\+Message (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{message,  }\item[{uint8\+\_\+t}]{psoc = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Function to send a message to either both psocs, by leaving it blank, or a specific psoc by writing 1 or 2. 
+
+\mbox{\Hypertarget{class_i2_c__reg_a2028790c3222d6ce7ae263b26919af20}\label{class_i2_c__reg_a2028790c3222d6ce7ae263b26919af20}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!set\+UP@{set\+UP}}
+\index{set\+UP@{set\+UP}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{set\+U\+P()}{setUP()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::set\+UP (\begin{DoxyParamCaption}\item[{int}]{cups }\end{DoxyParamCaption})}
+
+
+
+Function which starts the timers to get updates from the psocs, and sets nr. of cups on the psocs. 
+
+\mbox{\Hypertarget{class_i2_c__reg_af5483b482bc8129b9d460a570789528b}\label{class_i2_c__reg_af5483b482bc8129b9d460a570789528b}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!stop\+Psoc\+Polling@{stop\+Psoc\+Polling}}
+\index{stop\+Psoc\+Polling@{stop\+Psoc\+Polling}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{stop\+Psoc\+Polling()}{stopPsocPolling()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::stop\+Psoc\+Polling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function that disables the timer polling the psocs for updates. 
+
+\mbox{\Hypertarget{class_i2_c__reg_a3d471f20191b5918283fefca5d48e0e6}\label{class_i2_c__reg_a3d471f20191b5918283fefca5d48e0e6}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!test\+Static@{test\+Static}}
+\index{test\+Static@{test\+Static}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{test\+Static()}{testStatic()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::test\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_i2_c__reg_a031bc853a788721fea14a98e9ab4c06c}\label{class_i2_c__reg_a031bc853a788721fea14a98e9ab4c06c}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!unlock\+I2C@{unlock\+I2C}}
+\index{unlock\+I2C@{unlock\+I2C}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{unlock\+I2\+C()}{unlockI2C()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+reg\+::unlock\+I2C (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to unlock the mutex. Used by the \hyperlink{class_l_c_d}{L\+CD} class. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_i2_c__reg_a6bfe663e5f48ac17a3fd49226643754e}\label{class_i2_c__reg_a6bfe663e5f48ac17a3fd49226643754e}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!arduino\+Adress\+\_\+@{arduino\+Adress\+\_\+}}
+\index{arduino\+Adress\+\_\+@{arduino\+Adress\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{arduino\+Adress\+\_\+}{arduinoAdress\_}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::arduino\+Adress\+\_\+ = 0x06\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a09768cee402326bef0399729305edcf8}\label{class_i2_c__reg_a09768cee402326bef0399729305edcf8}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!arduino\+Message\+\_\+@{arduino\+Message\+\_\+}}
+\index{arduino\+Message\+\_\+@{arduino\+Message\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{arduino\+Message\+\_\+}{arduinoMessage\_}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::arduino\+Message\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a586e78ca7a45a3ffdb33051861a33b5d}\label{class_i2_c__reg_a586e78ca7a45a3ffdb33051861a33b5d}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!cond\+\_\+@{cond\+\_\+}}
+\index{cond\+\_\+@{cond\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{cond\+\_\+}{cond\_}}
+{\footnotesize\ttfamily osapi\+::\+Conditional I2\+C\+\_\+reg\+::cond\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a9f00fe7636749157c56ac0468a1443e9}\label{class_i2_c__reg_a9f00fe7636749157c56ac0468a1443e9}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!current\+Addr\+\_\+@{current\+Addr\+\_\+}}
+\index{current\+Addr\+\_\+@{current\+Addr\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{current\+Addr\+\_\+}{currentAddr\_}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::current\+Addr\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a3905d1dee48edcb683df50575ec27113}\label{class_i2_c__reg_a3905d1dee48edcb683df50575ec27113}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!display\+M\+Q\+\_\+@{display\+M\+Q\+\_\+}}
+\index{display\+M\+Q\+\_\+@{display\+M\+Q\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{display\+M\+Q\+\_\+}{displayMQ\_}}
+{\footnotesize\ttfamily osapi\+::\+Msg\+Queue$\ast$ I2\+C\+\_\+reg\+::display\+M\+Q\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_aa5fd39295618d3ae819136c60a9a93f9}\label{class_i2_c__reg_aa5fd39295618d3ae819136c60a9a93f9}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!fd\+\_\+@{fd\+\_\+}}
+\index{fd\+\_\+@{fd\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{fd\+\_\+}{fd\_}}
+{\footnotesize\ttfamily int I2\+C\+\_\+reg\+::fd\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a9e139070cc9a328c976e02d50bfc8463}\label{class_i2_c__reg_a9e139070cc9a328c976e02d50bfc8463}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!mq\+\_\+@{mq\+\_\+}}
+\index{mq\+\_\+@{mq\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{mq\+\_\+}{mq\_}}
+{\footnotesize\ttfamily osapi\+::\+Msg\+Queue$\ast$ I2\+C\+\_\+reg\+::mq\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a3c3e7e3c3ff7d9cb70715a960fc909c2}\label{class_i2_c__reg_a3c3e7e3c3ff7d9cb70715a960fc909c2}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!mut\+\_\+@{mut\+\_\+}}
+\index{mut\+\_\+@{mut\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{mut\+\_\+}{mut\_}}
+{\footnotesize\ttfamily osapi\+::\+Mutex I2\+C\+\_\+reg\+::mut\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a5812753df4f7f637195db36382817db0}\label{class_i2_c__reg_a5812753df4f7f637195db36382817db0}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!psoc1\+Adress\+\_\+@{psoc1\+Adress\+\_\+}}
+\index{psoc1\+Adress\+\_\+@{psoc1\+Adress\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{psoc1\+Adress\+\_\+}{psoc1Adress\_}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::psoc1\+Adress\+\_\+ = 0x10\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_ac6899d5ab5021a60c5250d8b94341a8f}\label{class_i2_c__reg_ac6899d5ab5021a60c5250d8b94341a8f}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!psoc2\+Adress\+\_\+@{psoc2\+Adress\+\_\+}}
+\index{psoc2\+Adress\+\_\+@{psoc2\+Adress\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{psoc2\+Adress\+\_\+}{psoc2Adress\_}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::psoc2\+Adress\+\_\+ = 0x11\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a7233ee02b2a6f76eff04f9bd7648c958}\label{class_i2_c__reg_a7233ee02b2a6f76eff04f9bd7648c958}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!psoc\+Message\+\_\+@{psoc\+Message\+\_\+}}
+\index{psoc\+Message\+\_\+@{psoc\+Message\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{psoc\+Message\+\_\+}{psocMessage\_}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::psoc\+Message\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_aca7b0128eae9ad08da09376b6b15dc4f}\label{class_i2_c__reg_aca7b0128eae9ad08da09376b6b15dc4f}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!receiving\+Pso\+C\+\_\+@{receiving\+Pso\+C\+\_\+}}
+\index{receiving\+Pso\+C\+\_\+@{receiving\+Pso\+C\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{receiving\+Pso\+C\+\_\+}{receivingPsoC\_}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::receiving\+Pso\+C\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_ac1783200bd4cfa343c9efcf3d05147d2}\label{class_i2_c__reg_ac1783200bd4cfa343c9efcf3d05147d2}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!running\+\_\+@{running\+\_\+}}
+\index{running\+\_\+@{running\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{running\+\_\+}{running\_}}
+{\footnotesize\ttfamily bool I2\+C\+\_\+reg\+::running\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a501dcb1b2bced713fcbac3e52a23b8f3}\label{class_i2_c__reg_a501dcb1b2bced713fcbac3e52a23b8f3}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!Score\+System\+M\+Q\+\_\+@{Score\+System\+M\+Q\+\_\+}}
+\index{Score\+System\+M\+Q\+\_\+@{Score\+System\+M\+Q\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{Score\+System\+M\+Q\+\_\+}{ScoreSystemMQ\_}}
+{\footnotesize\ttfamily osapi\+::\+Msg\+Queue$\ast$ I2\+C\+\_\+reg\+::\+Score\+System\+M\+Q\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a7fcccc0e344c7b69c1e5d8ba1c90a68b}\label{class_i2_c__reg_a7fcccc0e344c7b69c1e5d8ba1c90a68b}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!screen\+Adress\+\_\+@{screen\+Adress\+\_\+}}
+\index{screen\+Adress\+\_\+@{screen\+Adress\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{screen\+Adress\+\_\+}{screenAdress\_}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+reg\+::screen\+Adress\+\_\+ = 0x20\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_a14b21c49054b5101a5b7258abbfcf7ec}\label{class_i2_c__reg_a14b21c49054b5101a5b7258abbfcf7ec}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!state\+\_\+@{state\+\_\+}}
+\index{state\+\_\+@{state\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{state\+\_\+}{state\_}}
+{\footnotesize\ttfamily unsigned int I2\+C\+\_\+reg\+::state\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_aaad6b1b2efeb974521239765556a18c8}\label{class_i2_c__reg_aaad6b1b2efeb974521239765556a18c8}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!timer1\+\_\+@{timer1\+\_\+}}
+\index{timer1\+\_\+@{timer1\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{timer1\+\_\+}{timer1\_}}
+{\footnotesize\ttfamily \hyperlink{class_timer}{Timer}$\ast$ I2\+C\+\_\+reg\+::timer1\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_i2_c__reg_afaa9f5a61f18026faeb1cf499422ee04}\label{class_i2_c__reg_afaa9f5a61f18026faeb1cf499422ee04}} 
+\index{I2\+C\+\_\+reg@{I2\+C\+\_\+reg}!tt\+\_\+@{tt\+\_\+}}
+\index{tt\+\_\+@{tt\+\_\+}!I2\+C\+\_\+reg@{I2\+C\+\_\+reg}}
+\subsubsection{\texorpdfstring{tt\+\_\+}{tt\_}}
+{\footnotesize\ttfamily osapi\+::\+Thread$\ast$ I2\+C\+\_\+reg\+::tt\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/osapi/\+Score\+System/\hyperlink{_i2_c__reg_8hpp}{I2\+C\+\_\+reg.\+hpp}\item 
+Score\+System/\hyperlink{_i2_c__reg_8cpp}{I2\+C\+\_\+reg.\+cpp}\end{DoxyCompactItemize}

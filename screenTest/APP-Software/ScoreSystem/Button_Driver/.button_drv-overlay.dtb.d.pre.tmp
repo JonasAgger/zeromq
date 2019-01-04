@@ -1,0 +1,2 @@
+button_drv-overlay.o: \
+ /home/stud/beerpong/APP-Software/ScoreSystem/Button_Driver/button_drv-overlay.dts

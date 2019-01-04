@@ -1,0 +1,106 @@
+\hypertarget{class_timer}{}\section{Timer Class Reference}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+hpp$>$}
+
+
+
+Inherits Thread\+Functor.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_timer_a430e1b903802ec44b560a56dad510751}{Timer} (unsigned long timeout, unsigned long id, osapi\+::\+Msg\+Queue $\ast$mq)
+\item 
+virtual \hyperlink{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}{$\sim$\+Timer} ()
+\item 
+void \hyperlink{class_timer_a27f97da1b1d19ad74a847703ca25c455}{stop\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer, so that it can be joined and deleted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_timer_a1323444ebd7f2c1407518a03a193b5f4}{run} ()
+\begin{DoxyCompactList}\small\item\em Thread\+Functor function, Sends a message every X ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+osapi\+::\+Msg\+Queue $\ast$ \hyperlink{class_timer_af8eb86ca8b96b4c88c3c0b8c09d88e9a}{mq\+\_\+} = nullptr
+\item 
+unsigned long \hyperlink{class_timer_aaf66e97fe49e0657c3c2c1984ac14fe1}{id\+\_\+} = 0
+\item 
+unsigned long \hyperlink{class_timer_a474478436edc2312ce9d0a375aff403a}{timeout\+\_\+} = 0
+\item 
+bool \hyperlink{class_timer_af78e657414c25836212454891b20f0ad}{running\+\_\+} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_timer_a430e1b903802ec44b560a56dad510751}\label{class_timer_a430e1b903802ec44b560a56dad510751}} 
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{unsigned long}]{timeout,  }\item[{unsigned long}]{id,  }\item[{osapi\+::\+Msg\+Queue $\ast$}]{mq }\end{DoxyParamCaption})}
+
+Normal constructor. Sets the time of which it is to overflow, and what id it\textquotesingle{}s supposed to pass along. it also takes what message queue to place the message in. \mbox{\Hypertarget{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}\label{class_timer_a14fa469c4c295c5fa6e66a4ad1092146}} 
+\index{Timer@{Timer}!````~Timer@{$\sim$\+Timer}}
+\index{````~Timer@{$\sim$\+Timer}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{$\sim$\+Timer()}{~Timer()}}
+{\footnotesize\ttfamily Timer\+::$\sim$\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_timer_a1323444ebd7f2c1407518a03a193b5f4}\label{class_timer_a1323444ebd7f2c1407518a03a193b5f4}} 
+\index{Timer@{Timer}!run@{run}}
+\index{run@{run}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Timer\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Thread\+Functor function, Sends a message every X ms. 
+
+\mbox{\Hypertarget{class_timer_a27f97da1b1d19ad74a847703ca25c455}\label{class_timer_a27f97da1b1d19ad74a847703ca25c455}} 
+\index{Timer@{Timer}!stop\+Timer@{stop\+Timer}}
+\index{stop\+Timer@{stop\+Timer}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{stop\+Timer()}{stopTimer()}}
+{\footnotesize\ttfamily void Timer\+::stop\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops the timer, so that it can be joined and deleted. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_timer_aaf66e97fe49e0657c3c2c1984ac14fe1}\label{class_timer_aaf66e97fe49e0657c3c2c1984ac14fe1}} 
+\index{Timer@{Timer}!id\+\_\+@{id\+\_\+}}
+\index{id\+\_\+@{id\+\_\+}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{id\+\_\+}{id\_}}
+{\footnotesize\ttfamily unsigned long Timer\+::id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_timer_af8eb86ca8b96b4c88c3c0b8c09d88e9a}\label{class_timer_af8eb86ca8b96b4c88c3c0b8c09d88e9a}} 
+\index{Timer@{Timer}!mq\+\_\+@{mq\+\_\+}}
+\index{mq\+\_\+@{mq\+\_\+}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{mq\+\_\+}{mq\_}}
+{\footnotesize\ttfamily osapi\+::\+Msg\+Queue$\ast$ Timer\+::mq\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_timer_af78e657414c25836212454891b20f0ad}\label{class_timer_af78e657414c25836212454891b20f0ad}} 
+\index{Timer@{Timer}!running\+\_\+@{running\+\_\+}}
+\index{running\+\_\+@{running\+\_\+}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{running\+\_\+}{running\_}}
+{\footnotesize\ttfamily bool Timer\+::running\+\_\+ = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_timer_a474478436edc2312ce9d0a375aff403a}\label{class_timer_a474478436edc2312ce9d0a375aff403a}} 
+\index{Timer@{Timer}!timeout\+\_\+@{timeout\+\_\+}}
+\index{timeout\+\_\+@{timeout\+\_\+}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{timeout\+\_\+}{timeout\_}}
+{\footnotesize\ttfamily unsigned long Timer\+::timeout\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/osapi/\+Score\+System/\hyperlink{_timer_8hpp}{Timer.\+hpp}\item 
+Score\+System/i2c\+Test\+Code/\hyperlink{i2c_test_code_2_timer_8cpp}{Timer.\+cpp}\end{DoxyCompactItemize}

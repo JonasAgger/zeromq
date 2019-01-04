@@ -1,0 +1,335 @@
+\hypertarget{class_l_c_d}{}\section{L\+CD Class Reference}
+\label{class_l_c_d}\index{L\+CD@{L\+CD}}
+
+
+{\ttfamily \#include $<$L\+C\+D.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}{L\+CD} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, sets up registers. \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_aa8f5c322edfcbbd78c719a8a9d6f1600}{begin} ()
+\begin{DoxyCompactList}\small\item\em Sets up the display to the correct modes according to the datasheet for the H\+D44780. \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_a3936d094c35e80038c68c94d1acee71d}{lcd\+Write\+\_\+four\+\_\+bits} (uint8\+\_\+t \hyperlink{class_l_c_d_a31a0cb42497d83cdc9cb8000828f7190}{command})
+\begin{DoxyCompactList}\small\item\em Writing a four bit value to the screen. Making several I2C requests meanwhile. \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_a31a0cb42497d83cdc9cb8000828f7190}{command} (uint8\+\_\+t \hyperlink{button__drv_8c_ac4f474c82e82cbb89ca7c36dd52be0ed}{value})
+\begin{DoxyCompactList}\small\item\em send a command to the screen. Used to set blink, cursor etc. \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_a48220450fd152b25994eb7d0ba340e8d}{set\+Cursor} (uint8\+\_\+t col, uint8\+\_\+t row)
+\begin{DoxyCompactList}\small\item\em Set cursor position. \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_a194814f64dfa50a90e07e0fe0d361620}{cursor} ()
+\begin{DoxyCompactList}\small\item\em enables the buttom cursor \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_aec8ffaa1e69c7a6e13ac0cfbc29151d9}{no\+Cursor} ()
+\begin{DoxyCompactList}\small\item\em disables the buttom cursor \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_a5b07cf05e8e5e7c53654f5ca0cf58b89}{display} ()
+\begin{DoxyCompactList}\small\item\em turn display on \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_af3974da6d988ba2d21c25135ada12108}{no\+Display} ()
+\begin{DoxyCompactList}\small\item\em turn display off \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_a878b36878fa8287093964eba83aace77}{blink} ()
+\begin{DoxyCompactList}\small\item\em starts blinking at the current position \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_a3b755c4b397b5985752be8c30ee1a9b5}{no\+Blink} ()
+\begin{DoxyCompactList}\small\item\em stops the current position from blinking \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_afa699e0beeeee03cce8cef87eba81c4a}{clear} ()
+\begin{DoxyCompactList}\small\item\em clears the display \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_aee45ad37f09312f5d9982257e2d37e68}{home} ()
+\begin{DoxyCompactList}\small\item\em returns cursor to the home position \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_ac740e9489fdff4f2f40fab32146e5562}{send} (uint8\+\_\+t \hyperlink{button__drv_8c_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Wrapper function, so that it can be passed an 8bit value and send it using 2x write\+\_\+four\+\_\+bits. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_a7ee8acb9ba87f391991d6fa6c5ac861a}{read\+Reg} ()
+\begin{DoxyCompactList}\small\item\em read the current G\+P\+IO values. \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_aa6838b75ba35ad177394599e11bc38d1}{string\+Write} (string str)
+\begin{DoxyCompactList}\small\item\em Writes a string to the screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_l_c_d_a2a7ee75f1a8fd2fb6f812ab7c60dc487}{char\+Write} (uint8\+\_\+t \hyperlink{button__drv_8c_ac4f474c82e82cbb89ca7c36dd52be0ed}{value})
+\begin{DoxyCompactList}\small\item\em Writes a char on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_a9689016d04e674b7845c2a53be7a1444}{En} = 0b00000100
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_adfd73ce4fc19ae4d852bb07197201dd0}{Rw} = 0b00000010
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_ab110d70390d7ee2d58a090e2b30196ad}{Rs} = 0b00000001
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_ae6261bf99bcd8b2364f97e9e11c58502}{\+\_\+rs\+\_\+pin} = 1
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_a7bbb2365fb389314e5f457a590d8dd5e}{\+\_\+rw\+\_\+pin} = 255
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_a35aa36f96baa53a9f6b0a825b6d0366d}{\+\_\+enable\+\_\+pin} = 2
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_accee0498e7736561a109a98fe58183b7}{\+\_\+data\+\_\+pins} \mbox{[}4\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_adef97dff16494aa9e1a5f37003ea0204}{display\+Function} = 0x00
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_ad57d2b520a80da4ffcbb321fd5e07067}{display\+Control} = 0x00
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_ab753a72be1a77a16b51844b4d0752500}{display\+Mode} = 0x00
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_aa9a72eb7fc8bca5d8e429fa1988f26cc}{num\+Lines} = 0
+\item 
+uint8\+\_\+t \hyperlink{class_l_c_d_ab6514db16bf7b904e988b198d944e003}{current\+Line} = 0
+\item 
+\hyperlink{class_adafruit___m_c_p23008}{Adafruit\+\_\+\+M\+C\+P23008} \hyperlink{class_l_c_d_acf92e89c3c9c9b1c99dab9f9bf72cb20}{i2c\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}\label{class_l_c_d_a00bb2db1390721abc7b24ac4b8c276c8}} 
+\index{L\+CD@{L\+CD}!L\+CD@{L\+CD}}
+\index{L\+CD@{L\+CD}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{L\+C\+D()}{LCD()}}
+{\footnotesize\ttfamily L\+C\+D\+::\+L\+CD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor, sets up registers. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_l_c_d_aa8f5c322edfcbbd78c719a8a9d6f1600}\label{class_l_c_d_aa8f5c322edfcbbd78c719a8a9d6f1600}} 
+\index{L\+CD@{L\+CD}!begin@{begin}}
+\index{begin@{begin}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void L\+C\+D\+::begin (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sets up the display to the correct modes according to the datasheet for the H\+D44780. 
+
+\mbox{\Hypertarget{class_l_c_d_a878b36878fa8287093964eba83aace77}\label{class_l_c_d_a878b36878fa8287093964eba83aace77}} 
+\index{L\+CD@{L\+CD}!blink@{blink}}
+\index{blink@{blink}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{blink()}{blink()}}
+{\footnotesize\ttfamily void L\+C\+D\+::blink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+starts blinking at the current position 
+
+\mbox{\Hypertarget{class_l_c_d_a2a7ee75f1a8fd2fb6f812ab7c60dc487}\label{class_l_c_d_a2a7ee75f1a8fd2fb6f812ab7c60dc487}} 
+\index{L\+CD@{L\+CD}!char\+Write@{char\+Write}}
+\index{char\+Write@{char\+Write}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{char\+Write()}{charWrite()}}
+{\footnotesize\ttfamily void L\+C\+D\+::char\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Writes a char on the screen. 
+
+\mbox{\Hypertarget{class_l_c_d_afa699e0beeeee03cce8cef87eba81c4a}\label{class_l_c_d_afa699e0beeeee03cce8cef87eba81c4a}} 
+\index{L\+CD@{L\+CD}!clear@{clear}}
+\index{clear@{clear}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void L\+C\+D\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clears the display 
+
+\mbox{\Hypertarget{class_l_c_d_a31a0cb42497d83cdc9cb8000828f7190}\label{class_l_c_d_a31a0cb42497d83cdc9cb8000828f7190}} 
+\index{L\+CD@{L\+CD}!command@{command}}
+\index{command@{command}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{command()}{command()}}
+{\footnotesize\ttfamily void L\+C\+D\+::command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+send a command to the screen. Used to set blink, cursor etc. 
+
+\mbox{\Hypertarget{class_l_c_d_a194814f64dfa50a90e07e0fe0d361620}\label{class_l_c_d_a194814f64dfa50a90e07e0fe0d361620}} 
+\index{L\+CD@{L\+CD}!cursor@{cursor}}
+\index{cursor@{cursor}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{cursor()}{cursor()}}
+{\footnotesize\ttfamily void L\+C\+D\+::cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+enables the buttom cursor 
+
+\mbox{\Hypertarget{class_l_c_d_a5b07cf05e8e5e7c53654f5ca0cf58b89}\label{class_l_c_d_a5b07cf05e8e5e7c53654f5ca0cf58b89}} 
+\index{L\+CD@{L\+CD}!display@{display}}
+\index{display@{display}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void L\+C\+D\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+turn display on 
+
+\mbox{\Hypertarget{class_l_c_d_aee45ad37f09312f5d9982257e2d37e68}\label{class_l_c_d_aee45ad37f09312f5d9982257e2d37e68}} 
+\index{L\+CD@{L\+CD}!home@{home}}
+\index{home@{home}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{home()}{home()}}
+{\footnotesize\ttfamily void L\+C\+D\+::home (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns cursor to the home position 
+
+\mbox{\Hypertarget{class_l_c_d_a3936d094c35e80038c68c94d1acee71d}\label{class_l_c_d_a3936d094c35e80038c68c94d1acee71d}} 
+\index{L\+CD@{L\+CD}!lcd\+Write\+\_\+four\+\_\+bits@{lcd\+Write\+\_\+four\+\_\+bits}}
+\index{lcd\+Write\+\_\+four\+\_\+bits@{lcd\+Write\+\_\+four\+\_\+bits}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{lcd\+Write\+\_\+four\+\_\+bits()}{lcdWrite\_four\_bits()}}
+{\footnotesize\ttfamily void L\+C\+D\+::lcd\+Write\+\_\+four\+\_\+bits (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command }\end{DoxyParamCaption})}
+
+
+
+Writing a four bit value to the screen. Making several I2C requests meanwhile. 
+
+\mbox{\Hypertarget{class_l_c_d_a3b755c4b397b5985752be8c30ee1a9b5}\label{class_l_c_d_a3b755c4b397b5985752be8c30ee1a9b5}} 
+\index{L\+CD@{L\+CD}!no\+Blink@{no\+Blink}}
+\index{no\+Blink@{no\+Blink}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{no\+Blink()}{noBlink()}}
+{\footnotesize\ttfamily void L\+C\+D\+::no\+Blink (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stops the current position from blinking 
+
+\mbox{\Hypertarget{class_l_c_d_aec8ffaa1e69c7a6e13ac0cfbc29151d9}\label{class_l_c_d_aec8ffaa1e69c7a6e13ac0cfbc29151d9}} 
+\index{L\+CD@{L\+CD}!no\+Cursor@{no\+Cursor}}
+\index{no\+Cursor@{no\+Cursor}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{no\+Cursor()}{noCursor()}}
+{\footnotesize\ttfamily void L\+C\+D\+::no\+Cursor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+disables the buttom cursor 
+
+\mbox{\Hypertarget{class_l_c_d_af3974da6d988ba2d21c25135ada12108}\label{class_l_c_d_af3974da6d988ba2d21c25135ada12108}} 
+\index{L\+CD@{L\+CD}!no\+Display@{no\+Display}}
+\index{no\+Display@{no\+Display}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{no\+Display()}{noDisplay()}}
+{\footnotesize\ttfamily void L\+C\+D\+::no\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+turn display off 
+
+\mbox{\Hypertarget{class_l_c_d_a7ee8acb9ba87f391991d6fa6c5ac861a}\label{class_l_c_d_a7ee8acb9ba87f391991d6fa6c5ac861a}} 
+\index{L\+CD@{L\+CD}!read\+Reg@{read\+Reg}}
+\index{read\+Reg@{read\+Reg}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{read\+Reg()}{readReg()}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::read\+Reg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read the current G\+P\+IO values. 
+
+\mbox{\Hypertarget{class_l_c_d_ac740e9489fdff4f2f40fab32146e5562}\label{class_l_c_d_ac740e9489fdff4f2f40fab32146e5562}} 
+\index{L\+CD@{L\+CD}!send@{send}}
+\index{send@{send}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void L\+C\+D\+::send (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{value,  }\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Wrapper function, so that it can be passed an 8bit value and send it using 2x write\+\_\+four\+\_\+bits. 
+
+\mbox{\Hypertarget{class_l_c_d_a48220450fd152b25994eb7d0ba340e8d}\label{class_l_c_d_a48220450fd152b25994eb7d0ba340e8d}} 
+\index{L\+CD@{L\+CD}!set\+Cursor@{set\+Cursor}}
+\index{set\+Cursor@{set\+Cursor}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{set\+Cursor()}{setCursor()}}
+{\footnotesize\ttfamily void L\+C\+D\+::set\+Cursor (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{col,  }\item[{uint8\+\_\+t}]{row }\end{DoxyParamCaption})}
+
+
+
+Set cursor position. 
+
+\mbox{\Hypertarget{class_l_c_d_aa6838b75ba35ad177394599e11bc38d1}\label{class_l_c_d_aa6838b75ba35ad177394599e11bc38d1}} 
+\index{L\+CD@{L\+CD}!string\+Write@{string\+Write}}
+\index{string\+Write@{string\+Write}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{string\+Write()}{stringWrite()}}
+{\footnotesize\ttfamily void L\+C\+D\+::string\+Write (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
+
+
+
+Writes a string to the screen. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_l_c_d_accee0498e7736561a109a98fe58183b7}\label{class_l_c_d_accee0498e7736561a109a98fe58183b7}} 
+\index{L\+CD@{L\+CD}!\+\_\+data\+\_\+pins@{\+\_\+data\+\_\+pins}}
+\index{\+\_\+data\+\_\+pins@{\+\_\+data\+\_\+pins}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{\+\_\+data\+\_\+pins}{\_data\_pins}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::\+\_\+data\+\_\+pins\mbox{[}4\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_a35aa36f96baa53a9f6b0a825b6d0366d}\label{class_l_c_d_a35aa36f96baa53a9f6b0a825b6d0366d}} 
+\index{L\+CD@{L\+CD}!\+\_\+enable\+\_\+pin@{\+\_\+enable\+\_\+pin}}
+\index{\+\_\+enable\+\_\+pin@{\+\_\+enable\+\_\+pin}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{\+\_\+enable\+\_\+pin}{\_enable\_pin}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::\+\_\+enable\+\_\+pin = 2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_ae6261bf99bcd8b2364f97e9e11c58502}\label{class_l_c_d_ae6261bf99bcd8b2364f97e9e11c58502}} 
+\index{L\+CD@{L\+CD}!\+\_\+rs\+\_\+pin@{\+\_\+rs\+\_\+pin}}
+\index{\+\_\+rs\+\_\+pin@{\+\_\+rs\+\_\+pin}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{\+\_\+rs\+\_\+pin}{\_rs\_pin}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::\+\_\+rs\+\_\+pin = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_a7bbb2365fb389314e5f457a590d8dd5e}\label{class_l_c_d_a7bbb2365fb389314e5f457a590d8dd5e}} 
+\index{L\+CD@{L\+CD}!\+\_\+rw\+\_\+pin@{\+\_\+rw\+\_\+pin}}
+\index{\+\_\+rw\+\_\+pin@{\+\_\+rw\+\_\+pin}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{\+\_\+rw\+\_\+pin}{\_rw\_pin}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::\+\_\+rw\+\_\+pin = 255\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_ab6514db16bf7b904e988b198d944e003}\label{class_l_c_d_ab6514db16bf7b904e988b198d944e003}} 
+\index{L\+CD@{L\+CD}!current\+Line@{current\+Line}}
+\index{current\+Line@{current\+Line}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{current\+Line}{currentLine}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::current\+Line = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_ad57d2b520a80da4ffcbb321fd5e07067}\label{class_l_c_d_ad57d2b520a80da4ffcbb321fd5e07067}} 
+\index{L\+CD@{L\+CD}!display\+Control@{display\+Control}}
+\index{display\+Control@{display\+Control}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{display\+Control}{displayControl}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::display\+Control = 0x00\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_adef97dff16494aa9e1a5f37003ea0204}\label{class_l_c_d_adef97dff16494aa9e1a5f37003ea0204}} 
+\index{L\+CD@{L\+CD}!display\+Function@{display\+Function}}
+\index{display\+Function@{display\+Function}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{display\+Function}{displayFunction}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::display\+Function = 0x00\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_ab753a72be1a77a16b51844b4d0752500}\label{class_l_c_d_ab753a72be1a77a16b51844b4d0752500}} 
+\index{L\+CD@{L\+CD}!display\+Mode@{display\+Mode}}
+\index{display\+Mode@{display\+Mode}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{display\+Mode}{displayMode}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::display\+Mode = 0x00\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_a9689016d04e674b7845c2a53be7a1444}\label{class_l_c_d_a9689016d04e674b7845c2a53be7a1444}} 
+\index{L\+CD@{L\+CD}!En@{En}}
+\index{En@{En}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{En}{En}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::\+En = 0b00000100\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_acf92e89c3c9c9b1c99dab9f9bf72cb20}\label{class_l_c_d_acf92e89c3c9c9b1c99dab9f9bf72cb20}} 
+\index{L\+CD@{L\+CD}!i2c\+\_\+@{i2c\+\_\+}}
+\index{i2c\+\_\+@{i2c\+\_\+}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{i2c\+\_\+}{i2c\_}}
+{\footnotesize\ttfamily \hyperlink{class_adafruit___m_c_p23008}{Adafruit\+\_\+\+M\+C\+P23008} L\+C\+D\+::i2c\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_aa9a72eb7fc8bca5d8e429fa1988f26cc}\label{class_l_c_d_aa9a72eb7fc8bca5d8e429fa1988f26cc}} 
+\index{L\+CD@{L\+CD}!num\+Lines@{num\+Lines}}
+\index{num\+Lines@{num\+Lines}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{num\+Lines}{numLines}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::num\+Lines = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_ab110d70390d7ee2d58a090e2b30196ad}\label{class_l_c_d_ab110d70390d7ee2d58a090e2b30196ad}} 
+\index{L\+CD@{L\+CD}!Rs@{Rs}}
+\index{Rs@{Rs}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{Rs}{Rs}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::\+Rs = 0b00000001\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_l_c_d_adfd73ce4fc19ae4d852bb07197201dd0}\label{class_l_c_d_adfd73ce4fc19ae4d852bb07197201dd0}} 
+\index{L\+CD@{L\+CD}!Rw@{Rw}}
+\index{Rw@{Rw}!L\+CD@{L\+CD}}
+\subsubsection{\texorpdfstring{Rw}{Rw}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+C\+D\+::\+Rw = 0b00000010\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/osapi/\+Score\+System/\hyperlink{_l_c_d_8hpp}{L\+C\+D.\+hpp}\item 
+Score\+System/\hyperlink{_l_c_d_8cpp}{L\+C\+D.\+cpp}\end{DoxyCompactItemize}

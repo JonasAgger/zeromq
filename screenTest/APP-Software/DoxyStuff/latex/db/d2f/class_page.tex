@@ -1,0 +1,166 @@
+\hypertarget{class_page}{}\section{Page Class Reference}
+\label{class_page}\index{Page@{Page}}
+
+
+{\ttfamily \#include $<$Page.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_page_a8348344aff8c2ec7e7f1d52edf2eb99f}{Page} (std\+::string filename)
+\item 
+void \hyperlink{class_page_a8c7dd5910785a3a69e0644a3159ecf12}{button\+Pressed} (\hyperlink{class_l_c_d}{L\+CD} $\ast$display, string \&return\+String, unsigned int \&state\+\_\+)
+\item 
+void \hyperlink{class_page_aea5c5dd94cfbb77072150c60a59b6589}{button\+Right} (\hyperlink{class_l_c_d}{L\+CD} $\ast$display)
+\item 
+void \hyperlink{class_page_a741e3788b484622f2426a9f0134e34c9}{button\+Left} (\hyperlink{class_l_c_d}{L\+CD} $\ast$display)
+\item 
+void \hyperlink{class_page_ae49da6fc746a1c10c4d208d717b6da31}{display\+Screen} (\hyperlink{class_l_c_d}{L\+CD} $\ast$display, string $\ast$name1=nullptr, string $\ast$name2=nullptr)
+\item 
+void \hyperlink{class_page_accc9eda24cc6ccd4133fd8dd59202144}{reset\+Page} ()
+\begin{DoxyCompactList}\small\item\em Resets the page. Cursorposition and teamname is reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_page_acc5caef0eeb95817d30050e985aa3e4f}{page\+Text}
+\item 
+int8\+\_\+t \hyperlink{class_page_aed4c5e44ec4495ac8f33ae8a55d441e3}{cursor\+Pos\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_page}{Page} Text to be displayed. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{class_page_a46dc188f2ae533c023cbbde595cb4c7c}{nr\+Cursor\+Pos\+\_\+}
+\begin{DoxyCompactList}\small\item\em Current cursor position. \end{DoxyCompactList}\item 
+char \hyperlink{class_page_ac354cb7bc8c03459179a5c2c1628d5ed}{team\+Name\+Arr} \mbox{[}16\mbox{]}
+\item 
+bool \hyperlink{class_page_a34b443eebdb2ae4f0233be759cd725ae}{team\+Enter\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em Used for team naming schemes. \end{DoxyCompactList}\item 
+bool \hyperlink{class_page_a58f2fd2c2eae4bf594b8e9b8435cf6f0}{selecting\+Char} = false
+\begin{DoxyCompactList}\small\item\em Used for team naming schemes. \end{DoxyCompactList}\item 
+char \hyperlink{class_page_a807fddcf3944886e052d48fb71888cc9}{current\+Char} = \textquotesingle{}a\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Used for team naming schemes. \end{DoxyCompactList}\item 
+std\+::vector$<$ struct \hyperlink{structcursor_coord}{cursor\+Coord} $>$ \hyperlink{class_page_a4d699ca3cdde0ff6325cde57f315b60b}{possible\+Cursor\+Pos}
+\begin{DoxyCompactList}\small\item\em Used for team naming schemes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_page_a8348344aff8c2ec7e7f1d52edf2eb99f}\label{class_page_a8348344aff8c2ec7e7f1d52edf2eb99f}} 
+\index{Page@{Page}!Page@{Page}}
+\index{Page@{Page}!Page@{Page}}
+\subsubsection{\texorpdfstring{Page()}{Page()}}
+{\footnotesize\ttfamily Page\+::\+Page (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for \hyperlink{class_page}{Page}. It opens up the specified file, and reads it in. File needs to be a specific style, where the cursorcoords is in the first line, comma seperated with a colon indicating the end. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_page_a741e3788b484622f2426a9f0134e34c9}\label{class_page_a741e3788b484622f2426a9f0134e34c9}} 
+\index{Page@{Page}!button\+Left@{button\+Left}}
+\index{button\+Left@{button\+Left}!Page@{Page}}
+\subsubsection{\texorpdfstring{button\+Left()}{buttonLeft()}}
+{\footnotesize\ttfamily void Page\+::button\+Left (\begin{DoxyParamCaption}\item[{\hyperlink{class_l_c_d}{L\+CD} $\ast$}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Handles when the button is rotated left. Here it checks if a char is being selected, since it either needs to rotate the cursor or change the char appropriately \mbox{\Hypertarget{class_page_a8c7dd5910785a3a69e0644a3159ecf12}\label{class_page_a8c7dd5910785a3a69e0644a3159ecf12}} 
+\index{Page@{Page}!button\+Pressed@{button\+Pressed}}
+\index{button\+Pressed@{button\+Pressed}!Page@{Page}}
+\subsubsection{\texorpdfstring{button\+Pressed()}{buttonPressed()}}
+{\footnotesize\ttfamily void Page\+::button\+Pressed (\begin{DoxyParamCaption}\item[{\hyperlink{class_l_c_d}{L\+CD} $\ast$}]{display,  }\item[{string \&}]{return\+String,  }\item[{unsigned int \&}]{state\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks the current button position and checks what action it\textquotesingle{}s supposed to do, according to the type. It needs to check if we\textquotesingle{}re scrolling through chars, since it then needs to deselect it. Updated after accepttest, since a stray line of code was commented out, enabling the possibility of reaching unwanted places when deleting \mbox{\Hypertarget{class_page_aea5c5dd94cfbb77072150c60a59b6589}\label{class_page_aea5c5dd94cfbb77072150c60a59b6589}} 
+\index{Page@{Page}!button\+Right@{button\+Right}}
+\index{button\+Right@{button\+Right}!Page@{Page}}
+\subsubsection{\texorpdfstring{button\+Right()}{buttonRight()}}
+{\footnotesize\ttfamily void Page\+::button\+Right (\begin{DoxyParamCaption}\item[{\hyperlink{class_l_c_d}{L\+CD} $\ast$}]{display }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Handles when the button is rotated right. Here it checks if a char is being selected, since it either needs to rotate the cursor or change the char appropriately \mbox{\Hypertarget{class_page_ae49da6fc746a1c10c4d208d717b6da31}\label{class_page_ae49da6fc746a1c10c4d208d717b6da31}} 
+\index{Page@{Page}!display\+Screen@{display\+Screen}}
+\index{display\+Screen@{display\+Screen}!Page@{Page}}
+\subsubsection{\texorpdfstring{display\+Screen()}{displayScreen()}}
+{\footnotesize\ttfamily void Page\+::display\+Screen (\begin{DoxyParamCaption}\item[{\hyperlink{class_l_c_d}{L\+CD} $\ast$}]{display,  }\item[{string $\ast$}]{name1 = {\ttfamily nullptr},  }\item[{string $\ast$}]{name2 = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Displays the screen. Scrolls through the page\+Text and writes it to the screen. Takes 2 string arguments, which is either both team names, or the IP adress, and displays them accordingly. Remember to check if the page has space for the strings before you pass the strings. \mbox{\Hypertarget{class_page_accc9eda24cc6ccd4133fd8dd59202144}\label{class_page_accc9eda24cc6ccd4133fd8dd59202144}} 
+\index{Page@{Page}!reset\+Page@{reset\+Page}}
+\index{reset\+Page@{reset\+Page}!Page@{Page}}
+\subsubsection{\texorpdfstring{reset\+Page()}{resetPage()}}
+{\footnotesize\ttfamily void Page\+::reset\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Resets the page. Cursorposition and teamname is reset. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_page_a807fddcf3944886e052d48fb71888cc9}\label{class_page_a807fddcf3944886e052d48fb71888cc9}} 
+\index{Page@{Page}!current\+Char@{current\+Char}}
+\index{current\+Char@{current\+Char}!Page@{Page}}
+\subsubsection{\texorpdfstring{current\+Char}{currentChar}}
+{\footnotesize\ttfamily char Page\+::current\+Char = \textquotesingle{}a\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used for team naming schemes. 
+
+\mbox{\Hypertarget{class_page_aed4c5e44ec4495ac8f33ae8a55d441e3}\label{class_page_aed4c5e44ec4495ac8f33ae8a55d441e3}} 
+\index{Page@{Page}!cursor\+Pos\+\_\+@{cursor\+Pos\+\_\+}}
+\index{cursor\+Pos\+\_\+@{cursor\+Pos\+\_\+}!Page@{Page}}
+\subsubsection{\texorpdfstring{cursor\+Pos\+\_\+}{cursorPos\_}}
+{\footnotesize\ttfamily int8\+\_\+t Page\+::cursor\+Pos\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\hyperlink{class_page}{Page} Text to be displayed. 
+
+\mbox{\Hypertarget{class_page_a46dc188f2ae533c023cbbde595cb4c7c}\label{class_page_a46dc188f2ae533c023cbbde595cb4c7c}} 
+\index{Page@{Page}!nr\+Cursor\+Pos\+\_\+@{nr\+Cursor\+Pos\+\_\+}}
+\index{nr\+Cursor\+Pos\+\_\+@{nr\+Cursor\+Pos\+\_\+}!Page@{Page}}
+\subsubsection{\texorpdfstring{nr\+Cursor\+Pos\+\_\+}{nrCursorPos\_}}
+{\footnotesize\ttfamily uint8\+\_\+t Page\+::nr\+Cursor\+Pos\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Current cursor position. 
+
+\mbox{\Hypertarget{class_page_acc5caef0eeb95817d30050e985aa3e4f}\label{class_page_acc5caef0eeb95817d30050e985aa3e4f}} 
+\index{Page@{Page}!page\+Text@{page\+Text}}
+\index{page\+Text@{page\+Text}!Page@{Page}}
+\subsubsection{\texorpdfstring{page\+Text}{pageText}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Page\+::page\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_page_a4d699ca3cdde0ff6325cde57f315b60b}\label{class_page_a4d699ca3cdde0ff6325cde57f315b60b}} 
+\index{Page@{Page}!possible\+Cursor\+Pos@{possible\+Cursor\+Pos}}
+\index{possible\+Cursor\+Pos@{possible\+Cursor\+Pos}!Page@{Page}}
+\subsubsection{\texorpdfstring{possible\+Cursor\+Pos}{possibleCursorPos}}
+{\footnotesize\ttfamily std\+::vector$<$struct \hyperlink{structcursor_coord}{cursor\+Coord}$>$ Page\+::possible\+Cursor\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used for team naming schemes. 
+
+\mbox{\Hypertarget{class_page_a58f2fd2c2eae4bf594b8e9b8435cf6f0}\label{class_page_a58f2fd2c2eae4bf594b8e9b8435cf6f0}} 
+\index{Page@{Page}!selecting\+Char@{selecting\+Char}}
+\index{selecting\+Char@{selecting\+Char}!Page@{Page}}
+\subsubsection{\texorpdfstring{selecting\+Char}{selectingChar}}
+{\footnotesize\ttfamily bool Page\+::selecting\+Char = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used for team naming schemes. 
+
+\mbox{\Hypertarget{class_page_a34b443eebdb2ae4f0233be759cd725ae}\label{class_page_a34b443eebdb2ae4f0233be759cd725ae}} 
+\index{Page@{Page}!team\+Enter\+\_\+@{team\+Enter\+\_\+}}
+\index{team\+Enter\+\_\+@{team\+Enter\+\_\+}!Page@{Page}}
+\subsubsection{\texorpdfstring{team\+Enter\+\_\+}{teamEnter\_}}
+{\footnotesize\ttfamily bool Page\+::team\+Enter\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used for team naming schemes. 
+
+\mbox{\Hypertarget{class_page_ac354cb7bc8c03459179a5c2c1628d5ed}\label{class_page_ac354cb7bc8c03459179a5c2c1628d5ed}} 
+\index{Page@{Page}!team\+Name\+Arr@{team\+Name\+Arr}}
+\index{team\+Name\+Arr@{team\+Name\+Arr}!Page@{Page}}
+\subsubsection{\texorpdfstring{team\+Name\+Arr}{teamNameArr}}
+{\footnotesize\ttfamily char Page\+::team\+Name\+Arr\mbox{[}16\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+inc/osapi/\+Score\+System/\hyperlink{_page_8hpp}{Page.\+hpp}\end{DoxyCompactItemize}

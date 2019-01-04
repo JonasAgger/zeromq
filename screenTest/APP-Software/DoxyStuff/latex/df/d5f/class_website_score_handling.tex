@@ -1,0 +1,481 @@
+\hypertarget{class_website_score_handling}{}\section{Website\+Score\+Handling Class Reference}
+\label{class_website_score_handling}\index{Website\+Score\+Handling@{Website\+Score\+Handling}}
+
+
+Global function; Is called from Score\+System upon startup.  
+
+
+
+
+{\ttfamily \#include $<$Website\+Score\+Handling.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_website_score_handling_1_1_d_a_t_e_s_t_r_u_c_t}{D\+A\+T\+E\+S\+T\+R\+U\+CT}
+\item 
+struct \hyperlink{struct_website_score_handling_1_1_t_i_m_e_s_t_r_u_c_t}{T\+I\+M\+E\+S\+T\+R\+U\+CT}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_website_score_handling_ac0753b597e9933d012400e68b2fc772b}{Website\+Score\+Handling} (std\+::string team\+Name1, std\+::string team\+Name2, uint8\+\_\+t score\+Team1, uint8\+\_\+t score\+Team2, unsigned long game\+Time, uint8\+\_\+t double\+Shots)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_website_score_handling_acf28b6af9500124725c1ed6fb685fe5e}{get\+Score\+Team} (int team\+Number)
+\item 
+int \hyperlink{class_website_score_handling_a16769000b8ae94f3fffd1480fc544ec8}{get\+Total\+Double\+Cup\+Shots} ()
+\item 
+std\+::string \hyperlink{class_website_score_handling_a49314d4db6208788e53a9d56fa99dfee}{get\+Team\+Name} (int team\+Number)
+\item 
+std\+::string \hyperlink{class_website_score_handling_acc2365bbbfccb16022e568e93ec7ecc5}{get\+Game\+Time} ()
+\item 
+std\+::string \hyperlink{class_website_score_handling_adf5d617f2dfe1eb846eb3e008348f685}{get\+Date} ()
+\item 
+std\+::string \hyperlink{class_website_score_handling_a6d3947bb69c2095f2323dbfa2afb7e6c}{get\+Start\+Time\+Date} ()
+\item 
+std\+::string \hyperlink{class_website_score_handling_ae35c87db5467a9d52e08cb5c0600fcf6}{get\+Start\+Time} ()
+\begin{DoxyCompactList}\small\item\em Printing Start\+Time while filling out zeroes when number is lower than 10. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_website_score_handling_a06e4bba446c2b438fc2bfc52b2a6176e}{get\+End\+Time} ()
+\item 
+void \hyperlink{class_website_score_handling_ab4153d78bc79616303c5d338999d4b77}{set\+Score\+Team} (int team\+Number, int score)
+\item 
+void \hyperlink{class_website_score_handling_a2705a6902f38cd6663de44e43ad00eaa}{set\+Total\+Double\+Cup\+Shots} (int amount\+Of\+Shots)
+\item 
+void \hyperlink{class_website_score_handling_a5b3bc3e78e0f65ef4749124d7f57c42f}{set\+Team\+Name} (int team\+Number, std\+::string team\+Name)
+\item 
+void \hyperlink{class_website_score_handling_a08c2b9801c68f88da1e93f4cabeecc22}{set\+Game\+Time} (int game\+Time)
+\item 
+void \hyperlink{class_website_score_handling_a6bb8369b8bbffc82bdaa290bb716ad5c}{set\+Date} ()
+\item 
+void \hyperlink{class_website_score_handling_a5a59688924f563e984ccb473c7d3822c}{set\+Start\+Time} ()
+\begin{DoxyCompactList}\small\item\em Turning back time from the End\+Time point to the Start\+Time point. \end{DoxyCompactList}\item 
+void \hyperlink{class_website_score_handling_a36ce4afc4265f6671e28f81719a8628c}{set\+End\+Time} ()
+\item 
+void \hyperlink{class_website_score_handling_a443e910d91eae4e4325eb5ec714e09aa}{write\+To\+C\+SV} ()
+\item 
+void \hyperlink{class_website_score_handling_a973228f0341e39ce97c013707260b08c}{get\+Current\+ID} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::fstream \hyperlink{class_website_score_handling_a67456f438fa2687fe1a68872862de7c2}{fs\+\_\+}
+\item 
+std\+::fstream \hyperlink{class_website_score_handling_a5096933970404b633247f7975e71b643}{error\+Fs\+\_\+}
+\item 
+std\+::ifstream \hyperlink{class_website_score_handling_a6132d55c59920eb1a420f059e89a5f7d}{ifs\+\_\+}
+\item 
+std\+::string \hyperlink{class_website_score_handling_a9f8de26004558e2655831583db758797}{headers} = \char`\"{}Spil ID,Hold 1,Hold 2,Score Hold 1,Score Hold 2,Varighed,Starttidspunkt,Sluttidspunkt,Dobbelt skud\char`\"{}
+\item 
+std\+::string \hyperlink{class_website_score_handling_a5b110dd9bccb8d6216d2d982b763a9c7}{last\+Game\+ID} = \char`\"{}000000\char`\"{}
+\item 
+std\+::string \hyperlink{class_website_score_handling_afd9be3d660d8e4b80431850583c9eaff}{current\+Game\+ID} = \char`\"{}000000\char`\"{}
+\item 
+std\+::string \hyperlink{class_website_score_handling_a6e8dbd075951cece59dbb1870a569600}{old\+Name} = \char`\"{}\char`\"{}
+\item 
+std\+::string \hyperlink{class_website_score_handling_a0156acf4513ff569b91933a3f4fc7bfa}{new\+Name} = \char`\"{}\char`\"{}
+\item 
+std\+::string \hyperlink{class_website_score_handling_aa806a4566986529065ae5f5197c5872a}{line\+To\+Read} = \char`\"{}\char`\"{}
+\item 
+std\+::string \hyperlink{class_website_score_handling_aaea05f7ab2dcf417a8da33c20abd590d}{line\+To\+Copy} = \char`\"{}\char`\"{}
+\item 
+unsigned int \hyperlink{class_website_score_handling_abc7ee63b8d8c718ce460da3635d90d25}{game\+I\+D\+Integer} = 0
+\item 
+unsigned int \hyperlink{class_website_score_handling_a3cde6ae01393db61e049cee7eb0db7a9}{current\+Line} = 0
+\item 
+unsigned int \hyperlink{class_website_score_handling_a535fb9000802fd431fc7eb63973f45d7}{line\+Number} = 0
+\item 
+std\+::string \hyperlink{class_website_score_handling_aff47f8c9e251e9d88ae20e6d48d28985}{team\+Name1\+\_\+} = \char`\"{}\char`\"{}
+\item 
+std\+::string \hyperlink{class_website_score_handling_adc827082fdf0f563d26f087e2b8370d8}{team\+Name2\+\_\+} = \char`\"{}\char`\"{}
+\item 
+unsigned int \hyperlink{class_website_score_handling_aeb7146ed461fb35fc306c4eb4b6b398e}{score\+Team1\+\_\+} = 0
+\item 
+unsigned int \hyperlink{class_website_score_handling_a7ef10df17b3d100b009d8aea310b20bd}{score\+Team2\+\_\+} = 0
+\item 
+unsigned int \hyperlink{class_website_score_handling_a65a1d48c99c30982ff2b4c92a8c67961}{total\+Double\+Cup\+Shots\+\_\+} = 0
+\item 
+\hyperlink{struct_website_score_handling_1_1_d_a_t_e_s_t_r_u_c_t}{D\+A\+T\+E\+S\+T\+R\+U\+CT} \hyperlink{class_website_score_handling_a9ea8d35694c2f0a0b602ce32c2587da3}{date\+\_\+}
+\item 
+\hyperlink{struct_website_score_handling_1_1_t_i_m_e_s_t_r_u_c_t}{T\+I\+M\+E\+S\+T\+R\+U\+CT} \hyperlink{class_website_score_handling_a771503421f01243f69b609d8ca7a98db}{game\+Time\+\_\+}
+\item 
+\hyperlink{struct_website_score_handling_1_1_t_i_m_e_s_t_r_u_c_t}{T\+I\+M\+E\+S\+T\+R\+U\+CT} \hyperlink{class_website_score_handling_ac29bace30d83c7626d093f6cb5529ed1}{time\+Start\+\_\+}
+\item 
+\hyperlink{struct_website_score_handling_1_1_d_a_t_e_s_t_r_u_c_t}{D\+A\+T\+E\+S\+T\+R\+U\+CT} \hyperlink{class_website_score_handling_af393f7cce22756cda28cf109ab68c0e5}{time\+Start\+Date\+\_\+}
+\item 
+\hyperlink{struct_website_score_handling_1_1_t_i_m_e_s_t_r_u_c_t}{T\+I\+M\+E\+S\+T\+R\+U\+CT} \hyperlink{class_website_score_handling_a2c8bcd11b50c2db8019a5cde5c0e22a4}{time\+End\+\_\+}
+\item 
+time\+\_\+t \hyperlink{class_website_score_handling_ace26e5e42d3cbf978d921a03368797a8}{t} = time(N\+U\+LL)
+\item 
+struct tm $\ast$ \hyperlink{class_website_score_handling_a5360288826018542bb68945cb8401361}{time\+Keeper\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Global function; Is called from Score\+System upon startup. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_website_score_handling_ac0753b597e9933d012400e68b2fc772b}\label{class_website_score_handling_ac0753b597e9933d012400e68b2fc772b}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{Website\+Score\+Handling()}{WebsiteScoreHandling()}}
+{\footnotesize\ttfamily Website\+Score\+Handling\+::\+Website\+Score\+Handling (\begin{DoxyParamCaption}\item[{std\+::string}]{team\+Name1,  }\item[{std\+::string}]{team\+Name2,  }\item[{uint8\+\_\+t}]{score\+Team1,  }\item[{uint8\+\_\+t}]{score\+Team2,  }\item[{unsigned long}]{game\+Time,  }\item[{uint8\+\_\+t}]{double\+Shots }\end{DoxyParamCaption})}
+
+Author\+: Søren Skieller Setting timeinfo for class
+
+Setting game stats
+
+Getting time info
+
+Setting up website 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_website_score_handling_a973228f0341e39ce97c013707260b08c}\label{class_website_score_handling_a973228f0341e39ce97c013707260b08c}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+Current\+ID@{get\+Current\+ID}}
+\index{get\+Current\+ID@{get\+Current\+ID}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+Current\+I\+D()}{getCurrentID()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::get\+Current\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+If not opened beforehand, open now
+
+If file not created, create standard file
+
+Closing read/write
+
+Opening read
+
+Resetting ifstream flags
+
+If able to open file
+
+Reading from start of file
+
+Discarding the lines we read but do not need
+
+Positioning the read pointer to second line
+
+Get 2nd line
+
+Getting first element, 6 chars long
+
+If file is empty
+
+Closing read
+
+Closing read/write
+
+Opening read
+
+Resetting ifstream flags
+
+New game\+ID
+
+Deciding amount of extra numbers for ID (M\+AX ID\+: 999999) \mbox{\Hypertarget{class_website_score_handling_adf5d617f2dfe1eb846eb3e008348f685}\label{class_website_score_handling_adf5d617f2dfe1eb846eb3e008348f685}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+Date@{get\+Date}}
+\index{get\+Date@{get\+Date}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+Date()}{getDate()}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a06e4bba446c2b438fc2bfc52b2a6176e}\label{class_website_score_handling_a06e4bba446c2b438fc2bfc52b2a6176e}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+End\+Time@{get\+End\+Time}}
+\index{get\+End\+Time@{get\+End\+Time}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+End\+Time()}{getEndTime()}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::get\+End\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Do nothing \mbox{\Hypertarget{class_website_score_handling_acc2365bbbfccb16022e568e93ec7ecc5}\label{class_website_score_handling_acc2365bbbfccb16022e568e93ec7ecc5}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+Game\+Time@{get\+Game\+Time}}
+\index{get\+Game\+Time@{get\+Game\+Time}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+Game\+Time()}{getGameTime()}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::get\+Game\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Do nothing, only removing the zeroes for the hour counter \mbox{\Hypertarget{class_website_score_handling_acf28b6af9500124725c1ed6fb685fe5e}\label{class_website_score_handling_acf28b6af9500124725c1ed6fb685fe5e}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+Score\+Team@{get\+Score\+Team}}
+\index{get\+Score\+Team@{get\+Score\+Team}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+Score\+Team()}{getScoreTeam()}}
+{\footnotesize\ttfamily int Website\+Score\+Handling\+::get\+Score\+Team (\begin{DoxyParamCaption}\item[{int}]{team\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_ae35c87db5467a9d52e08cb5c0600fcf6}\label{class_website_score_handling_ae35c87db5467a9d52e08cb5c0600fcf6}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+Start\+Time@{get\+Start\+Time}}
+\index{get\+Start\+Time@{get\+Start\+Time}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+Start\+Time()}{getStartTime()}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::get\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Printing Start\+Time while filling out zeroes when number is lower than 10. 
+
+\mbox{\Hypertarget{class_website_score_handling_a6d3947bb69c2095f2323dbfa2afb7e6c}\label{class_website_score_handling_a6d3947bb69c2095f2323dbfa2afb7e6c}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+Start\+Time\+Date@{get\+Start\+Time\+Date}}
+\index{get\+Start\+Time\+Date@{get\+Start\+Time\+Date}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+Start\+Time\+Date()}{getStartTimeDate()}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::get\+Start\+Time\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a49314d4db6208788e53a9d56fa99dfee}\label{class_website_score_handling_a49314d4db6208788e53a9d56fa99dfee}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+Team\+Name@{get\+Team\+Name}}
+\index{get\+Team\+Name@{get\+Team\+Name}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+Team\+Name()}{getTeamName()}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::get\+Team\+Name (\begin{DoxyParamCaption}\item[{int}]{team\+Number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a16769000b8ae94f3fffd1480fc544ec8}\label{class_website_score_handling_a16769000b8ae94f3fffd1480fc544ec8}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!get\+Total\+Double\+Cup\+Shots@{get\+Total\+Double\+Cup\+Shots}}
+\index{get\+Total\+Double\+Cup\+Shots@{get\+Total\+Double\+Cup\+Shots}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{get\+Total\+Double\+Cup\+Shots()}{getTotalDoubleCupShots()}}
+{\footnotesize\ttfamily int Website\+Score\+Handling\+::get\+Total\+Double\+Cup\+Shots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a6bb8369b8bbffc82bdaa290bb716ad5c}\label{class_website_score_handling_a6bb8369b8bbffc82bdaa290bb716ad5c}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!set\+Date@{set\+Date}}
+\index{set\+Date@{set\+Date}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{set\+Date()}{setDate()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::set\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Setting default start date \mbox{\Hypertarget{class_website_score_handling_a36ce4afc4265f6671e28f81719a8628c}\label{class_website_score_handling_a36ce4afc4265f6671e28f81719a8628c}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!set\+End\+Time@{set\+End\+Time}}
+\index{set\+End\+Time@{set\+End\+Time}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{set\+End\+Time()}{setEndTime()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::set\+End\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Since R\+PI is G\+MT \mbox{\Hypertarget{class_website_score_handling_a08c2b9801c68f88da1e93f4cabeecc22}\label{class_website_score_handling_a08c2b9801c68f88da1e93f4cabeecc22}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!set\+Game\+Time@{set\+Game\+Time}}
+\index{set\+Game\+Time@{set\+Game\+Time}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{set\+Game\+Time()}{setGameTime()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::set\+Game\+Time (\begin{DoxyParamCaption}\item[{int}]{game\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Setting seconds
+
+Find seconds
+
+Find minutes
+
+Find hours \mbox{\Hypertarget{class_website_score_handling_ab4153d78bc79616303c5d338999d4b77}\label{class_website_score_handling_ab4153d78bc79616303c5d338999d4b77}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!set\+Score\+Team@{set\+Score\+Team}}
+\index{set\+Score\+Team@{set\+Score\+Team}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{set\+Score\+Team()}{setScoreTeam()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::set\+Score\+Team (\begin{DoxyParamCaption}\item[{int}]{team\+Number,  }\item[{int}]{score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a5a59688924f563e984ccb473c7d3822c}\label{class_website_score_handling_a5a59688924f563e984ccb473c7d3822c}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!set\+Start\+Time@{set\+Start\+Time}}
+\index{set\+Start\+Time@{set\+Start\+Time}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{set\+Start\+Time()}{setStartTime()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::set\+Start\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Turning back time from the End\+Time point to the Start\+Time point. 
+
+Removing gametime from current timer
+
+If the seconds go below 0
+
+Minutes
+
+Hours
+
+Days
+
+12 and 0 = december
+
+Months \mbox{\Hypertarget{class_website_score_handling_a5b3bc3e78e0f65ef4749124d7f57c42f}\label{class_website_score_handling_a5b3bc3e78e0f65ef4749124d7f57c42f}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!set\+Team\+Name@{set\+Team\+Name}}
+\index{set\+Team\+Name@{set\+Team\+Name}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{set\+Team\+Name()}{setTeamName()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::set\+Team\+Name (\begin{DoxyParamCaption}\item[{int}]{team\+Number,  }\item[{std\+::string}]{team\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a2705a6902f38cd6663de44e43ad00eaa}\label{class_website_score_handling_a2705a6902f38cd6663de44e43ad00eaa}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!set\+Total\+Double\+Cup\+Shots@{set\+Total\+Double\+Cup\+Shots}}
+\index{set\+Total\+Double\+Cup\+Shots@{set\+Total\+Double\+Cup\+Shots}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{set\+Total\+Double\+Cup\+Shots()}{setTotalDoubleCupShots()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::set\+Total\+Double\+Cup\+Shots (\begin{DoxyParamCaption}\item[{int}]{amount\+Of\+Shots }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a443e910d91eae4e4325eb5ec714e09aa}\label{class_website_score_handling_a443e910d91eae4e4325eb5ec714e09aa}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!write\+To\+C\+SV@{write\+To\+C\+SV}}
+\index{write\+To\+C\+SV@{write\+To\+C\+SV}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{write\+To\+C\+S\+V()}{writeToCSV()}}
+{\footnotesize\ttfamily void Website\+Score\+Handling\+::write\+To\+C\+SV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Creating new file temp, using app to add added content to end
+
+Using flush to write nothing to file making sure it is created
+
+Getting ID from last game from final.\+csv \char`\"{}\+Spil I\+D,\+Hold 1,\+Hold 2,\+Score Hold 1,\+Score Hold 2,\+Varighed,\+Starttidspunkt,\+Sluttidspunkt,\+Dobbelt skud\char`\"{};
+
+Spil ID //! Hold 1 //! Hold 2
+
+Score Hold 1 //! Score Hold 2 //! Varighed
+
+Starttidspunkt //! Sluttidspunkt //! Dobbelt skud
+
+Opening final.\+csv for overwriting
+
+Discarding the lines we read but do not need
+
+Positioning the read pointer to second line
+
+Reading the rest of the file one line at the time and writing that to fs\+\_\+. Since eof flag does not work when the final.\+csv is placed in the same folder as the website solution, we are here checking ourselves whether the end of document is reached.
+
+Closing both file streams
+
+=============== Delete old final.\+csv, replace it with new temp.\+csv ======
+
+Finally flush the stream
+
+and close it if not closed yet 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_website_score_handling_afd9be3d660d8e4b80431850583c9eaff}\label{class_website_score_handling_afd9be3d660d8e4b80431850583c9eaff}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!current\+Game\+ID@{current\+Game\+ID}}
+\index{current\+Game\+ID@{current\+Game\+ID}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{current\+Game\+ID}{currentGameID}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::current\+Game\+ID = \char`\"{}000000\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a3cde6ae01393db61e049cee7eb0db7a9}\label{class_website_score_handling_a3cde6ae01393db61e049cee7eb0db7a9}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!current\+Line@{current\+Line}}
+\index{current\+Line@{current\+Line}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{current\+Line}{currentLine}}
+{\footnotesize\ttfamily unsigned int Website\+Score\+Handling\+::current\+Line = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a9ea8d35694c2f0a0b602ce32c2587da3}\label{class_website_score_handling_a9ea8d35694c2f0a0b602ce32c2587da3}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!date\+\_\+@{date\+\_\+}}
+\index{date\+\_\+@{date\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{date\+\_\+}{date\_}}
+{\footnotesize\ttfamily \hyperlink{struct_website_score_handling_1_1_d_a_t_e_s_t_r_u_c_t}{D\+A\+T\+E\+S\+T\+R\+U\+CT} Website\+Score\+Handling\+::date\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a5096933970404b633247f7975e71b643}\label{class_website_score_handling_a5096933970404b633247f7975e71b643}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!error\+Fs\+\_\+@{error\+Fs\+\_\+}}
+\index{error\+Fs\+\_\+@{error\+Fs\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{error\+Fs\+\_\+}{errorFs\_}}
+{\footnotesize\ttfamily std\+::fstream Website\+Score\+Handling\+::error\+Fs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a67456f438fa2687fe1a68872862de7c2}\label{class_website_score_handling_a67456f438fa2687fe1a68872862de7c2}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!fs\+\_\+@{fs\+\_\+}}
+\index{fs\+\_\+@{fs\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{fs\+\_\+}{fs\_}}
+{\footnotesize\ttfamily std\+::fstream Website\+Score\+Handling\+::fs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_abc7ee63b8d8c718ce460da3635d90d25}\label{class_website_score_handling_abc7ee63b8d8c718ce460da3635d90d25}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!game\+I\+D\+Integer@{game\+I\+D\+Integer}}
+\index{game\+I\+D\+Integer@{game\+I\+D\+Integer}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{game\+I\+D\+Integer}{gameIDInteger}}
+{\footnotesize\ttfamily unsigned int Website\+Score\+Handling\+::game\+I\+D\+Integer = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a771503421f01243f69b609d8ca7a98db}\label{class_website_score_handling_a771503421f01243f69b609d8ca7a98db}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!game\+Time\+\_\+@{game\+Time\+\_\+}}
+\index{game\+Time\+\_\+@{game\+Time\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{game\+Time\+\_\+}{gameTime\_}}
+{\footnotesize\ttfamily \hyperlink{struct_website_score_handling_1_1_t_i_m_e_s_t_r_u_c_t}{T\+I\+M\+E\+S\+T\+R\+U\+CT} Website\+Score\+Handling\+::game\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a9f8de26004558e2655831583db758797}\label{class_website_score_handling_a9f8de26004558e2655831583db758797}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!headers@{headers}}
+\index{headers@{headers}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{headers}{headers}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::headers = \char`\"{}Spil ID,Hold 1,Hold 2,Score Hold 1,Score Hold 2,Varighed,Starttidspunkt,Sluttidspunkt,Dobbelt skud\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a6132d55c59920eb1a420f059e89a5f7d}\label{class_website_score_handling_a6132d55c59920eb1a420f059e89a5f7d}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!ifs\+\_\+@{ifs\+\_\+}}
+\index{ifs\+\_\+@{ifs\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{ifs\+\_\+}{ifs\_}}
+{\footnotesize\ttfamily std\+::ifstream Website\+Score\+Handling\+::ifs\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a5b110dd9bccb8d6216d2d982b763a9c7}\label{class_website_score_handling_a5b110dd9bccb8d6216d2d982b763a9c7}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!last\+Game\+ID@{last\+Game\+ID}}
+\index{last\+Game\+ID@{last\+Game\+ID}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{last\+Game\+ID}{lastGameID}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::last\+Game\+ID = \char`\"{}000000\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a535fb9000802fd431fc7eb63973f45d7}\label{class_website_score_handling_a535fb9000802fd431fc7eb63973f45d7}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!line\+Number@{line\+Number}}
+\index{line\+Number@{line\+Number}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{line\+Number}{lineNumber}}
+{\footnotesize\ttfamily unsigned int Website\+Score\+Handling\+::line\+Number = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_aaea05f7ab2dcf417a8da33c20abd590d}\label{class_website_score_handling_aaea05f7ab2dcf417a8da33c20abd590d}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!line\+To\+Copy@{line\+To\+Copy}}
+\index{line\+To\+Copy@{line\+To\+Copy}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{line\+To\+Copy}{lineToCopy}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::line\+To\+Copy = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_aa806a4566986529065ae5f5197c5872a}\label{class_website_score_handling_aa806a4566986529065ae5f5197c5872a}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!line\+To\+Read@{line\+To\+Read}}
+\index{line\+To\+Read@{line\+To\+Read}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{line\+To\+Read}{lineToRead}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::line\+To\+Read = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a0156acf4513ff569b91933a3f4fc7bfa}\label{class_website_score_handling_a0156acf4513ff569b91933a3f4fc7bfa}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!new\+Name@{new\+Name}}
+\index{new\+Name@{new\+Name}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{new\+Name}{newName}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::new\+Name = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a6e8dbd075951cece59dbb1870a569600}\label{class_website_score_handling_a6e8dbd075951cece59dbb1870a569600}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!old\+Name@{old\+Name}}
+\index{old\+Name@{old\+Name}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{old\+Name}{oldName}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::old\+Name = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_aeb7146ed461fb35fc306c4eb4b6b398e}\label{class_website_score_handling_aeb7146ed461fb35fc306c4eb4b6b398e}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!score\+Team1\+\_\+@{score\+Team1\+\_\+}}
+\index{score\+Team1\+\_\+@{score\+Team1\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{score\+Team1\+\_\+}{scoreTeam1\_}}
+{\footnotesize\ttfamily unsigned int Website\+Score\+Handling\+::score\+Team1\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a7ef10df17b3d100b009d8aea310b20bd}\label{class_website_score_handling_a7ef10df17b3d100b009d8aea310b20bd}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!score\+Team2\+\_\+@{score\+Team2\+\_\+}}
+\index{score\+Team2\+\_\+@{score\+Team2\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{score\+Team2\+\_\+}{scoreTeam2\_}}
+{\footnotesize\ttfamily unsigned int Website\+Score\+Handling\+::score\+Team2\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_ace26e5e42d3cbf978d921a03368797a8}\label{class_website_score_handling_ace26e5e42d3cbf978d921a03368797a8}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!t@{t}}
+\index{t@{t}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily time\+\_\+t Website\+Score\+Handling\+::t = time(N\+U\+LL)\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_aff47f8c9e251e9d88ae20e6d48d28985}\label{class_website_score_handling_aff47f8c9e251e9d88ae20e6d48d28985}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!team\+Name1\+\_\+@{team\+Name1\+\_\+}}
+\index{team\+Name1\+\_\+@{team\+Name1\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{team\+Name1\+\_\+}{teamName1\_}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::team\+Name1\+\_\+ = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_adc827082fdf0f563d26f087e2b8370d8}\label{class_website_score_handling_adc827082fdf0f563d26f087e2b8370d8}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!team\+Name2\+\_\+@{team\+Name2\+\_\+}}
+\index{team\+Name2\+\_\+@{team\+Name2\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{team\+Name2\+\_\+}{teamName2\_}}
+{\footnotesize\ttfamily std\+::string Website\+Score\+Handling\+::team\+Name2\+\_\+ = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a2c8bcd11b50c2db8019a5cde5c0e22a4}\label{class_website_score_handling_a2c8bcd11b50c2db8019a5cde5c0e22a4}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!time\+End\+\_\+@{time\+End\+\_\+}}
+\index{time\+End\+\_\+@{time\+End\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{time\+End\+\_\+}{timeEnd\_}}
+{\footnotesize\ttfamily \hyperlink{struct_website_score_handling_1_1_t_i_m_e_s_t_r_u_c_t}{T\+I\+M\+E\+S\+T\+R\+U\+CT} Website\+Score\+Handling\+::time\+End\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a5360288826018542bb68945cb8401361}\label{class_website_score_handling_a5360288826018542bb68945cb8401361}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!time\+Keeper\+\_\+@{time\+Keeper\+\_\+}}
+\index{time\+Keeper\+\_\+@{time\+Keeper\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{time\+Keeper\+\_\+}{timeKeeper\_}}
+{\footnotesize\ttfamily struct tm$\ast$ Website\+Score\+Handling\+::time\+Keeper\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_ac29bace30d83c7626d093f6cb5529ed1}\label{class_website_score_handling_ac29bace30d83c7626d093f6cb5529ed1}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!time\+Start\+\_\+@{time\+Start\+\_\+}}
+\index{time\+Start\+\_\+@{time\+Start\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{time\+Start\+\_\+}{timeStart\_}}
+{\footnotesize\ttfamily \hyperlink{struct_website_score_handling_1_1_t_i_m_e_s_t_r_u_c_t}{T\+I\+M\+E\+S\+T\+R\+U\+CT} Website\+Score\+Handling\+::time\+Start\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_af393f7cce22756cda28cf109ab68c0e5}\label{class_website_score_handling_af393f7cce22756cda28cf109ab68c0e5}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!time\+Start\+Date\+\_\+@{time\+Start\+Date\+\_\+}}
+\index{time\+Start\+Date\+\_\+@{time\+Start\+Date\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{time\+Start\+Date\+\_\+}{timeStartDate\_}}
+{\footnotesize\ttfamily \hyperlink{struct_website_score_handling_1_1_d_a_t_e_s_t_r_u_c_t}{D\+A\+T\+E\+S\+T\+R\+U\+CT} Website\+Score\+Handling\+::time\+Start\+Date\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_website_score_handling_a65a1d48c99c30982ff2b4c92a8c67961}\label{class_website_score_handling_a65a1d48c99c30982ff2b4c92a8c67961}} 
+\index{Website\+Score\+Handling@{Website\+Score\+Handling}!total\+Double\+Cup\+Shots\+\_\+@{total\+Double\+Cup\+Shots\+\_\+}}
+\index{total\+Double\+Cup\+Shots\+\_\+@{total\+Double\+Cup\+Shots\+\_\+}!Website\+Score\+Handling@{Website\+Score\+Handling}}
+\subsubsection{\texorpdfstring{total\+Double\+Cup\+Shots\+\_\+}{totalDoubleCupShots\_}}
+{\footnotesize\ttfamily unsigned int Website\+Score\+Handling\+::total\+Double\+Cup\+Shots\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/osapi/\+Score\+System/\hyperlink{_website_score_handling_8h}{Website\+Score\+Handling.\+h}\item 
+Score\+System/\hyperlink{_website_score_handling_8cpp}{Website\+Score\+Handling.\+cpp}\end{DoxyCompactItemize}
